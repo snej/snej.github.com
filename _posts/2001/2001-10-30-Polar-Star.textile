@@ -2,7 +2,7 @@
 layout: post
 title: "Polar Star"
 ---
-<br clear="both"/><font size="+1">The horizon folded down its blackness.
+The horizon folded down its blackness.
 Overhead curled exalted green clouds
 of Sun-born particles spiraling in.
 
@@ -14,4 +14,4 @@ glory surpassing the Sun’s electrons,
 if only for a second.
 
 Hood thrown back I howled a warning to low-flying angels.
-The dogs lay panting in the snow, unimpressed.</font>
+The dogs lay panting in the snow, unimpressed.

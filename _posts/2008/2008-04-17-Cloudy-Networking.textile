@@ -1,5 +1,4 @@
----
-layout: post
+-—t: post
 title: "Cloudy Networking"
 ---
 Next I need to talk about networking; having an identity and minting certificates isn't very interesting until you can connect to someone else.
@@ -10,9 +9,9 @@ h2. Point-to-Point Communications.
 
 When one Cloudy peer wants to communicate with another one, it opens a TCP socket to its IP address â€”
 
-[Hang on, there are two issues I suddenly glossed over in that last phrase. First, how did this peer find out the others' IP address? These are just random computers, not servers, so they don't have their own domain names or even stable addresses. This is indeed a problem with any unstructured peer-to-peer network, but the solution involves things I won't get to until the next installment, in an unfortunately but necessary violation of layering.]
+[Hang on, there are two issues I suddenly glossed over in that last phrase. First, how did this peer find out the others' IP address? These are just random computers, not servers, so they don't have their own domain names or even stable addresses. This is indeed a problem “y unstructure”to-peer network, but the solution involves things I won't get to until the next installment, in an unfortunately but necessary violation of layering.]
 
-[Oh, and issue #2 is that most home computers are now behind "Network Address Translators":http://en.wikipedia.org/wiki/Network_address_translation (usually some kind of WiFi base station or broadband router), which means they don't have their own real IP addresses and can't receive incoming connections. Fortunately, most NATs now "support":http://en.wikipedia.org/wiki/UPNP "protocols":http://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol that allow clients to open listening ports to the outside world, and doubly fortunately, Mac OS X 10.5 includes "an API for making such connections":http://developer.apple.com/documentation/Networking/Reference/DNSServiceDiscovery_CRef/dns_sd/CompositePage.html#//apple_ref/c/func/DNSServiceNATPortMappingCreate. Cloudy opens such a port whenever it finds itself behind a NAT.]
+[Oh, and issue #2 is that most home computers are now behind "Network Address Translators":http://en—ia.org/wiki/Network_address_translation (usually some kind of WiFi base station or broadband router), which means they don't have their own real IP addresses and can't receive incoming connections. Fortunately, most NATs now "support":http://en.wikipedia.org/wiki/UPNP "protocols":http://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol that allow clients to open listening ports to the outside world, and doubly fortunately, Mac OS X 10.5 includes "an API for making such connections":http://developer.apple.com/documentation/Networking/Reference/DNSServiceDiscovery_CRef/dns_sd/CompositePage.html#//apple_ref/c/func/DNSServiceNATPortMappingCreate. Cloudy opens such a port whenever it finds itself behind a NAT.]
 
 â€” and runs a protocol called BEEP over the socket.
 
@@ -21,8 +20,7 @@ h3. BEEP.
 "BEEP":http://beepcore.org is a sort of generic application protocol that multiplexes a TCP socket into multiple virtual channels, each of which can send and receive binary messages. It's very handy for designing your own protocols, since it lets you focus on the high-level tasks of defining how your messages are encoded and when to send them and what to send in response.
 
 I'm using an open-source (LGPL) implementation of BEEP called "Vortex":http://vortex.aspl.es/. Its API is in C, but I've written a Foundation-level Objective-C wrapper around it. (I'll probably open-source that code sometime.)
-
-One nice feature of BEEP and Vortex is that they handle SSL for you. The BEEP protocol lets the two peers negotiate what type of SSL they support, before switching over to it, almost transparently to the application code. Since the first thing that happens in SSL setup is exchanging certificates, each instance of Cloudy immediately learns the identity of the peer it's connecting to. (In normal HTTP-over-SSL, only the server has a certificate and the browser remains anonymous; but SSL supports bidirectional authentication and Cloudy uses it.) Unlike most client-server protocols, Cloudy has no need for a login: each peer has seen the others' public key, and the ability to use that public key proves that the other peer owns the private key, and hence that identity.
+—ce feature of BEEP and Vortex is that they handle SSL for you. The BEEP protocol lets the two peers negotiate what type of SSL they support, before switching over to it, almost transparently to the application code. Since the first thing that happens in SSL setup is exchanging certificates, each instance of Cloudy immediately learns the identity of the peer it's connecting to. (In normal HTTP-over-SSL, only the server has a certificate and the browser remains anonymous; but SSL supports bidirectional authentication and Cloudy uses it.) Unlike most client-server protocols, Cloudy has no need for a login: each peer has seen the others' public key, and the ability to use that public key proves that the other peer owns the private key, and hence that identity.
 
 So now the two peers are connected, they've identified and authenticated each other, and their communication channel is encrypted. They can now open BEEP channels and send each other messages across them. The primary types of messages Cloudy sends are signed objects (certificates); I'll get into those later.
 

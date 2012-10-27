@@ -1,9 +1,0 @@
----
-layout: post
-title: "Over 2^32 Sold! (Nearly)"
----
-bq. <tt>CUPERTINO, California--February 26, 2008--Apple® today announced that iTunes® (www.itunes.com) is now the number two music retailer in the US, behind only Wal-Mart, based on the latest data from the NPD Group*. Apple also announced that there are now over 50 million iTunes Store customers. iTunes has sold over four billion songs, </tt>…
-
-I really hope they thought ahead and used a 64-bit int for the <tt>number_of_songs_sold</tt> variable, otherwise some Bad Stuff might happen in the next few months.
-
-(We already know they used an <i>unsigned</i> int, otherwise there would have been a crazy press release a few years ago like "Apple announces iTunes has sold over -2,147,483,648 songs".)

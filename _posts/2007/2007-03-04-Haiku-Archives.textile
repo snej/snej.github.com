@@ -6,7 +6,7 @@ h3. 2001
 
 Figs cover the ground
 The children step over them
-Or sometimes they donâ€™t
+Or sometimes they don’t
 
 
 A hug and a kiss
@@ -84,7 +84,7 @@ miles above: the moon.
 
 
 green surface stretches
-â€™round a smaller volume now:
+’round a smaller volume now:
 four-thirds Ï€ r cubed
 
 
@@ -110,7 +110,7 @@ ClassCastException
 
 Garbage collection
 The unused objects are gone â€“
-Knew you wouldnâ€™t mind
+Knew you wouldn’t mind
 
 
 AWT
@@ -125,4 +125,4 @@ The sockets deadlock
 
 "Java For Dummies"
 Yee Haw! Are we coding yet?!
-Whenâ€™s our IPO?
+When’s our IPO?
