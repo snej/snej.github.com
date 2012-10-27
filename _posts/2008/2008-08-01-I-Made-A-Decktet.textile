@@ -1,0 +1,38 @@
+---
+layout: post
+title: "I Made A Decktet"
+---
+Sometimes it's nice to make physical objects. It's usually messier and more time-consuming than doing it on the computer, but in the end you have something you can actually touch.
+
+Ever since I saw P. D. Magnus's "Decktet":http://www.fecundity.com/pmagnus/decktet/ -- a whimsical yet mysterious deck of cards for games or divination -- I wanted one of my own. However, the Decktet is currently only available as a PDF, so any physical manifestation has to be of a DIY nature.
+
+!http://www.fecundity.com/pmagnus/decktet/card/19.gif! !http://www.fecundity.com/pmagnus/decktet/card/21.gif!
+
+The deck has 36 cards (plus the optional "The Excuse"), of six suits, and its most unusual feature is that the number cards each have _two_ suits. (There are also single-suited Aces and Kings.) This obviously adds a lot of interesting possibilities for games.
+
+Magnus has "given each suit a symbolic meaning":http://www.fecundity.com/pmagnus/decktet/fortune.php, as well as a color, and done a good job integrating them into each card. For example, the Penitent (see above) combines the green color and violent connotations of the Wyrms suit with the orange and "decisive action and clarity of purpose" of Suns; while the Market combines Wood's "gift of the earth ... raw materials and food products" with Knots' "craft, skill ... commerce and money".
+
+(I should add that I am not a believer in the supernatural. I love tarot cards, and own the rare "Hello Kitty deck":http://www.aeclectic.net/tarot/cards/hello-kitty/index.shtml#cards as well as the usual "Rider-Waite-Smith":http://www.aeclectic.net/tarot/cards/rider-waite/ ; but I see these as a combination of _objets d'art_ and Rorschach blots. They're lovely and spooky and meaningful, but what you get out of them is coming from the depths of your own mind, which is I think just as mysterious as any Astral Plane.)
+
+h3. How To Do It
+
+Fortunately I already knew where to get "printable blank playing cards":http://plaincards.com. I ordered the "both-sides-blank variety and the magic coating spray":http://www.plaincards.com/Store/shopdisplayproducts.asp?id=46&cat=Kits+To+Make+Coated+Playing+%0D%0ACards+%2D+%0D%0AOnly+Ships+to+Continental+U%2ES%2E. While waiting for the package, I adapted the Decktet PDF into the right layout for these cards, which was kind of a pain (does anyone know of a tool for cutting/pasting/cropping parts of PDFs?)
+
+* "Printable PDF Decktet for PlainCards":http://mooseyard.com/Pictures/Games/Decktet_for_PlainCards.pdf
+* "The same, in original iWork format":http://mooseyard.com/Pictures/Games/Decktet%20for%20PlainCards.pages.zip
+
+Then after the mail came, I carefully printed out each sheet of cards (the plain-paper setting worked best), fed them back in upside-down to print the backs, then held my breath while spraying sickly-sweet poisonous volatile plastic vapor over the sheets.
+
+After an hour or so to dry, the cards were ready to punch out. The paper is micro-perforated (like those Avery business card sheets) so the edges come out very cleanly after you bend the perforations back and forth a few times. And voila...
+
+h3. The Cards!
+
+<div style="text-align:center;"><img src="http://mooseyard.com/Jens/wp-content/uploads/2008/07//My Decktet 2.jpg" alt="My Decktet 2.jpg" border="0" width="550" height="412" /></div>
+
+Just like real playing cards! I love coding, but you can't hold a set of methods in your hand like that.
+
+<div style="text-align:center;"><img src="http://mooseyard.com/Jens/wp-content/uploads/2008/07//My Decktet 1.jpg" alt="My Decktet 1.jpg" border="0" width="550" height="412" /></div>
+
+The cards are shiny, and slippery enough to shuffle well, though they're not as slick as a new pack of commercial cards. The edges are a little bit rough from the perforations, but not unpleasantly so. A few of the edges got a little bent while being detached. The cloying smell of toluene and acetone is dissipating.
+
+Now I can use my Decktet! Should I tell my fortune first, or play a game of "Window":http://www.fecundity.com/pmagnus/decktet/window.php ?

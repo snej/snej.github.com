@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Lua and unique strings"
+---
+"Lua":http://www.lua.org/ is an interesting scripting language. I can't say I have much familiarity with it; I've only read the "book":http://www.inf.puc-rio.br/~roberto/book/, and a couple of papers, and downloaded and built the interpreter (which takes less than a minute). But what I've seen of it gives me a warm feeling, like reading a concise little poem, a haiku. It's a small language, but what's there is well-considered, and it appears that you can build bigger things (like object models, whether class- or prototype-based) out of its building blocks pretty easily.
+
+The implementation of the Lua 5.0 runtime is also interesting, as described in "an excellent paper":http://www.tecgraf.puc-rio.br/~lhf/ftp/doc/sblp2005.pdf. One of the smaller details that's been fascinating me is that Lua, it turns out, uses unique string objects.
+
+When you use any kind of garbage-collected (or ref-counted) framework, string objects accumulate like dust bunnies. I've profiled Java apps and seen tens of thousands of instances of java.lang.String. Cocoa apps also have large numbers of NSStrings lying around. Some of these are temporary strings that just haven't been garbage-collected (or drained from an autorelease pool) yet; but I think a lot more of them are duplicates.
+
+Lua's approach, which I have to say I hadn't thought of before, is to make all string instances unique: there are never two different string objects with the same contents. In practice this means that the runtime maintains a big hash table (a Set) of weak references to all the string objects, so before it creates a new string it can first check if one with the same contents already exists. This seems kind of expensive. But consider the advantages:
+
+* You save memory because there are never duplicate copies of a string lying around. This is a big deal: I know that OS X in particular tends to be RAM-constrained, and often the best way to make something run faster is to reduce its footprint.
+* Allocating fewer objects means less work for the garbage collector.
+* Comparing strings, an extremely common operation, is practically free: it's a simple pointer compare.
+* It's easy to implement the Big Hashtable such that the hash codes live inside the string objects themselves. This speeds up the use of these strings as keys for other hash tables, since you don't have to spend time hashing them over and over. This is a big deal in Lua since its only data structure is a PHP-like combination hashtable/array, which is used everywhere.
+
+One of the secondary issues, which only occurred to me after a little further reflection, is that this really works only if strings are all _immutable_. Otherwise you can take one string and change it to be identical to another string, yet still a distinct object. This is a bit of a drawback; I have to say that I prefer the Cocoa API, where the immutable NSString has a subclass NSMutableString, to the Java API where the mutable StringBuffer class is not type-compatible with the regular String. (Speaking of which, a "Lua tech note":http://www.lua.org/notes/ltn009.html presents a typically elegant way to implement an efficient appendable string buffer.)
+
+I wouldn't be at all surprised if the unique-strings approach predates Lua, perhaps going back to some primordial string-processing language like SNOBOL. Still, it was new to me, and it's been interesting to think about.

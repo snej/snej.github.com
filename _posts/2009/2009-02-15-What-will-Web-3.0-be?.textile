@@ -1,0 +1,37 @@
+---
+layout: post
+title: "What will Web 3.0 be?"
+---
+So, Web 2.0's heyday is over, and somewhere out there, Web 3.0 is slouching toward us waiting to be born. What will it be?
+
+There's really no such single thing as "Web _x_", of course. And all predictions are really just wishes. That being said, my wish is that Web 3.0 will be about _distributed_ systems. To oversimplify:
+
+Web 1.0 built up big brand-name websites with their own content -- things written by them, or repurposed from the media companies that owned them, or stuff to buy.
+
+Web 2.0 embraced "user-created content" and interaction between users. The content creation has become less centralized, outsourced to whomever wants to register an account and post stuff, but the sites managing, storing and serving the content are still centralized.
+
+Web 3.0, I hope, will take the decentralization to the software, and the storage. Monolithic web apps run by huge server farms -- Facebook, Blogger, Twitter, Flickr, etc. -- will be at least in part supplanted by apps that users run locally (or at least 'nearby') and which share data among each other.
+
+h3. Why is this important?
+
+* Centralization creates concentrations of power, and that's dangerous. The people who run the servers have total control over your (and everyone's) data. They can snoop at it (however private it's supposed to be), they can sell it to advertisers, they can accidentally lose it, they can accidentally expose it to hackers.
+
+* Centralization leads to walled gardens. Your data on each service is intrinsically disjoint. It can be linked together, through hyperlinks and feeds and APIs and mashups, but only to the degree each service allows, and it's never seamless.
+
+* Centralized services are hard to run. The more popular they get, the heavier the demands on the servers, and the worse the problems of abuse. (I see this every day in my job, even though the service I work on is one of the smallest Google runs.) This acts as a tax on innovation. Modern frameworks like Rails and Django make it easy to create a site, but to take it beyond just you and your friends, you have to get expensive hosting and deal with server clusters, database replication and so on. The early days of 3rd-party Facebook apps were a great example of this: no sooner would an app come online, than it'd drown under the load of its users and have to be resurrected by panicked owners upgrading their servers to more-expensive hosting plans.
+
+* Centralized services are usually closed-source. I'm not an open-source zealot, and I've spent my career working on closed-source software, but I don't think it's healthy for [nearly] all large web apps to keep their source code locked away. It discourages innovation and it makes it hard for open alternatives to compete (especially when you consider the huge intrinsic network effects that discourage switching.)
+
+h3. What do we need?
+
+Decentralized systems need well-defined protocols and data formats for communicating. We've been making headway with that as part of Web 2.0 -- there's an arsenal of technologies like REST, Atom, AtomPub, OpenID, OAuth, RDF, JSON and so on -- but they're not well integrated with each other. And we need higher level abstractions.
+
+I've been researching "CouchDB":http://couchdb.apache.org this week, and I'm getting more and more excited by it the more I learn. It combines data storage, REST-based APIs, scalability and data propagation through replication, and even application hosting. It's actually a lot like Google's internal infrastructure, but in an open and modular form.
+
+You can use CouchDB as the back end of a traditional web service, glomming more and more instances of the server together for scalability; that's the kind of architecture that Google and Amazon use. But you can also run instances independently from each other, and have them pull data from each other, very much like the way distributed version control systems like Git and Mercurial operate. As I've said before, once you have a decentralized system, you can easily design centralized systems of any form as special cases.
+
+Since each CouchDB instance also runs as a web server, that means I can run my social network from my machine, and you can run yours from yours, and yet they can be the _same_ social network. But I can keep my private data private, and I can hack on my software if I want, and the load on my server only scales with the size of _my_ friend list, no matter how big the entire global network grows.
+
+These are things I've been thinking of for a while (and my unfinished Cloudy app includes some of them), but CouchDB comes closer than any other software platform I've seen to making them implementable. It's still unfinished (nearing version 0.9 right now), and some of the authentication and replication features that would be needed for this aren't ready yet, but it really sounds like the people developing CouchDB Get It, and are working to make this vision of Web 3.0 come true.
+
+bq. [If this sounds interesting to you, go and read the preliminary draft of the "upcoming O'Reilly book on CouchDB":http://books.couchdb.org/relax/. Only the first few chapters exist yet, but they're well-written and lay out the basics pretty well.]

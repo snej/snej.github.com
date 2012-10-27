@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Computer Science’s Image Problem"
+---
+NYT: <i><a href="http://www.nytimes.com/2007/04/17/science/17comp.html">Computer Science Takes Steps to Bring Women to the Fold</a></i>
+
+I find this article baffling and the <a href="http://science.blogs.nytimes.com/2007/04/16/women-and-computer-science/">comments on it</a> aggravating.
+
+bq. <i>"The nerd factor is huge,â€ Dr. Cuny said. ... This image discourages members of both sexes, but the problem seems to be more prevalent among women. 'They think of it as programming,' Dr. Cuny said. 'They donâ€™t think of it as revolutionizing the way we are going to do medicine or create synthetic molecules or study our impact on the climate of the earth.'</i>
+
+Well, <i>of course</i> it's programming. Trying to sell CS as somehow not being about programming is false advertising â€” it's like telling kids that chemistry isn't about molecules or mathematics isn't about numbers. Sure, there are scientists using computers to design medicines or study the climate. But they're not computer scientists, they're biologists or geologists. Computer science is <i>about software</i>.
+
+How is it that people can be so excited by the Internet and digital media, but totally turned off by the prospect of designing the stuff that makes those things work? They seem to confuse computer science with data-entry, or boring MIS drudgery like writing payroll systems. Or do they just totally _not care_ about where things like web search and MP3 codecs and 3D graphics and peer-to-peer protocols come from ... are they just some magic that falls out of the sky and no one should give a second thought to?
+
+Another issue here is the distinction between Computer Science as a field of academic study, versus actual software engineering / programming / hacking. This is a young field (just as chemistry and aeronautics used to be) and not very codified yet. That's part of the fun â€” it's all being made up as we go along, and there aren't so many tomes of knowledge that have to be digested first. I had a great time in college ... but I have to admit that it didn't directly teach me that much about programming. I learned a great deal of useful science and mathematics, I had access to a lot of computers and time to do a lot of hacking, and I hung around with brilliant people whom I got some good ideas from. But I've worked with people who are great software engineers despite not having a college degree ... or having a degree in a different field like physics or psychology. So the number of people (and their M/F ratio) getting degrees in CS may not be that relevant.
+
+On the downside, I've looked at the source code to enough open source projects to realize that there are a lot of people out there writing code whose basic programming skills are very, very poor; they probably could have used a solid undergraduate CS introduction. (Not to start any flames, but PHP seems especially prone to this ... I think it's kind of the BASIC of the modern era. The barrier to entry is so low, and the language so ad hoc, that people can just flail around in it.)
+
+
+And I'm not even addressing the main point, the low and diminishing proportion of women in the field. In fact, my experience is that the ratio is a lot worse than the figures like 25% that they quote in the article: I've almost never worked in an environment where more than about 10% of the technical people were female. Which is really sad, in many ways.

@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Ottoman Status"
+---
+Yes, I'm still working on Ottoman (my append-only multiversion-concurrent storage library). As the code grows in size and complexity, so it grows in its resistance to being changed, but as Piet Hein said and I never tire of quoting:
+
+bq. _Problems worthy of attack_
+_Prove their worth by fighting back._
+
+I just pushed "my latest changes":http://bitbucket.org/snej/ottoman/changesets/ up to bitbucket.org. What's new?
+
+*Variable-sized top-level index.* Previously, the hash data structure used a top level array of 256 hashtables. I've now made that '256' a variable that scales with the number of records. This saves a lot of room for smaller datasets. (Sounds easy, right? I thought so too. But it ended up triggering significant changes to the file format and algorithms and took a lot of debugging.)
+
+*The return of the trees! part un.* I started this as a project to learn about B+trees, but when I got to the point of implementing the append-only multiversion stuff I did it with hashtables first because it's more straightforward that way, and the tree code went into the freezer. Well, it's back now. There is a "new" "Tree":http://bitbucket.org/snej/ottoman/src/tip/src/Tree.h class that can be used to read and write persistent B+trees. It's not yet integrated into the top-level Ottoman class, though, so you can only use it on its own, not intermixed with hash-tables, and without the API for tracking versions.
+
+The next task is of course to integrate the tree API into the Ottoman class. But more than that, it will be entwined with the hashtable such that trees will serve as searchable indexes into the data store. So the hashtable will provide extremely fast but unordered access via a unique "record ID", but you can build as many indexes as you like that will use ordered secondary keys (of your choice) to look up hash values.
+
+At that point, I believe Ottoman will be ready to serve as a substrate for HTML local data storage, for "implementing a CouchDB-compatible database":http://jchrisa.net/drl/_design/sofa/_show/post/HTML5-Storage-Continues (a la "JSONDB":http://github.com/jchris/WebWorkerStorage/blob/master/JSONDB.md), or for other fun databasey purposes.

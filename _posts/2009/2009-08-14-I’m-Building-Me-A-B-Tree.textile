@@ -1,0 +1,24 @@
+---
+layout: post
+title: "I’m Building Me A B-Tree"
+---
+The other day I took it into my head to implement a "B+tree":http://en.wikipedia.org/wiki/B%2Btree. Why? Because they sound neat, and I've done hardly any serious programming with trees in my career. (Someone, I think Buzz Andersen, once noted that there are two kinds of programmers: those who do think in terms of trees, and those who do everything with hash tables. I'm in the latter camp.)
+
+And also because I'm a big fan of "CouchDB":http://couchdb.apache.org, and really admire its elegant storage model. It's an on-disk B-tree -- no surprises there -- but "the file is append-only":http://horicky.blogspot.com/2008/10/couchdb-implementation.html, which both makes it impervious to crash-related corruption, provides nearly lockless concurrency, and makes it easy to access earlier revisions.
+
+bq. [In a nutshell: Updated data values or tree nodes are appended to the file instead of overwriting the earlier versions. Since updating a node changes its location, its parent node needs to be updated too to point to the new location. This recurses up the tree, meaning any change ends up with a new root node written at the very end of the file. In fact, when you open the file you find the root by looking at the very end. Since no data is ever changed, once you open the file you're impervious to changes made by other writers since they don't affect anything you're looking at.]
+
+I'd love to use something like that for various projects, but as CouchDB is implemented in the exotic functional language Erlang, I can't really use its storage layer as-is. So: could I implement something like it in C++?
+
+Thus far I have a working in-memory B+tree implementation. Inserts and deletes work, and I'm working on the iterator. Even this much was harder to get working than it should have been, or so it feels. But that always seems to be true -- algorithms sound straightforward when you read about them, but putting them into practice exposes you to all the details and subtleties inherent in hand-waving like "now merge the node with a neighbor".
+
+Actually I haven't implemented a straight B+tree, rather "a 'top-down' variant described by Ohad Rodeh":http://www.cs.tau.ac.il/~ohadrode/papers/btree_TOS.pdf that's better suited to this type of application because it changes fewer numbers of interior nodes during an update.
+
+What's next?
+
+* Support for string keys (so far it just handles ints)
+* Serializing nodes to/from disk
+* Keeping track of which nodes are touched during an operation, and appending those to the file
+* Writing a trailer to the file to mark a successful update (and to link back to the previous trailer, for historical purposes.)
+
+Sounds straightforward, but of course the devil's in the details.

@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Gone Indie"
+---
+Here's a career update, for those of you who care: I've left Apple, and I'm now working on my own, from home, as an indie software developer. I have plans for at least two kick-ass Mac apps, I'll probably contribute to a few open source projects, and I may dabble in some web stuff.
+
+(At least, that's the plan for now! Everything is subject to change without prior notice. This document contains forward-looking statements. These statements involve risks and uncertainties, and actual results may differ.)
+
+This is kind of a big change for me. I've been continuously employed for 19 years, 16 of those at Apple. I clearly like being part of a team, part of a company, and specifically part of Apple. But there comes a time when a man's gotta do what a man's gotta do.
+<!--more-->
+In fact, I was noticing the other day that there's some...
+
+h3. Spooky Career-Related Stuff About Jens In Years Ending In "7"
+
+*1977:* The year I first spend significant quality time at a computer. (I learned BASIC the year before, but computers were hard to get to at the time, especially for a preteen kid!)
+*1987:* The year I graduated from college and became a Professional Software Engineer. (This started on a high point with a summer internship at Xerox PARC, then devolved into a year of struggling to find contracting work. Which at least gave me free time to learn Mac programming.)
+*1997:* The year I quit Apple after the project I'd been on [OpenDoc] was axed, and most of my team-mates laid off. (I came back, after a year in the wilderness of doomed startups and soon-to-be-beleaguered coffee-themed server vendors.)
+*2007:* Me telling you this.
+
+(The pattern breaks down if you extend back to 1967, when I did nothing unusual, except for being two and living in New Jersey. Check up with me in ten years to see what I do in 2017! I may be uploading my consciousness into an iBrain, or I may be assembling a Difference Engine out of twisted rebar in my weakly-radioactive cave.)
+
+h3. "Why Did You Resign, Number 19832?"
+
+Wouldn't they love to know! They tried all the tricks -- even scheduled me for an "exit interview" with an "HR director". I sang like a canary. Sorry, I'm no "Patrick McGoohan":http://en.wikipedia.org/wiki/The_Prisoner. (It's a shame; Portmeiron looks like a lovely community.)
+
+Really, it comes down to the cliché of...
+
+h3. "Creative Differences"
+
+Apple's a very focused company, and that's a strategy that's worked well for the past ten years. I admire that, and I'm happy to be in a world where I don't have to feel like a freak anymore for using a Mac in public. And overall, Apple's core goals of elegant user interfaces and beautiful design are ones I am glad to contribute to.
+
+But I'm _fascinated_ with social software. Apple isn't. Despite some promising starts, the most I've been able to get accomplished in that vein at Apple was iChat [the IM part; I'm really not interested in videoconferencing], Safari RSS, and the "PubSub" [which turned out to be "RSS and Atom"] framework. There were some very promising prototypes of sexier things, but I _really_ can't talk about those, other than to say that they were canceled.
+
+I looked around after Leopard was finished, and didn't see any place in the company where I could pursue my ideas. It would have meant evangelizing reluctant executives into sharing my vision ... and that's something that I know I have little talent at. My strategy is more of "build a sexy demo app and they will come around"; that and my awesome co-worker Jess's salesmanship got the above-mentioned prototype projects off the ground, but it wasn't enough to get them through the product feature review process, sadly.
+
+There were some lesser issues, too...
+
+h4. Ideas
+
+I tend to have a lot of ideas. I'm not bragging, and that's not always a good trait; it can be hard for me to focus on something long enough to finish it. A structured job has helped me stay on-task. On the other hand, though, the development cycle in a big company is such that every significant idea takes a year or more to finish, and during that time, more ideas pile up in my brain.
+
+That wouldn't be bad if there were some other channels to express those ideas. And if they took the form of songs, or novels, or scrimshaw carvings of Biblical scenes on walrus tusks, I could do whatever I wanted with them. But on software, Apple's position (not unusually for the industry) is "All Your Idea Are Belong To Us", and I signed onto that when I accepted the job offer. In other words, anything I do that relates in any way to Apple's areas of business, no matter when or where I do it, belongs to Apple. [Edit: Ha! Note I'm still using present tense.]
+
+(Again, this isn't something particular about Apple. Most tech companies are like this, and if you work for one, you probably signed a very similar "Proprietary Rights Agreement" that they hid in the stack of paperwork beneath your offer letter. And yes, "companies will enforce that":http://mooseyard.com/Jens/1997/04/they-made-me-an-offer-i-couldnt-refuse/ if they see profit in it.)
+
+h4. Individuality
+
+Finally — and this may seem petty — Apple's lack of individuality bugs me. I don't mean internally: within the company, communication is reasonably open (modulo confidentiality issues) and there's lots of room for self-expression. But ever since the return of Steve Jobs, the company has been pretty maniacal about micro-managing its _visible face_, to make it as smooth and featureless as an iPod's backside. (In my darker moments I've compared it to the brutal whiteness of "THX-1138".)
+
+It's deeply ironic: For a company that famously celebrates individuality and Thinking Different, Apple has in the past decade kept its image remarkably impersonal. Other than the trinity who go onstage at press events — Steve Jobs, Jonathan Ive, Phil Schiller — how many people can you name who work for Apple? How many _engineers_?
+
+[And no, "Woz" is not a correct answer. Woz has not contributed to Apple since the mid '80s. He's a great guy, but the fact that people still associate him with Apple is, I think, a symptom of the company's scarcity of public faces.]
+
+It wasn't always this way. Apple was very open in the beginning, and treated the members of the original Mac team like rock stars, complete with "photo layouts in _Rolling Stone_":http://www.folklore.org/ProjectView.py?project=Macintosh&index=3&sortOrder=Sort%20by%20Date&detail=medium&gallery=1. Their signatures were engraved in the inside of the computer's case. ("Andy Herzfeld wrote a good article about this":http://www.folklore.org/StoryView.py?project=Macintosh&story=Credit_Where_Due.txt&topic=The%20Launch&sortOrder=Sort%20by%20Date&detail=medium.) Even in my early years there, applications' "about boxes" proudly listed the names of the people who worked on them. The OS itself had semi-secret easter eggs that listed everyone's name. The developer Tech Notes were bylined with the names of the individual engineers who wrote them. (Don't scoff: the tech notes were great stuff, quirky and funny and individual. As a young Mac developer, just reading them gave me a great feeling about the company and made me want to work there.)
+
+Nowadays, unless you're a vice president, the only time Apple consents to show your name is if you give a talk at the Worldwide Developers' Conference, a rather pricey annual event. Which is nice, but relatively few engineers do this (it's a ton of work to prepare for) and it's definitely not public (all but Steve's keynote is under NDA.)
+
+It's not that I'm poutily demanding that I get my portrait taken by Annie Leibowitz, just like Andy Herzfeld and Bill Atkinson. But when I (and those I work with) slave over a project for a year, and shape it with our creative energies, I think we should be able to put our damn _names_ on it somewhere (unobtrusively, in 8pt Lucida).
+
+And then there are blogs. Apple doesn't like them, not when they talk about it. (Big surprise.) I've heard it said that there are hardly any bloggers working at Apple; there are actually a lot more than you'd think, but they mostly keep it a secret. (I could out a few people, including at least one director...) I think Apple's policy on blogging is one of the least enlightened of major tech companies; Microsoft in particular is surprisingly open.
+
+I believe in being individual, and open. It always got on my nerves that there were so many things I couldn't write about (not confidential information, of course, just public stuff) without the very real chance of waking up to a testy email the next day.
+
+h3. Gulp.
+
+And speaking of which, I now find myself at the end of this unexpectedly-long post, rather afraid of pressing the Publish button. I have been long-conditioned to avoid saying anything like the above in public. Even now, I may very well want to work at Apple again someday (dammit, I still love the place, despite my gripes), and I don't want to burn any bridges.
+
+Realistically, I need to consider that if I did want to go back, the skills I have to offer should take precedence over any fur I've rubbed the wrong way with posts like this. But I still worry about how They will react. And it's that sort of thinking that really shows me that, yes, I need some time on my own.
+
+So wish me luck. I'll be in touch.

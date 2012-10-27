@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Plugging a hole in GameKit"
+---
+The GameKit framework in iPhone OS 3.0 is very interesting to a Bonjour / P2P head "like yrs truly":http://mooseyard.com/Jens/2008/04/cloudy-as-buzzwords/. It basically provides a very easy-to-use API for ad-hoc group formation and many-to-many messaging on a local network. Great for games, of course, but also for many other types of social apps. (I just saw a report on a dev forum that somebody had "whipped up a basic chat app in about 15 minutes":http://www.iphonedevsdk.com/forum/iphone-sdk-development-iphone-os-3-0/13601-using-new-iphone-os-3-0-a.html#post61710.)
+
+GameKit uses BlueTooth networking; that lets it work where there's no WiFi, but it also limits the range. BlueTooth covers just a few meters, whereas a WiFi network connected to an Ethernet subnet can easily cover a whole floor of a building.
+
+My "MYNetwork":http://mooseyard.com/projects/MYNetwork/ framework seems like a good way to bridge that gap. The TCP connection classes provide the Bonjour discovery and makes point-to-point connections, and the "BLIP":http://mooseyard.com/Jens/2008/05/blip-come-n-get-it/ protocol lets you send data blobs over those connections.
+
+It should be pretty straightforward to build some classes that are plug-compatible with the GameKit network classes but use MYNetwork. Then iPhone apps could easily support both protocols, and compatible Mac apps could be developed. Anyone want to try it?
+
+<i>[Note: I'm only referring to information that was publicly discussed at "Apple's press event yesterday":http://events.apple.com.edgesuite.net/0903lajkszg/event/index.html. I've read through the APIs, but I won't go into details about them here in public.]</i>

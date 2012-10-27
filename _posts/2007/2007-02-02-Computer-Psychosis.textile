@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Computer Psychosis"
+---
+_"I have verified that I can create a sound file that can wake Vista speech recognition, open Windows Explorer, delete the documents folder, and then empty the trash."_
+— "George Ou, ZDNet":http://blogs.zdnet.com/Ou/?p=418
+
+Sounds like computer psychosis to me. "I'm sorry, Dave, but I can't open that. The voices told me to delete all of your files."

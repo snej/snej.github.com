@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Ottoman For Cocoa (and bug-fixes)"
+---
+I've pushed out a few "updates to the Ottoman library":http://bitbucket.org/snej/ottoman/changesets/ today. These fix a couple of embarrassing bugs, and also add an API in regular ol' Objective-C for those of you who aren't into that funky "C++" stuff.
+
+(The Cocoa stuff uses MYUtilities, so if you're not already using that, please read the "setup instructions":http://bitbucket.org/snej/mynetwork/wiki/Setup.)

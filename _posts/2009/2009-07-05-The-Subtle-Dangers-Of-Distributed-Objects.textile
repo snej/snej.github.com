@@ -1,0 +1,45 @@
+---
+layout: post
+title: "The Subtle Dangers Of Distributed Objects"
+---
+bq. *Introduction:* I wrote this as part of a reply on Apple's bonjour-dev mailing list, then decided it might be worth publishing more visibly. I've found that Cocoa's Distributed Objects technology is immediately attractive to many developers, while those who've used it end up finding that it's much more complex than it looks. But I haven't seen much written about the caveats of using it.
+
+bq. I am not saying "don't use DO" or "DO is broken"! It has valid uses, and it works as designed. But you should be aware of the less-obvious complexities. If you have a single GUI app and a single background agent, that's a great use-case. If the agent communicates with multiple apps (like the iChatAgent), things get trickier. If you're going to use DO over the network, you've got to be really, really careful.
+
+"Distributed Objects":http://developer.apple.com/documentation/Cocoa/Conceptual/DistrObjects/Concepts/AboutDistributedObjects.html is not as simple as it looks at first glance, especially for use over a network. Here are some of the issues I've run into:
+
+* *Ref-counting bugs* can be really hard to track down, because remote objects can be holding onto references to your local objects via their proxies. It's possible to have reference-loops that span two machines! Note that this means a buggy client can cause its server to leak memory.
+* Any message sent to a remote object can *potentially throw an exception* if there's a network problem or the remote peer disconnects. To make your app robust you have to handle all such exceptions and clean up gracefully. (A nasty case of this that I've seen is where a client's crash causes the server to crash, which then causes all the other clients to crash...)
+* Sending a non-oneway message to a remote object *blocks the thread indefinitely* until the remote peer sends a response. This effectively lets the peer hold your thread hostage, and can cause your app to lock up if the peer is overloaded or buggy or actively hostile. You can also end up with deadlocks that span multiple computers -- good luck debugging those! (In the app I shipped that used DO, we ended up using only oneway messages in our API for this reason.)
+* Even oneway message sends can fail if *DO's send buffer fills up*. The Mach queue is fixed size; I'm not sure if this applies to TCP too. We found it necessary to build a wrapper layer for sends that would catch the resulting exception and re-send the message again after a delay.
+
+It gets worse if you're using DO over a network. In most cases, _especially in a P2P app_, you have to consider the possibility of *malicious peers*. (Even if your app will only be used in controlled environments, a buggy peer can have similar effects.) This means *you can't trust any input you get from a peer without validating it first*. A distributed object API can be really dangerous in such an environment because it blurs the line between local/trusted and remote/untrusted code and data. It makes it harder to identify the points in your code where you have to verify.
+
+Here are some of the possible security problems:
+
+* Any remotely-accessible method has to handle *arbitrary parameter values* without ill effects. If it takes an <code>NSString*</code>, it has to survive being passed nil. If that causes a crash, it's a denial-of-service attack. If it throws an exception, you have to make sure all of your code cleans up state on the way out, otherwise corrupted state could lead to denial of service or worse.
+* If a remotely-accessible method allocates nontrivial amounts of memory (like creating new objects), then a malicious peer could call it in an infinite loop and *run your app out of memory*, most likely crashing it. Another DOS attack.
+* It's easy to fall into the assumption that a remote object behaves the way your implementation of it says it does. This isn't true, in the malicious case, because an attacker could implement *their own version of the same interface* with arbitrary behavior. A particularly stupid example would be a <code>RemoteClient</code> interface with a boolean <code>isLoggedIn</code> property. You expect that this will return NO until you set it to YES, but what if someone implemented it to always return YES?
+
+You can argue that this just calls for good unit testing and black-box testing as with any public API. Which is partly true; except that you can't get away with simply stating that "nil values are not allowed for this parameter" or "the effect of calling this twice is undefined". You have to expect anything. And worse, any bugs not found in testing are not just mundane customer-support issues, but potential priority-zero security holes that could cause really serious problems.
+
+The end result of my experiences is that I don't think I would use DO again. By the time you've refactored the API to be all-oneway, and written wrappers to delegate messaging to background threads, it doesn't look like regular message-sends anymore. In other words, instead of writing
+<pre>
+	result = [remoteObject doSomething: param using: param2];
+</pre>
+by the time you've added the delegation, asynchrony and error handling you end up with something like:
+<pre>
+	NSError *error;
+	if (![dispatcher sendMessage: @selector(doSomething:withObject:) toObject: remoteObject withObject: param withObject: param2
+			target: self action: @selector(didSomething:) error: &error])
+		[self handleError: error];
+	// now keep going while you wait for the -didSomething: call ...
+
+	...
+
+	- (void) didSomething: (NSString*)result {
+		//...now handle the result
+	}
+</pre>
+
+So you might as well use something lower-level to send the commands over the socket and save yourself a lot of complexity.

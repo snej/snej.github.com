@@ -1,0 +1,64 @@
+---
+layout: post
+title: "My Geek History"
+---
+Time to bore you young whippersnappers with my early history in computers. (I saw a couple of other people do it and thought hey! I can do that too!) First we have to set the Wayback Machine for the darkest depths of the '70s, a decade that's oh-so-much funner as retro than it was to live through...<!--more-->
+
+
+*Fall 1975.* I'm in fifth grade. A couple of interesting logic-puzzle worksheets manage to get me interested in math, which has until now been a wasteland of times tables to tearfully memorize. My mom takes me to a nearby place called _Creative Publications_ that published these worksheets, and I get a couple of books and math toys and their catalog.
+
+*November 1975.* I ask for an interesting sounding book from the catalog for my birthday, and receive it. It's called _My Computer Likes Me When I Speak In BASIC_. I devour the book and am blown away by the idea of programming a computer, although I may never actually set eyes on one.
+
+*1976.* I start writing my own BASIC programs in a notebook. I think the first one was to print a table of powers of two. Boring, yes, but the book hasn't taught me any string functions so I only have numbers to work with. I sit in the hallway during recess writing programs, not endearing myself to my classmates. (But in 6th grade I'd lost all my friends for other reasons, so this was a decent substitute.)
+
+In the summer I find out about a place called the Community Computer Center, in Menlo Park, and get my parents to take me there. It's a bunch of hippies in a storefront with a PDP 11/70 and a bunch of Teletypes and VT-52s, renting out computer time for $5 an hour. Computer power to the people, man! You can play games like WUMPUS or HURKLE, or program in BASIC. My parents leave me sitting at a Teletype for two hours as I do all of the above (I brought my notebook along to type stuff in from.) About 30 seconds of subjective time later, my time is up and I'm dragged blinking into the sunlight, suddenly realizing how light-headed with hunger I am. _This is my formative geek moment. I am forever changed._
+
+The problem now is how to get better access to computer time, since Menlo Park is way too far to ride my bike, and computers are huge refrigerator-size monsters that live in special rooms. But by eerie coincidence, 1976 is when the idea of the personal or hobbyist computer really begins to take off. My dad's electronics magazines start running ads for LED-covered boxes with names like ALTAIR and IMSAI that are apparently real, live computers you can have in your house. One is shown connected to a terminal, running some sort of game. My head explodes.
+
+My dad and I subscribe to BYTE magazine (I still have old issues in the garage going back to early '76.) I fill my head with everything there is to know about 8080s and 6502s and S-100 busses and Tarbell cassette interfaces, and memorize the specs of every available home computer (the SOL-20 is my favorite.) Unfortunately my parents won't buy me a computer.
+
+*1977.* I make a friend in junior high who is also into computers. We convince our parents to take us to the CCC on some evenings. We buy a copy of the RSTS/11 Extended BASIC manual from the CCC and enter an Aladdin's cave of string functions, multidimensonal arrays, file I/O and other delights.
+
+In April(?) my dad takes us to the first personal computer trade show, the West Coast Computer Faire, in San Francisco. We are dazed by this gigantic wonderland of geeky hardware and software. The highlight is the Apple ][, with its unheard-of color graphics and game controllers, which I had seen described in Woz's BYTE article but never touched in the flesh. I get a demo and ask a lot of questions of a guy whom I think must have been either Steve Jobs or Mike Markkula.
+
+The math room at school has this bizarre ancient Litton programmable desktop calculator the size of a typewriter. It has Nixie tubes for a display, and a card reader. You program it with hole-punch cards in a really weird machine language. In octal. We find this lots of fun.
+
+In the summer my friend David and I also discover one of the first computer stores, the Byte Shop in Mountain View, which is within bike riding distance. The guys there are OK with having a couple of crazed 13-year-olds hacking their IMSAI computer all afternoon. Sometimes we can't drag ourselves away before dark and our parents have to come pick us up.
+
+*1977-78.* My junior high school gets a Commodore PET and starts a computer class. Those of us who already know much more than the teacher are allowed to take turns at the computer instead of paying attention to the lecture. I had derided the PET as an Apple knock-off when it came out, but it turns out to be a great machine. We discover the netherworld of the PET's RAM as news arrives of undocumented features enabled via the deep magic of the POKE command. Writing values into special memory locations lets us display lowercase letters (!!), read the current keyboard state (!!!!) and directly write to the screen memory (!!!!1!!!11!) Lots and lots of action games result. The C-30 cassette on which I store my programs becomes my most precious possession.
+
+A Computerland store opens up in Los Altos, just a few blocks from school. They have several Apple ][s. Nontrivial numbers of eighth-grade geeks invade the store. The staff aren't entirely happy, but it does seem to impress potential customers that these computers are "simple" enough to be used by 13 year olds. (I get asked how old I am a lot.)
+
+My dad brings home two tech reports from a friend who works at Xerox PARC. _Personal Dynamic Media_ is a description of the Dynabook project which produced the Alto and the first GUI. The other is the _Smalltalk-72 Instruction Manual_, which is absolutely the most mind-blowing thing I've ever read. Objects, messages, methods. Weird characters. Extensible syntax. Windows. Turtle graphics. PARC becomes my shining tower on a hill that I _must_ reach.
+
+*1978-79.* I enter high school and quickly fall in with the Science Fiction Club, the local geek enclave, and am rapidly initiated into the cultural essentials of D&D, _Monty Python_, _The Prisoner_, naïve sexual innuendo, and tons and tons of SF novels. We are absolutely despised and picked on, the scum of the school, but I at last have a tribe to call myself part of.
+
+The physics teacher also happens to have a PET in his classroom and I start hanging out there too. The computer-geek crowd has some overlap, though not that much, with the SF-geek crowd.
+
+*1980.* I get an Apple ][ for Christmas. With an honest to god _floppy drive_, and 16K of memory that I upgrade to 48K with some RAM chips my dad brings home, and Microsoft BASIC. It lives in my room. I am in heaven. Unfortunately I loathe 6502 assembly, but I do a lot of crazed stuff in BASIC, including writing interpreters for a couple of other little languages I've read about in _Creative Computing_.
+
+I buy a copy of Ted Nelson's _Computer Lib / Dream Machines_ and am blown away by his visions of computers for everyone, of hypertext, of computer graphics and interactive multimedia. It's a huge, jumbled, disorganized book that you can read over and over again discovering new tidbits.
+
+*1981-82.* I take a computer class in high school. The lab has an eclectic mix of machines and I learn them all. I learn how to boot the PDP-8 off of DECtape, how to code FORTRAN on mark-sense cards, how to use an IBM 029 keypunch and submit batch jobs. There's also an Apple ][ and a thriving warez scene (only we didn't call it "warez" then, kiddies). All floppy copy-protection schemes are cracked and we always have the latest cool games. (Especially the ones by Naser, like Space Eggs.)
+
+Also importantly, there is a DECwriter hardcopy terminal with a modem. I'm not sure what it was _supposed_ to be for, but the first generation bulletin board system (BBS) scene is thriving in the Valley and there are at least 5 BBS's within local calling range. They only allow one user online at a time so there are lots of busy signals, but we're persistent. I strike up a friendship with a girl in Palo Alto named Lucy Collier. I dream of asking her out but am too shy to ask. In the end she gradually stops logging in and I never meet her. :-(
+
+We also acquire the fabulous treasure of a secret dial-up number for Stanford's TIP, an ARPAnet access point. From there you only have to press Ctrl-E and then the octal address of an ARPAnet host to be connected. We try lots of random numbers and find all sorts of interesting sites including UCLA and MIT. MIT lets people get "tourist accounts" on the ITS system, which I do, and manage to learn a little LISP.
+
+Oh, and at one point we got a Sprint access code from a shady personage on 8BBS and used it expressly to dial up a computer in Minnesota that lets us play Dungeon (aka Zork) without a login.
+
+*1982.* I have a summer job at a startup in Palo Alto that has a VAX 11/750 running BSD 4.2 Unix. I learn a lot of Unix, hack C code in vi, play hours and hours of Rogue, am finally granted root access (I still remember the root password: "harunix".)
+
+*1982-87.* Caltech. I spend my first six months at college not even going near a computer, nor missing one. I am way too busy trying to pass classes that are a dozen times harder than high school, as well as develop a real social life (_everyone_ is a geek! We are all normal!) and explore the delights and miseries of girlfriends and strong drink.
+
+Finally 3rd term frosh year I take CS 10, the usual intro to programming course, which is taught on these interesting 68000-based HP 9836 "Chipmunk" workstations with color graphics and tablets. I finally learn Pascal.
+
+I spend the rest of my college career hacking the Chipmunks. I like Pascal better than C because it has type-checking (remember, this was pre-ANSI-C.) My friends and I replace the horrid text-menu-based interface and filesystem with our own. I print out the entire man page for csh from a Unix system and using it as a guide implement a csh clone for the Chipmunks.
+
+I also do a bit of hacking on VAXen running Unix, but mostly use them for ARPAnet access. I am there for the Great Renaming of the Usenet group hierarchy (net.music --> rec.music, etc.) and for the Stupendous Renaming as DNS replaces the old hand-maintained ARPA naming tables (CITvax.arpa --> cs.caltech.edu, etc.)
+
+In 1984 and 1985 I have summer jobs at Xerox's nearby Pasadena facility, working in Smalltalk-80. The group there is doing a very complex desktop environment for analysts at the CIA (shhh! Call it "The Customer") and I hack my way deep into the Smalltalk classes to extend the text system. Later on I get into the virtual machine (written in a weird language called MESA) and add a polygon-fill graphic primitive and an accelerated save/restore.
+
+*1987.* I finally graduate from college and have a summer job at ... Xerox PARC. More Smalltalk-80 work, writing a graphical programming system for a very weird dataflow-based parallel microprocessor from NEC. This is my first complex GUI app, and I think I did a good job at it. I have no idea at all whether it ever got used for anything after I left.
+
+After this point we get into my full-time career, also known as my "tangled job history":http://mooseyard.com/Jens/2004/04/jenss-tangled-job-history ...

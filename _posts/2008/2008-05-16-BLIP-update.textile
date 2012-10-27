@@ -1,0 +1,14 @@
+---
+layout: post
+title: "BLIP update"
+---
+I've got my "new BLIP protocol":http://mooseyard.com/Jens/2008/05/the-fine-line-between-clever-and-stupid/ all implemented now. After my previous post on Monday:
+
+* On Tuesday I implemented message metadata.
+* On Wednesday I got SSL working (configuring the "server" side to verify the "client's" cert was difficult.)
+* On Thursday I put Cloudy up on blocks, pried out Vortex and my Obj-C wrapper library, and replaced them with BLIP.
+* And on Friday (today) I debugged.
+
+Cloudy's back up and running, and all its features work. So, that makes one week of effort to implement the networking layer from scratch (I started sketching and coding on Saturday). Really makes me regret spending several times that on the previous library -- writing an Obj-C API, fixing bugs, adding features. Still, I'm sure all that experience helped me implement BLIP so quickly.
+
+(The code for BLIP is quite separable from Cloudy; but it does use some lower-level utilities and network classes I wrote, so it's not quite standalone. And it needs documentation before it'll make sense to anyone. How soon I release it depends on how much interest there is, so let me know if it's something you're interested in using.)

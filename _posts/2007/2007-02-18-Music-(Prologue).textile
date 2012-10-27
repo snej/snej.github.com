@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Music (Prologue)"
+---
+The problem with "writing about something I dislike":/Jens/2007/01/in-which-i-think-about-java-again-but-only-for-a-moment/ is that, after the momentary pleasure of getting it off your chest, there's not a lot of motivation to read people's responses (especially the argumentative ones.) Better to pick as a topic something that I _do_ like very much ... such as music.
+
+I can't claim to be an expert on music: I can only barely play an instrument, my dj skills are wack, the theory hurts my brain, and my knowledge is encyclopedic only in a few micro-genres. But I'm rabidly enthusiastic about it; and fortunately, music nowadays is tightly entangled with computer technology, which (like any engineer) I _can_ easily sound like an expert on.
+
+<!--more-->
+And fortuitously, this month is open season on "open letters" on digital music. I thought "SJ's":http://www.apple.com/hotnews/thoughtsonmusic/ was pretty damn good really, probably better than I could manage; but fortunately many of the answer letters have set the bar so low that I think I can hold my own even though I'm neither a "half-literate sports team owner":http://www.blogmaverick.com/2007/02/07/what-should-the-music-biz-do-next/ nor a "PR duckspeak generation algorithm":http://daringfireball.net/2007/02/macrovision_translation.
+
+h3. First some ground rules.
+
+# I don't speak for my employer. I don't work on or cruise-direct anything directly music-related, and I'm not palzy-walzy with anyone who does. This is my blog on my domain, and I'm writing this on my computer on my patio on my weekend off. _"I am not a number — I am a free man!"_ "†":http://en.wikipedia.org/wiki/The_Prisoner
+# I don't have answers. Questions and doubts are more interesting and useful at this stage. _"If a man ... be content to begin with doubts, he shall end in certainties."_ "†":http://www.btinternet.com/~glynhughes/squashed/bacon.htm
+# I am not trying to sound cooler-than-thou (q.v.)
+
+h3. My background.
+
+As disclaimed above, I don't have serious Musical Skills. But I can listen to it real good! I love playing music, and the ancillary activities like discovering new artists, hunting down obscure albums, poring over liner notes and biographies, "making mixtapes":http://mooseyard.com/recordings/, and babbling to my friends about how they _have to_ listen to this awesome new album I just found.
+
+I've been in this state since about age eight(?) when I discovered my parents' copy of the Beatles' _1962-1966_, the "Red Album". After playing that to death and nearly going blind reading the black-on-red lyric sheets, I started buying their other albums. I was pretty monotheistic (quadratarian?) about the Beatles for a few years, but in high school I got into first jazz, then Classic Rock (which wasn't that classic yet), then prog-rock, then "New Wave and punk":http://mooseyard.com/recordings/mub37/. Since then I've mostly listened to various flavors of indie-rock, post-rock, electronic-music-with-beats, and ambient music; with forays into New Music (aka minimalism or "that deedly-deedly stuff"), experimental noise, Balkan folk, big-band / swing, Baroque, instrumental surf, and so forth.
+
+I'm aware that, in the grand scheme of history and the globe, that's spanning the gamut of genres from A to B, but at least I know what I like. And I'm always willing to try new things — Renaissance polyphony, death-metal, 1930s country music, rai, Justin Timberlake — if, like Linus's pumpkin, they're sincere.
+
+By the way, this is not meant to put down anyone else's musical taste, or point out how cool I am. I could (and have) walk into any college radio station and get that attitude aimed at me by some DJ with a crate of out-of-print Lithuanian ska-tech remix 12"s. That's no fun! If you want to club people with 'tude, explain to them why their favorite API sucks. You talk about _music_ to share it, make friends, and find more of it, not to alienate people.
+
+h3. _—skritchy turntable backspin SFX—_
+
+"...You talk about music to share it, make friends, and find more of it..."
+
+Oops, there's that loaded word "share". Where'd that come from?
+
+* Who told me I had a _right_ to "share" music?
+* What do "friends" have to do with what is, after all, a commercial transaction?
+* Where _did_ I "find more of it", hmm? At an officially-sanctioned retailer of shrink-wrapped CDs or DRM-wrapped files? Or maybe ... _on the interwebs???_
+
+Boy, those are some swell questions. Too bad I'm out of time for now. I gotta go.

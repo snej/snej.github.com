@@ -1,0 +1,9 @@
+---
+layout: post
+title: "That New-Cards Smell"
+---
+"My Decktet":http://mooseyard.com/Jens/2008/08/i-made-a-decktet/ is a thing of beauty. I even printed & assembled the box (an activity that took me back to my happy childhood days of making paper polyhedra models.)
+
+The only problem is that the cards still have a faint sickly-sweet stink of toluene and acetone (from the plastic coating) even after I left them spread out on the floor for a few days. It's quite unpleasant, not like the nice smell of new books, cars or boardgames.
+
+Is this the papercraft equivalent of "Code Smell":http://en.wikipedia.org/wiki/Code_smell?

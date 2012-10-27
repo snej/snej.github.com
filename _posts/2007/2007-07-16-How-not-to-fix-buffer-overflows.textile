@@ -1,0 +1,11 @@
+---
+layout: post
+title: "How not to fix buffer overflows"
+---
+"This tale of woe":http://use.perl.org/%7EAristotle/journal/33448 is making me rethink whether I want to be running any "PHP-based software":http://wordpress.org on my website.
+
+Yes, integer overflows happen to the best of us ("even those of us who write popular algorithm textbooks":http://googleresearch.blogspot.com/2006/06/extra-extra-read-all-about-it-nearly.html), but I would hope that once one is pointed out, the people maintaining the code would have a clue about how to fix it.
+
+Stuff like "if (size>INT_MAX)..." is funny, but I find it even scarier that someone would think the solution to integer overflow is to store potentially-huge byte counts in variables of type "float". Which is apparently still being done in top-of-tree PHP.
+
+[Hint: "float" is almost always 32-bit IEEE format with a 24-bit mantissa, meaning it can't represent any integer larger than 2^23^-1 (8 MB) exactly. And round-off error is the _last_ thing you want when computing how large a buffer to allocate.]

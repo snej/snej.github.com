@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Security hole in Safari RSS"
+---
+Brian Mastenbrook has discovered "a really bad security hole in Safari RSS":http://brian.mastenbrook.net/display/27:
+
+bq. I have discovered that Apple's Safari browser is vulnerable to an attack that allows a malicious web site to read files on a user's hard drive without user intervention. This can be used to gain access to sensitive information stored on the user's computer, such as emails, passwords, or cookies that could be used to gain access to the user's accounts on some web sites. The vulnerability has been acknowledged by Apple.
+
+bq. All users of Mac OS X 10.5 Leopard who have not who have not performed the workaround steps listed below are affected, regardless of whether they use any RSS feeds. Users of previous versions of Mac OS X are not affected.
+
+He hasn't released details yet, presumably to give Apple time to release a patch, so I don't know what the bug is. But it's my fault, since I either wrote the bad code myself, or at least didn't notice a mistake a co-worker made. And since I'm not at Apple anymore I can't help fix it.
+
+Shit. I'm sorry, everyone.

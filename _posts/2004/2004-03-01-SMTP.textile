@@ -1,0 +1,27 @@
+---
+layout: post
+title: "SMTP"
+---
+The Simple Mail Transfer Protocol is by no means perfect -- its lack of authentication is a prime reason why spam is such a problem -- but I think it got one thing right: it has the right topology for building a person-to-person communications system.<!--more-->
+
+Most current non-email communications topologies are polarized at a few extremes:
+
+* Centralized, with one server hosting everyone. This includes commercial IM systems like AIM and MSN, social networks like LiveJournal and Orkut,
+* Peer-to-peer, with all communications going directly between users (KaZaA, Gnutella, etc.)
+* Isolated, with multiple servers that don't interoperate, like most blogs and bulletin boards.
+
+The problems with centralized and isolated systems are pretty obvious: they don't interoperate and they don't scale well without heroic measures (AIM uses a server cluster capable of routing a _billion_ IMs a day.) Peer-to-peer is extremely trendy, but it has its own problems: connectivity (firewalls and NATs make it hard for end users to contact each other) and availability (you can't receive data unless you're online.)
+
+SMTP strikes a balance that involves a loose confederation of servers, which connect peer-to-peer, using DNS to locate each other by name; and clients that connect to a single local server that hosts their account. This avoids the scalability issues (the number of independent servers grows as the total user base does) and the connectivity issues (all connections involve a server, which is always online and leads a privileged life with connectivity through any firewall.)
+
+Here are the steps involved in sending a message from point a@foo.com to point b@bar.net:
+
+# Client logged into foo.com's server as user "a" sends the server a message addressed to b@bar.net.
+# foo.com server uses DNS to look up the host for bar.net and opens a connection to it.
+# foo.com server sends the message to bar.net.
+# bar.net server waits, if necessary, for user b to log in.
+# bar.net server sends message to client b.
+
+Great stuff, but I'm not aware of many other protocols that do this. The major other one is the [[Jabber]] instant messaging system. Jabber adds a few improvements: strong authentication of all connections, and use of the same protocol for client-server as for server-server (in email the client-server protocol is not SMTP but either POP or IMAP.)
+
+My opinion is that some mechanism like this is the right way to go. It also ties in with everyone's dawning suspicion that email as we know it is fatally flawed and needs an overhaul. A protocol that preserves the fundamental topology of SMTP while improving everything else would be a great thing to have.

@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Lesser-known scripting languages"
+---
+Just when it seemed, a decade ago, that the programming world had settled on C++ as the _lingua franca_, the One Language To Rule Them All, instead we got an explosion of new high-level languages that have risen to popularity. Why did this happen? Chiefly because the World-Wide Web has conditioned users to expect five-second delays before any responses to their actions, which provides an environment ideally suited for interpreted, garbage-collected scripting languages. This movement has been encouraged by server vendors like Sun and IBM who are eager to show Web developers the productivity increases they can get by using such languages, especially after they then install massively powerful servers.
+<!--more-->
+
+
+In addition to the mainstream scripting languages like Perl, PHP, Python, PavaScript, and Pruby, there are other ones that are less well known, mostly because their names don't begin with "P". I've been looking into several of these more obscure languages lately, partly because I hate doing the same things most other people do, but mostly because I love buying those O'Reilly books with the cute animals on the covers.
+
+In the interest of popularizing these languages (because I'm already tired of them and need a good excuse to abandon them as "too mainstream"), I thought I'd devote a few posts to some of the most notable ones. Here's the first installment.
+
+h3. VISUAL H4X1C
+
+You've heard of "script kiddies":http://en.wikipedia.org/wiki/Script_kiddie ? Well, this is the language they script in, one specially designed not for _building_ websites but for _attacking_ them. Visual H4x1c can really only be fully appreciated in its own IDE, in which the characters rain down in phosphor green on a black background (whoaaa!) but I'll show a brief hack here in plain text form. (Besides, I have to say that I found the IDE a pain to use, since it can only be run as root.)
+
+<blockquote><p><font size="-1"><pre>
+10 R3M B0NECUTTER VERSION 3.2B5
+20 R3M COPYRIGHT 2005 BY THE SHADOWY LEGION OF CHAOTIC RETRIBUTION
+30 R3M THIS SOURCE CODE MAY ONLY BE POSTED ON 2600.ORG AND GAMEFAQS.COM
+40 R3M WRITTEN BY BOBBY NEWMARK, AGE 13
+50 R3M
+60 IF NOT PWNZ0R "www.microsoft.com" THEN 99
+60 D3F4CE "HELLO WORLD HOW ARE YOU!! ";
+70 D3F4CE "YOU HAVE NO CHANCE TO SURVIVE MAKE YOUR TIME!"
+80 D3F4CE "ALL YOUR WEBSITE ARE BELONG TO THE SHADOWY LEGION!!!!!11 "
+90 G0T0 60
+99 3ND
+</pre><p></p></font></p></blockquote>
+
+As you can see, the high-level built-in statements like OWN and DEFACE (thoughtfully, all keywords can be written in either English or L33T5p33k) make everyday hacking tasks a breeze. Accordingly, Visual H4x1c is quickly gaining mindshare among today's most feared hackers, who need to multitask a heavy workload of site intrusions, virus development, and English term papers.
+
+I tried Visual H4x1c briefly, and in an evening was able to repurpose whitehouse.gov as a clearinghouse for gigabytes of Serbian hardcore pr0n, and to write a virus that, by targeting vulnerabilities in Minesweeper, knocked out the Northeastern US power grid for over a week last January, causing widespread social disruption. So I'd have to say that much of the hype about this new language is justified.
+
+Nevertheless, the language has some quirks that annoyed me. For example, all data structures (strings, arrays, credit card databases) in Visual H4x1c are immutable and fixed-size, so you must store values in them by means of buffer-overrun attacks. Of course the language is ideally suited for creating such attacks, but I still found this requirement clumsy, and conducive to hard-to-maintain code. Moreover, as newer versions of Visual H4x1c are released (in the form of automatic patches) the data structures tend to add defenses against earlier attacks, which often breaks your scripts until you rewrite them to exploit new vulnerabilities in the runtime.

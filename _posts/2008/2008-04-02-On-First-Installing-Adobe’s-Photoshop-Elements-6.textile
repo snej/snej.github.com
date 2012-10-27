@@ -1,0 +1,62 @@
+---
+layout: post
+title: "On First Installing Adobe’s Photoshop Elements 6"
+---
+I've been waiting eagerly for my pre-ordered copy of Photoshop Elements 6 to arrive. The previous version I had was 2.0(!) which had been balky for a long time and totally lost the will to live (or launch) when I installed Leopard two years ago. Acorn and Pixelmator are nice apps, but they just don't do everything I need an image editor to do — I don't mean the "pro" features, rather the labor-saving conveniences that let even teh dummiez like me cut out backgrounds and correct colors and so forth.
+
+Anyway, for a high-profile, award-winning app from one of the biggest software companies out there, the out-of-the-box experience for the new Elements is _crappy_. Really, it's the worst I've seen in ages. So I had to write this post to complain about it, of course. And it got longer than I expected it to. And rantier.
+
+Really, I'm still happy I got a new version of Photoshop Elements, one that actually launches. I'm sure once I start using it I'll appreciate all of its amazing features. It's just that everything _outside_ the features is so clunky.
+
+Is it really so hard to make a good user experience? Most of it seems pretty obvious to me, but then why do so many big companies get it wrong? And in particular, why do they get it wrong when tiny one- or ten-person outfits regularly come out with beautiful apps that show that you don't need huge teams or lots of money to get it right?
+
+h2. "Mystery Case Files: Adobe", or: "Where's The Installer?"
+
+First things first: After inserting the disc, I had _no idea_ how to start the installation. I can't remember the last time that's happened.
+
+!http://mooseyard.com/Pictures/PhotoshopElements6Disc-20080402-161020.jpg!
+
+The big, obvious application icon at the top of the window was really just a design element of the folder's background picture, so it didn't do anything when I clicked or dragged it. Haha! Funny! [Not that I was really expecting to find the actual app — because Important Products from Major Developers always come with installers to show how Important they are. Nor was there an installer package, of course — Extremely Important Products wouldn't deign to use Apple's installer, they always come with their own.] But I couldn't even find any Adobe installer app.
+
+The other "Adobe Photoshop Elements 6" icon turned out to be a disguised folder. Its contents were a list view showing "Bootstrapper.dmg", two folders named "payloads" and "resources", and a "Setup" folder with the same custom icon. As a programmer (and Mac user) I could tell from the names that this was clearly No User Serviceable Parts Inside territory, like the inside of a bundle or something, so I quickly closed the window.
+
+I did see a ReadMe file, but it wasn't any help. It told me to restart after installing, but not actually, y'know, how to install.
+
+Even the tiny little printed documentation booklet didn't describe the installation process.
+
+But as Holmes said, when you've eliminated every possibility, the remaining impossibility must be the truth. So I went back into that weird folder and double-clicked "Setup". Of course, that turned out to be the installer.
+
+But not quite the installer; more like the warm-up act. It got me in the installin' mood by asking me to give it root privileges, then launched some other process with an identical Dock icon, which put up a _progress bar_. An installer so slow, it has to put up a progress bar while it _launches!_ Finally after about 15 seconds, both icons vanished from the Dock, and I started to get nervous. Had the installer crashed? No, after a few more seconds to build tension, the _real_ installer came up.
+
+h2. The Installer
+
+OK, it's an installer. A third-party installer. It's hard to get too worked up about an installer, one way or the other, but it's annoying when it _insists_ on installing over 2 gigabytes of stuff on my disk (most of which seems to be clip-art) without any choice to skip the inessentials. Nor would it even tell me ahead of time what it was installing, besides the ominously-named "system components". I'm installing a glorified _paint program_. What kind of system extensions does it need to install?
+
+The installation of course took a long time. The installer helpfully displayed two identical progress bars, one above the other. Really! One of them tracked the installation progress, the other the progress of Disc 1. But of course there was only one disc. [See, this is what companies need a Steve Jobs for: to look at this during development and point out the obvious, that it looks stupid to have two identical progress bars, and bully the development team into taking a few hours to hide one of them when numberOfDiscs==1.]
+
+OK, the installer finally quit. It didn't tell me to restart the computer. And why should it? It's just installing a glorified paint program, right? Well, the ReadMe file that I'd peeked at in the beginning told me I'd have to restart after installing. So I decided to follow its advice rather than have something unspecified go wrong later on.
+
+h2. First Launch
+
+It certainly launched faster than the old version! That's nice.
+
+Then it covered my whole screen with a gray backdrop. And filled about 75% of the backdrop with toolbars and palettes, leaving a little bit of room in the middle for a document window. It reminded me of an old mid-'90s Macworld parody of what the next version of Microsoft Word would look like, an entire screenful of toolbars.
+
+There's a preference to not cover the _entire_ screen with gray, fortunately. It punches out a hole in that gap between the palettes and toolbars. It still looks pretty silly: the user interface has crossed over some kind of line, where it's no longer the application using up a lot of your desktop with its UI, it's now the application _owning_ your screen, granting you a bit of room to peek through and see those other, lesser applications that you won't be needing anymore.
+
+Oh well, the gray UI looks fairly nice, if completely nonstandard (it's not even anything like Apple's pro apps' own nonstandard gray UI.)
+
+h2. Who Will Update The Updaters?
+
+Just now I launched Elements again, and got an alert that there's an update to the Adobe Updater, and do I want to download it? Somehow the idea of a separate updater, that needs to update itself, made me laugh. Is there an Adobe Updater Updater that puts up that alert and updates the updater? And what if the Updater Updater needs an update? (I can start to see where that 2 gigabytes went, now.)
+
+The Updater, of course, consumes 99.5% of one CPU during the entire download process, putting my MacBook Pro's fans into wind-tunnel mode. Apparently whoever wrote this thing had no idea how to use CFReadStream and used it in the most inefficient way possible (sit in a tight loop calling CFReadStreamBytesAvailable as fast as you can.)
+
+h2. Big Conclusions
+
+* Installers suck.
+* Custom 3rd-party installers that make your Dock bounce a lot suck harder.
+* If this is the "lite", for-dummies, cheap-n-cheerful version of Photoshop, I can't imagine how huge the _real_ version must be. I mean, if MacPaint was "Rock Around The Clock", and the first version of Photoshop was, say, "Please Please Me", then this is Yes's "Tales From Topographic Oceans":http://www.connollyco.com/discography/yes/topographic.html. If so, that makes Acorn and Pixelmator something like "The Clash" and "Pink Flag", respectively; not really a threat to the hegemony yet, but if future versions can mature into "London Calling" and "154", it'll be time to kick out the jams.
+
+<img src="http://www.connollyco.com/discography/yes/topographic.jpg" width=200 height=200/>
+<img src="http://images.amazon.com/images/P/B00004BZ0N.01.LZZZZZZZ.jpg" width=200 height=200/> <img src="http://web.mit.edu/klund/www/lewis/154.gif" width=200 height=200/>

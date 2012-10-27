@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Just Like The Cool Kids"
+---
+Like most geeks, as a kid I not only despised the Cool Kids, but also wanted to be one of them too. My own school-age development trajectory took me from a state of total ignorance of what that required[1], to brave attempts to fit in[2], to a realization that different was cool[3].
+
+Anyway: these days being a Cool Kid is within every geek's reach. Perhaps that's because the shared culture has exploded into an uncountable number of fragments, each of which is a tribe with its own parallel hierarchies of coolness. Amen to that.
+<!--more-->
+ Within the confines of geekery, even if I don't have a PGP key or submit patches to the Linux kernel or get Slashdotted, there are still subcultures of Cool Kids I can fit into.
+
+One of my Geeky New Year's Resolutions[4] this year is to finally really learn "Ruby On Rails":http://rubyonrails.com, since it not only seems incredibly neat-o, but is also what all the cool kids seem to be into. So I bought "Agile Web Development With Rails":http://www.pragmaticprogrammer.com/titles/rails/index.html and have been plowing through it eagerly. I really appreciate that the book has both a lengthy tutorial _and_ a series of later chapters explaining all of the components of the architecture in detail. I find that I learn best by reading about things in depth after getting my feet wet, and the online Rails docs don't seem to have anything in between flashy but superficial tutorials and dry API docs.
+
+I have only just started putting together my own Rails app. About a year ago I had an idea for a web app and wrote about 2/3 of it in PHP before losing steam. I think I can rewrite it in Rails in about a tenth of the time (especially since I can reuse a lot of the CSS and HTML.) Stay tuned.
+
+The other mandatory Cool Kid gear is a copy of "TextMate":macromates.com. BBEdit (which I was never a big user of, anyway) is now as old-fashioned as wearing a star on your belly after McBean comes to the beach. TextMate is not only featured in the Rails video demos, it's plugged as the editor all the Rails core developers are using.
+
+And it really is cool, but somewhat frustratingly so. It's pretty and has a lot of very nifty features for working in all sorts of languages. (One of my favorites is that it supports nested languages: in an HTML file with PHP or Rails code in it, it not only syntax highlights everything accordingly, but colors the background of the embedded code so you can tell the languages apart at a glance. Very nice.) In fact, it has _so damn many_ cool features that I know I could be working five times as efficiently if I'd only learn them all; but when I'm using it I feel too busy to just play. Maybe I need to add "Play With TextMate And Learn Its Whizzy Features" to my list of resolutions.
+
+The other thing is that, somewhat like a kid with "Asperger's":http://en.wikipedia.org/wiki/Asperger%27s, its genius-level talents come at the expense of some basic skills we take for granted. In this case, there are a handful of simple editing operations that it gets wrong, from double-click-and-drag to shifting text. This isn't a huge deal, but I run into these glitches every fifteen minutes or so, and they're as annoying as watching the genius kid pick his nose.
+
+I paid my $48 for TextMate anyway, yesterday. My demo had expired, and while doing some PHP hacking on a wiki server for work yesterday, I found I couldn't live without it. Coincidentally, version 1.5 had just been released. It doesn't fix those basic editing bugs, but I did file bug reports on them, so hopefully, given the rate of progress, they'll be dealt with in the near future.
+
+fn1. (I didn't wear OP shorts, listen to KFRC or have a Mr. Zog's Sex Wax sticker on my backpack)
+
+fn2. (Pink Floyd t-shirt, KOME sticker on my binder, long hair)
+
+fn3. (hand-drawn Throbbing Gristle logo on my binder, KFJC bumper sticker, playing lead air guitar on a Syd Barrett song at the talent show, dialing into ARPAnet through purloined dial-up numbers.)
+
+fn4. Geeky New Year's Resolution number zero is to finish and publish the list of resolutions, but I haven't gotten around to that one yet.

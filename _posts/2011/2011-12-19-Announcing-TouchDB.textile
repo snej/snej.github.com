@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Announcing TouchDB"
+---
+[I just posted this to the Couchbase Mobile community mailing list.]
+
+"*TouchDB*":https://github.com/couchbaselabs/TouchDB-iOS/ is a project Iâ€™ve been feverishly working on for a few weeks. Itâ€™s an investigation into the feasibility of a CouchDB-compatible database rewritten from the ground up for mobile apps. The comparison I like to make is that â€œif CouchDB is MySQL, then TouchDB is SQLiteâ€. In fact, it uses SQLite as its underlying storage engine. You can read a "longer justification for it":https://github.com/couchbaselabs/TouchDB-iOS/wiki/Why-TouchDB%3F on its wiki, as well as an "FAQ":https://github.com/couchbaselabs/TouchDB-iOS/wiki/FAQ and "design document":https://github.com/couchbaselabs/TouchDB-iOS/wiki/Object-Design-And-Schema.
+
+â€” It speaks CouchDBâ€™s replication protocol. Iâ€™m pretty serious about that; Iâ€™m even "documenting the protocol":https://github.com/couchbaselabs/TouchDB-iOS/wiki/Replication-Algorithm. 
+â€” It also understands a large subset of the REST API, enough so that it works with CouchCocoa. Iâ€™ve got a clone of Grocery Sync working as one of the demo apps in the project.
+â€” The current implementation is for iOS. If the investigation pans out weâ€™ll port it to Android, and possibly other platforms.
+
+TouchDB is certainly not ready for prime-time yet, but here are some current statistics to whet your appetite:
+â€¢ Code size of an â€˜emptyâ€™ iOS app with nothing in it but TouchDB: ~150k.
+â€¢ Time to initialize TouchDB and open a database, on iPad 2: ~100ms (cold) or ~60ms (warm).
+â€¢ Size of source code: ~4000 lines of Objective-C (plus another ~2500 lines from some existing utility libraries.)
+
+Whatâ€™s left to do? Probably a lot â€” that infamous â€œsecond 90%â€. Prominently:
+â€¢ Attachments
+â€¢ Reduce functions and grouping
+â€¢ Filters for views and replication
+â€¢ Performance tuning
+See the "issue tracker":https://github.com/couchbaselabs/TouchDB-iOS/issues for more.
+
+So, what does this mean for Couchbase Mobile? Honestly, we donâ€™t know yet. It may be that TouchDB turns out to be so awesome that it replaces embedded-CouchDB entirely in Couchbase Mobile on iOS and Android. It may be that there are still scenarios where embedded-CouchDB works better and is worth the extra overhead for some developers, in which case weâ€™ll still support it. This is not a product announcement; itâ€™s a technical announcement of something that isnâ€™t a product yet, because we like to do our development in the open. Weâ€™d love your feedback or even contributions.

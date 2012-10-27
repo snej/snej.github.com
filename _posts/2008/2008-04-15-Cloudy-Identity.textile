@@ -1,0 +1,140 @@
+---
+layout: post
+title: "Cloudy Identity"
+---
+<i>Continuing from "the previous Cloudy post":http://mooseyard.com/Jens/2008/04/cloudy-as-buzzwords/ ... </i>
+
+!http://mooseyard.com/Jed/Cloudy/WhatAStrangePlace.jpg!
+
+At the root of Cloudy is the means for creating and establishing identity. A lot of peer-to-peer systems treat the peers mostly as interchangeable anonymous nodes, often deliberately so, but Cloudy is a _social_ system.
+
+h2. Quick Crypto Recap.
+
+The identity and security layers of Cloudy are tightly intertwined, because identity _without_ security is useless. And security is accomplished entirely through cryptography, because the centralized alternatives like locking all of your servers up in a closet don't apply. Cloudy doesn't do anything new cryptographically (wisely so), but for the benefit of those who aren't familiar with it, here's a superficial overview of the off-the-shelf tools I'm using:
+
+h3. Cryptographic Hashes, or, Digests.
+
+Like any hash algorithm, a cryptographic hash converts a block of data of arbitrary length into a short fixed-length output; the same input always produces the same output; and even the slightest change to the input should produce an entirely different output. Unlike a regular hash, two different inputs should _never_ result in the same hash output. (That's "never" in the practical sense: collisions are mathematically inevitable, but it should impractically long, ideally millions of years, to find one.) And it should be infeasible to identify anything about the original data given only the hash.
+
+Cryptographic hashes are rather weird and neat. I've previously called them "the Dewey Decimal numbers for the Universal Library". They also remind me of the scene in the old TV cartoon of "The Cat In The Hat", where the Cat and kids are running around labeling every object in the house with cryptic identifiers like "QW-X12". Digests are a bit longer than that (SHA-1 outputs 160 bits, i.e. 20 bytes) but it's still very handy to have a compact label to identify any conceivable chunk of data.
+
+h3. Public/Private Key Pairs, or, Asymmetric Keys
+
+A regular cipher uses what's called a _symmetric key_. The sender and receiver choose a single key that they both have to know, but keep secret. The sender inserts the key into the encryption algorithm and feeds the message in, and out comes the encrypted form. The receiver then inserts the same key into the decryption algorithm, feeds the encrypted data into it, and out comes the original message. The point is that they use a single key, and the one who generates the key has to somehow convey it secretly to the other party before they can use it, leading to an obvious chicken-and-egg problem.
+
+Asymmetric encryption algorithms, the best known of which is RSA, use _two_ keys. The keys are generated together in a matched pair. When one key is used by the sender to encrypt data, it takes the _other_ key of the pair to decrypt it.
+
+The genius of this is that you only have to keep one of the keys secret. The other one can be given away freely and is called the "public key". If someone else has a copy of your public key, s/he can use your public key to encrypt a message to you. Remember, it doesn't matter how people get your key; you can read it to them over the phone, email it, print it on a billboard. The encrypted message still can't be read by anyone else, because only you have the matching _private_ key to decrypt it. In other words, it becomes possible to send secure messages without having to share a secret key in advance.
+
+h3. Digital Signatures.
+
+There's another use for key-pairs. You can use your private key to generate a _signature_ of a message, a small block of data that can be attached to it. Anyone who has your public key can then use it to _verify_ the signature, i.e. prove that you generated the signature of that message with your private key. No one else could have generated the signature. In other words, as the name "signature" implies, this is a way to unforgeably mark a document to show your authorship or approval.
+
+(A digital signature is really just a cryptographic hash of the document, which is then encrypted with the private key. To verify someone's signature you just decrypt it using their public key, then compute your own hash of the document and compare the two results.)
+
+h3. Digital Certificates.
+
+A _certificate_ is, in general, just a signed document that attests to something. Usually it's vouching for the identity of the owner of another key; something like "the owner of the public key 3FD8B640 is Joe-Bob Briggs, of Dallas TX, joebob@example.com. Signed, Verisign.com." This is the standard way that trust gets spread around in a distributed system.
+
+h2. Back To Cloudy: Generating An Identity.
+
+Your Cloudy identity is simply a public key, currently 2048-bit RSA, generated the first time you launch the program. (The matching private key is stored securely in the Mac OS Keychain.) From then on, that public key uniquely identifies you. It's _unique_ because it's randomly picked from a space so large that the possibility of collisions is for all practical purposes zero. It _identifies_ you because it can be used by others to verify anything you signed with the matching private key.
+
+[2048 bits (256 bytes) is somewhat bulky to use as an identifier; so a public key can be run through an SHA-1 hash and converted into a 160-bit (20-byte) digest form that's, for all intents and purposes, equally unique. (2^160^ is about 10^48^, nearly the number of atoms in the Earth.) The digest, however, has no cryptographic value to a recipient who doesn't already have the public key, so it's not a _secure_ identifier by itself.]
+
+The first thing the new key is used for is to mint an SSL certificate, which will be used for identification when you communicate with other peers over SSL sockets. It's a "self-signed" certificate because it doesn't contain a signature from any trusted higher authority (there aren't any). But that's OK: when Cloudy peers connect, they only need to make sure of the identities they're contacting, which are literally just the public keys in the certificates.
+
+h2. Cloudy Certificates.
+
+SSL unfortunately uses an awkward and complex certificate format called X.509, which is one of two evolutionary relics left over from a long-dead overly-ambitious network architecture called X.500. (The other one is the LDAP directory protocol; the fact that the L stands for "Lightweight" gives you an idea of how comparatively elephantine X.500 must have been.) Most cryptographic experts seem to hate X.509: Ferguson and Schneier's "Practical Cryptography":http://www.amazon.com/Practical-Cryptography-Niels-Ferguson/dp/0471223573/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1208239300&sr=8-1 flatly recommends avoiding it if possible, and Peter Gutmann's "overview":http://www.cs.auckland.ac.nz/~pgut001/pubs/pkitutorial.pdf is a masterful takedown, with sarcasm worthy of Doug Piranha.
+
+After spending a week painfully figuring out how to generate a goddamn trivial self-signed cert, even with the help of state-of-the-art system APIs, I could understand what the experts meant. I didn't want to use X.509 anymore. And it wasn't flexible enough anyway, since it was designed around the idea of hierarchical authorities. Unfortunately I didn't have a choice for SSL, but I went with an alternate approach for all the other certs Cloudy peer use when talking to each other.
+
+I really liked the approach taken by "SDSI":http://people.csail.mit.edu/rivest/sdsi11.html, a distributed identity system from about 10 years ago that never took off. It defined a simple textual syntax for certificates. SDSI used LISP-like S-expressions as the syntax, but the details aren't important -- I took the abstract concepts and went with something I found more readable. I tried "JSON":http://json.org first, but found it too limiting, so I ended up using "YAML":http://yaml.org.
+
+[YAML is a data serialization syntax; it's language-agnostic, but most popular in the Ruby community. Its main advantages over JSON (or OS X property lists) are a richer set of data types, custom typing for collections (i.e. you can say "this array is a Rectangle" or "this dictionary is a Person"), and the ability to represent arbitrary object graphs, not just trees. You can think of it as being like a pretty syntax for Cocoa object archives or Java object serialization.]
+
+All I had to do (aside from writing a good Cocoa wrapper API for YAML) was define a schema for representing things like keys and signatures in YAML. Then I could use those to define my own signed certificate objects.
+
+h3. A YAML Certificate Example.
+
+<code><pre>
+.  --- !cloudy/CallingCard
+.  host: 76.191.199.123
+.  prof: 229474364
+.  port: 60507
+.  stat: 4
+.  signature: !cloudy/Signature
+.    signed: !binary |-
+.      oVCuVVlXPEdRPR+gy1k/UNOXtwvcN7LNpK6xTcA/hmlKh6uIT56E19LxWzA7POxm
+.      nhc351NVdoKC9XaUVsaZYDOnp2wWEWLUtdYYA8I++NZZIVlCHOjHCHr7mcfNcceD
+.      v+15RE9vguQ/PO1yaOU4DlviYt75y7xKMRs5REbZss6E/mr+0r1KE+f73dpHCVoD
+.      SW0azTD43pug2Pyh2Kar0GHXQcS4Iq/Y2nRFv7wyLUUmyVA7XI665a8QjMCiec2w
+.      0PqQ32FwGBYkH/iR/cfmaKjuwjAbW/qo7NoTH6WSFQy2ua/PVQs9B+dyjnZ5Z30E
+.      rnl9UTCVwjUmCc8J4hoaTQ==
+.    digest: !cloudy/Digest pFCzUK7yuO0dWtm0oATB7ag6vj0=
+.    date: 2008-04-15 21:55:46.830 -07:00
+.    expires: 21600
+.    signer: !cloudy/Person
+.      nickname: snej
+.      publicKey: !cloudy/PublicKey
+.        algorithm: 42
+.        format: 1
+.        bits: 2048
+.        data: !binary |-
+.          MIIBCgKCAQEApP6/D5aZm7nYfGwSMD3xQCCWw+XeU1NmZE7N/7eHvQlCUHMS8Aac
+.          Wh+s/PlPd1o7k+YePhoHnc1vR9uAfWm8iowiUU0RluUNxY0dRkTauRqeYM6//s+5
+.          ZXuh27pDDq2BgQYPL6EOp2UtWSQ/ojQjqX2/sGMkZ3k+uYiu1ZGQS2s0xTHPkgtu
+.          VI+Kg2TBY/28zAG4H/seUHNAP+frlpX+fizSC2oYNdREpEcVcVacHMQGwrj3mAr7
+.          g/LpJTnWgZhiJYvp7c4MkAYfHOIbKIXeXrF8oOz0EwgwSp0ZWkezuIYa4BMAns52
+.          WYK3LooQ+GttPIdVhSzzhLlY3psLeOf6nQIDAQAB
+</pre></code>
+
+This represents a "CallingCard" object, which a peer broadcasts in order to tell other peers that it's online, and where it is on the network and what it's current state is. (One of the places a CallingCard appears is in the TXT record of Cloudy's Bonjour service.)
+
+The syntax is more complex than JSON, but still pretty easy to read:
+
+* The first line says this is a dictionary structure whose higher-level type is "cloudy/CallingCard" (this gets mapped to the CallingCard class in my code.)
+* The next four lines describe four key/value pairs in the dictionary. In a CallingCard these represent the IP address, port number, timestamp of the user's current "profile", and online status (4 = "Available"). The keys are four letters long just to save some room and because I get nostalgic for OSTypes sometimes.
+* Line 6 assigns the "signature" key to a nested dictionary of type "cloudy/Signature". This dictionary is the digital signature of the enclosing object.
+* The "signed" attribute of the signature is the raw RSA signature data.
+* The "digest" attribute is the SHA-1 digest of the object being signed, in this case the enclosing CallingCard, _ignoring the "signature" attribute_.
+* The "date" attribute is the timestamp of the moment the signature was generated.
+* The "expires" attribute is the lifetime of the signature, in seconds, starting from the "date". After this interval the signature expires, and the signed object loses its validity and will generally be deleted, or at least not passed on to other peers anymore.
+* The "signer" attribute is a cloudy/Person object, the identity who generated the signature.
+* "nickname" is a brief human-readable name for this identity. It doesn't really mean anything; it's just useful as a default name to display (like an AIM handle in a buddy list) if the local user hasn't set up a customized name.
+* "publicKey" is the identity's public key, the actual unique identifier.
+* "algorithm" identifies the type of key (RSA), "format" identifies the format of the key data (PEM, I think), "bits" is the number of bits in the key, and "data" is the key data itself.
+
+This does look a bit verbose when written out, but of course usually you'd never see this unless you were debugging something. (And it compresses well, by about 50% using gzip.) One space-saving feature that doesn't show up here is that, if the same object appears more than once, it's only written out once; after that it appears as a short reference back to the definition. So if I YAML-encode an array of signed objects (which is very common), my cloudy/Person data only appears once.
+
+h3. A Nasty Detail: Canonical Form
+
+I glossed over an important detail: to sign an object you have to compute a digest of it, and to compute a digest you have to be able to express the object as raw data. Clearly the raw data in this case is the YAML encoding of the object, right?
+
+The catch is that in YAML, as with any human-readable syntax, there are many different ways to write out the same object. I can change the indentation, I can change the line breaks, I can list dictionary attributes in a different order. Any of those changes causes the resulting digest to look completely different.
+
+This is a real problem because, if I read a signed object from YAML into a native object and then write it back out to YAML, it's likely to come out slightly differently. For example, if I write it as part of an array, then as a nested element its lines will be indented. Also, the ways dictionaries are stored in hashtables mean that their keys come out in unpredictable orders when iterated. But if that happens, the digest changes, which invalidates the signature.
+
+So any certificate syntax has to define a single standard ("canonical") encoding of an object into binary data. In my YAML code I had to enable a "canonical mode" that, when turned on, causes a specific set of spacing rules to be used, dictionary and set entries to be written in alphabetical order, et cetera. This mode isn't normally used, but it has to be turned on when computing the digest of an object, in order to sign it or to verify a signature.
+
+[Incidentally, one of the reasons that digital signatures aren't being used much in the various trendy XML-based data formats, like RSS and Atom, is that XML is much more difficult to canonicalize. I don't understand all of the details, but they looked nasty enough that I was glad enough to rule out using XML.]
+
+h3. Verifying A Signed Object.
+
+When you verify the signature of a block of YAML like the above, you have to do this:
+
+# Parse the YAML into a graph of native objects.
+# Take the root Signed object, remove the "signature" attribute, and write it back into YAML in "canonical mode".
+# Compute the digest of that canonical YAML.
+# Compare the digest with the "digest" attribute of the Signature. If it doesn't match, the object's been tampered with (or damaged) and should be ignored.
+# Otherwise, write the "Signature" object back into canonical YAML and compute the digest.
+# Encrypt that digest using the public key in the "signer.publicKey" attribute.
+# Compare the result with the "signed" attribute. If it doesn't match, the signature was forged (or damaged.)
+# Otherwise, the signature is valid and the outer Signed object can be treated as being definitively created by the Person listed in the Signature.
+
+h2. Whew.
+
+OK, so we can create secure identities, encrypt stuff, and sign arbitrary objects. Now what do we do with them? The CallingCard example above should give you some ideas, but I'll go into more detail in the next 'thrilling' installment.
+
+*Next: "Networking":http://mooseyard.com/Jens/2008/04/cloudy-networking/.*

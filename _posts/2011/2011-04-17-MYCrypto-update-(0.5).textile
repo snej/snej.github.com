@@ -1,0 +1,15 @@
+---
+layout: post
+title: "MYCrypto update (0.5)"
+---
+I've been making little updates to the "*MYCrypto*":https://bitbucket.org/snej/mycrypto library for "a few months":https://bitbucket.org/snej/mycrypto/overview, and after the latest batch I did some housekeeping -- fixing iOS and 64-bit build errors, updating the docs -- and decided to dignify them with a new version number, 0.5.
+
+Notable improvements:
+
+* More certificate I/O functionality. You can now import and export PKCS12 (.p12) files, which are encrypted archives that contain a private key as well as its cert.
+* More certificate trust validation APIs, including read/write access to user trust settings.
+* Access to X.509 cert extensions like key-usage.
+* Can verify signatures that use algorithms other than SHA-1, and parse certs that use such algorithms.
+* MYMockKey, a testing fixture that lets you test code that uses digital signatures without having to generate or use real key-pairs.
+
+If you infer from this list that I've been working on an app that manages X.509 certs, I won't deny it :) Maybe I'll have more to say about that soon.

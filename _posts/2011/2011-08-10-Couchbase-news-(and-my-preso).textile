@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Couchbase news (and my preso)"
+---
+"My new employer is doing well":http://www.couchbase.com/press-releases/couchbase-series-C:
+
+bq. MOUNTAIN VIEW, Calif. – August 10, 2011 – Couchbase, the leading NoSQL database company, today announced it has secured $14 million in a Series C round of financing led by venture capital firm Ignition Partners with participation from the company’s existing investors Accel Partners, Mayfield Fund, and North Bridge Venture Partners. The company has also reserved an additional $1 million for investment from strategic customers and partners. The new funding will be used to further invest in NoSQL product development, support the adoption and growth of Couchbase in enterprise organizations, and support international expansion.
+
+bq. On the heels of its inaugural CouchConf developer conference, held July 29 in San Francisco with more than 300 attendees from around the world, Couchbase announced a Series C round of financing, bringing the company’s total funding to $30 million.
+
+"CouchConf":http://www.couchbase.com/couchconf was a great time. I really enjoyed meeting developers, and learning more about Couchbase from the other presentations. The slides from my own talk on Couchbase Mobile for iOS are "now online":hhttp://www.slideshare.net/Couchbase/couchconfsfdevelopingnativeiosappswithcouchbasemobile (minus the gratuitous Keynote transitions) if you'd like to take a look.

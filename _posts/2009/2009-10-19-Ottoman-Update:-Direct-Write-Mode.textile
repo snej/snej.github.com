@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Ottoman Update: Direct-Write Mode"
+---
+I've pushed "a new update":http://bitbucket.org/snej/ottoman/changesets/ of my Ottoman storage library.
+
+What's new is the option to have individual additions to the dictionary written directly to disk, instead of being buffered in memory until you save a new version. This helps performance if you're writing a ton of data all at once. And there's a simple demo called "PackDir":http://bitbucket.org/snej/ottoman/src/tip/test/PackDir.cpp that writes a ton of data all at once: it packs the contents of an entire directory tree into an Ottoman file, with keys being filenames and values being file contents.
+
+To implement this I had to violate the lockless semantics a bit, because having multiple clients appending key/value pairs to the file at the same time would make it a lot harder to keep their revisions straight. So before being able to do any direct puts, you have to enter an [ugh] ExclusiveTransaction.
+
+(Of course, the issues with locking don't matter if the file is only being used by one process. Or even if there are multiple readers but only one writer, since the locks don't interrupt readers.)

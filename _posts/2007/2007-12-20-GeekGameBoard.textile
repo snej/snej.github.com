@@ -1,0 +1,24 @@
+---
+layout: post
+title: "GeekGameBoard"
+---
+Santa has an early Xmas present for all you good Leopard programmers: "GeekGameBoard":http://developer.apple.com/samplecode/GeekGameBoard/index.html, a new piece of sample code by the anonymous engineer elves at Apple.
+
+[Update: GeekGameBoard is now an open-source project hosted at "bitbucket.org":http://bitbucket.org/snej/geekgameboard.]
+
+bq. GeekGameBoard is an example of using Core Animation to present the user interface of a board or card game. It implements a small framework for implementing such games, with domain-specific classes like "Grid" and "Piece", and examples of several game definitions built on top of the framework.
+Some of the generally-useful Core Animation techniques illustrated are:
+• Hit testing
+• Dragging CALayers with the mouse
+• Loading images from files and setting them as layer contents
+• 3D "card-flip" animations
+
+Framework classes include Bit, Piece, PlayingCard, HexGrid and more. It comes with sample games from Klondike solitaire to Checkers and even Tic-Tac-Toe. It's all ready for you to add AI, network play, new game definitions...
+
+<img src='http://mooseyard.com/Pictures/Klondike-20071220-130328.jpg' alt='Klondike'/>
+
+<img src='http://mooseyard.com/Pictures/Hexchequer-20071220-130652.jpg' alt='Hexchequer'/>
+
+<img src="http://interfacelift.com/icons-mac/previews/0330_gingkosicons.jpg" align="right" style="padding-left: 10px;"/>
+
+PS: Icon websites like "IconFactory":http://iconfactory.com/freeware, "InterfaceLift":http://interfacelift.com/icons-mac/index.php?sort=date and "DeviantArt":http://browse.deviantart.com/customization/icons/dock/?order=9&startts=1198051200&endts=1198137600 are great places to get artwork for game pieces. (My personal favorite game pieces are "Ginko's Icons":http://interfacelift.com/icons-mac/details.php?id=330, shown on the right.) Just be aware that most icons, even if freeware, require you to get the copyright holder's permission for anything other than personal use.

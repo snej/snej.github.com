@@ -1,0 +1,23 @@
+---
+layout: post
+title: "The Origin Of The iChat UI"
+---
+I had lost this historical document for a long time, but finally found it the other day on an old backup CD. It's the original 1997 sketch I made of a chat user interface based on speech balloons.
+<!--more-->
+
+
+<img id="image97" src="http://mooseyard.com/Jens/wp-content/uploads/2008/03/balloon-chat-ui-21-april-1997.png" alt="Balloon Chat UI Sketch (21 April 1997)" />
+
+Drawn in ClarisWorks, April 21, 1997. This was based on my experiences with MUDs and IRC, having a really hard time keeping track of many-way chats. I think the only IM app available then was ICQ, which I hadn't heard of. (IIRC, AIM came out later that year, at least for non-AOL users.) This also predates Microsoft Comic Chat, which used speech balloons too, although in a very different UI: theirs was for novelty, mine was for usability.
+
+Novel features that made it into iChat:
+
+* The speech balloons, of course, after being beautifully Aqua-fied by Steve Lemay.
+* Per-speaker colorization.
+* Aligning your messages to the other side from everyone else's; in iChat this was improved a lot by also changing the alignment of the text, and pushing in the outer margins of the balloons to make their alignment more obvious.
+* Showing in-progress messages (the dotted balloon at the bottom). This became the "thought-bubble" marker in iChat. Back then I really wanted to show the partial message text, updated every second or two; but most users found it annoying to have other people seeing every typo they made, and it really conflicted with AIM's rate-limiting, so it was turned off.
+* Custom user pictures (though these were just sketched in as ovals in the drawing.)
+
+One idea here that wasn't used in iChat was connecting a speaker's consecutive speech balloons together with "pipes". I thought this helped make it easier to identify the flow of the conversation, but it was a pain to implement (I tried doing it in Java once) and I didn't even try to add it to the NSTextView-based balloons in iChat.
+
+I'm not sure why I put the userpics in the margin but not next to the speech balloons. Maybe I thought there wouldn't be room, or that it would look weird to see the userpic repeated multiple times.

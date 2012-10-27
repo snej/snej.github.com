@@ -1,0 +1,11 @@
+---
+layout: post
+title: "JavaScript 2.0, aka ECMAScript 4"
+---
+I just discovered that there is an "ECMAScript 4":http://www.ecmascript.org/ -- better known as JavaScript 2.0 -- in development. As a shameless language slut, I immediately dove into the "language overview":http://www.ecmascript.org/es4/spec/overview.pdf, and it's pretty neat.
+
+This turns JavaScript into a much more useable language, that I could see doing serious development in. I'm well aware that today's JS isn't a "toy", that it's got an interesting prototype-based object model under the hood; but I've found the language so loose as to be difficult to use. This new version adds a full class model, much better support for iteration, a form of generators/coroutines, and more.
+
+Intriguingly, it also offers type-checking, which has been absent from most mainstream dynamic languages. I know it's trendy to use "duck typing", but I find that languages with no compile-time type-checking frustrate me because I make so damn many mistakes that aren't caught until runtime; which means things I could have fixed in two minutes in C++ or Objective-C take half an hour to fix as I run the program over, and over, and over, discovering and fixing one problem at a time.
+
+Given the concurrent "developments in Apple's JavaScript interpreter":http://webkit.org/blog/189/announcing-squirrelfish/, I'm getting pretty excited for JavaScript. I hope that in addition to making it blindingly fast, Apple will also add ECMAScript 4 support, and make it easy to access the language outside of a WebView.

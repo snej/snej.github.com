@@ -1,0 +1,52 @@
+---
+layout: post
+title: "The Ballad Of badtz-maru"
+---
+I had a "tiny Linux box":http://206.14.132.88/products/Travla/c138/C138.html
+Its name was "badtz-maru":http://www.badtzmaru.com/ ;
+It sat out in the office
+"Serving tunes":http://www.slimdevices.com/su_downloads.html for me and you.
+
+One day the "Squeezebox":http://www.slimdevices.com/su_downloads.html just went black!
+I didn't know what to do!
+Safari, ssh and ping
+Lost touch with badtz-maru.
+The living room was silent
+(Between games of "Pikachu":http://cube.ign.com/articles/656/656659p1.html).
+<!--more-->
+Last weekend I rolled up my sleeves
+And grafted on a head
+So I could hack at badtz-maru
+And raise it from the dead.
+
+The boot parade scrolled by, but then
+With sinking heart I read
+Of errors in filesystems,
+Evil things best left unsaid.
+
+I grabbed my dusty "Linux book":http://www.oreilly.com/catalog/runux3/index.html
+And then without delay,
+Lips moving with the effort,
+Typed in "'fsck'":http://www.die.net/doc/linux/man/man8/fsck.8.html.
+
+The battle raged! The disk fought back,
+Its platters growing hot,
+But I showed who was master
+(by pressing "Y" a lot.)
+
+One-two! One-two! And through and through
+The "vorpal":http://www.jabberwocky.com/carroll/jabber/jabberwocky.html tool went hack!
+The damage was deleted
+From each "inode":http://en.wikipedia.org/wiki/Inode and track.
+
+I raised a cheer, detached its head,
+And went galumphing back
+To the comfort of the living room,
+And there cued up a track.
+
+I have a tiny Linux box
+Its name is badtz-maru
+It sits out in the office
+Serving tunes for me and you.
+
+bq. Addendum: Some months after this was written, I grew tired of badtz-maru's noisy case fan and took the vorpal blade to it, dissecting out the hard disk and plopping it into a <strike>jar of formaldehyde</strike> USB drive enclosure, which I then plugged into "pancake", our Mac Mini. However, the disk is still named "badtz-maru".

@@ -1,0 +1,27 @@
+---
+layout: post
+title: "96 Characters Ought To Be Enough For Anyone"
+---
+Famous Hacker Paul Graham "on his new LISP dialect, Arc":http://paulgraham.com/arc0.html:
+
+bq. "Arc only supports Ascii. MzScheme, which the current version of Arc compiles to, has some more advanced plan for dealing with characters. But it would probably have taken me a couple days to figure out how to interact with it, and I don't want to spend even one day dealing with character sets. Character sets are a black hole. I realize that supporting only Ascii is uninternational to a point that's almost offensive [...] _But the kind of people who would be offended by that wouldn't like Arc anyway._"
+
+That last bit [emphasis mine] sort of flummoxed me. Is he saying that LISP only appeals to native English speakers?[1] Or that no one in their right mind would use LISP to write software for end-users?[2] Or maybe that internationalization is just some sort of abstract feel-good political-correctness issue, since none of those third-worlders even have computers anyway?[3]
+
+He makes similarly eye-opening assertions about HTML, too. Arc has HTML-generating libraries, but they "just do everything with tables" instead of CSS. Why? Because apparently CSS-based Web designs are _less agile_ than ones made out of tables. Somehow I don't think most people who've done web design both ways would agree -- those old-school layouts made with infinitely-nested tables were about as agile as a house of cards.
+
+Anyway. Normally I'm a big slut for new programming languages, but it would probably take me a couple days to figure out Arc, and I don't want to spend even one day on Yet Another LISP Variant that won't even let me write code I could use in the real world.
+<hr /><p>Wait -- let me not end on such a snarky note. Since I'm such a big smarty, what would I have done differently? I would simply have made the language's "character" data type 16 bits wide instead of 8, and provided four trivial library routines to convert such strings to and from UTF-8 and CP-1252 encodings for I/O purposes. That's about an hour's work, and all you need for really basic Unicode support; once you have that, you can add further Unicode niceties (and there are admittedly a zillion of 'em) a few at a time without completely breaking old code.</p>
+<hr /><p>[1] And only those native English speakers who don't care about foo-foo details like â€œcurly quotesâ€ -- or emdashes -- or other Arcane Symbolsâ„¢. Remember, to the true old-school hacker, even lowercase letters are an inessential frill.
+
+[2] Like, say, "Reddit.com":http://reddit.com. From SecretGeek's awesome "overview of LISP":http://www.secretgeek.net/lisp_truth.asp:
+
+bq. "Reddit is proof that lisp is really powerful. Paul Graham originally wrote reddit, in lisp, on the back of a napkin while he was waiting for a coffee. it was so powerful that it had to be rewritten in python just so that ordinary computers could understand it. Because it was written in lisp it was almost no effort to rewrite the entire thing, and the rewrite was completed in-between two processor cycles."
+
+[3] I'm reminded of a meeting between Apple and Sun (JavaSoft) back in 1996. I was there to discuss OpenDoc and JavaBeans, but each company also had text and I18N engineers there, who were talking about Unicode and text-layout technology for the upcoming Java2D graphics engine. There was an exchange that went something like this:
+
+Apple engineer: ...and the layout needs to take into account ligatures and contextual forms, where adjacent letters change glyphs depending on neighboring characters, or even merge into a single glyph.
+
+Sun engineer: C'mon, is this important? How many people need advanced typographic features like that, anyway?
+
+Apple engineer: _[after a pause]_ Well, there are over 900 million of them in "India":http://en.wikipedia.org/wiki/Devanagari#Ligatures alone, and another 200 million or so in the "Arabic world":http://en.wikipedia.org/wiki/Arabic_alphabet#Modified_letters.</p>

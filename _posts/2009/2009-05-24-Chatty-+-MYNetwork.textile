@@ -1,0 +1,5 @@
+---
+layout: post
+title: "Chatty + MYNetwork"
+---
+As "foreshadowed":http://mooseyard.com/Jens/2009/05/a-bonjour-chat-tutorial-for-iphone-developers/, I've created a modified version of the "Chatty":http://www.mobileorchard.com/tutorial-networking-and-bonjour-on-iphone/ iPhone sample app, which uses the "MYNetwork":http://bitbucket.org/snej/mynetwork/ library instead of custom networking code. You can "get it off of Bitbucket":http://bitbucket.org/snej/chatty/wiki/Home.

@@ -1,0 +1,45 @@
+---
+layout: post
+title: "Re: Idea for alternative RSS syncing system"
+---
+Brent "NetNewsWire" Simmons raises the idea of "an open protocol for syncing RSS/Atom subscriptions":http://inessential.com/2010/02/08/idea_for_alternative_rss_syncing_system, that is, a way of keeping multiple local newsreader apps (like on a Mac and an iPhone) in sync with each other, so that they share the same set of subscribed feeds, and remember which articles have already been read. You can think of it as "IMAP for RSS".
+
+NetNewsWire already does this using Google Reader as an intermediary, and Apple's PubSub framework (which is what Safari and Mail use) shares the read/unread state using MobileMe. But it would be nice to have an open protocol.
+
+I have some experience with this, having implemented the sync system used by PubSub. It's an interesting problem -- you might think I would have just used Apple's SyncServices, and it's true that it would have worked great for the subscription list, but it doesn't scale well to huge numbers of rapidly-changing "read/unread" flags.
+
+I have two suggestions (which I would have made on Brent's blog, except he doesn't allow comments anymore.)
+
+h2. CouchDB
+
+"CouchDB":http://couchdb.apache.org is an awesome web-centric database engine. It doesn't use SQL; instead, it's a glorified key-value store whose values are arbitrary JSON objects, and which uses map-reduce for efficient querying. The basic API is pure REST, though glue libraries for many languages exist.
+
+CouchDB natively supports syncing data through distributed groups of servers. It's sort of like the way distributed version-control systems like Git or Mercurial work: multiple CouchDB instances each store a replica of the same data set, but can "pull" changes from each other over HTTP to stay in sync.
+
+CouchDB is pretty lightweight and is already being used on the desktop by client apps: GNOME has been "integrating it into the Linux desktop":https://launchpad.net/desktopcouch to use as a shared store for user data like contacts and bookmarks. It plays a similar role to SyncServices on Mac OS, but it's all open source and any two instances can sync with each other instead of requiring a proprietary server. I hear this is already shipping in the latest Ubuntu releases.
+
+It doesn't look as though anyone's designed a schema for storing RSS subscriptions this way, but it would be pretty easy to define one. You then need a local agent running CouchDB (it can be stripped down to be pretty small), a client library for Cocoa apps, and an upstream CouchDB server to sync to.
+
+h2. REST-Logging
+
+This protocol is similar to what I came up with for PubSub. It's a simple extension of "REST":http://en.wikipedia.org/wiki/Representational_State_Transfer, but I haven't heard of it being used elsewhere. The idea is that you model an append-only log file as an HTTP resource. The items that are logged are 'events' describing changes in the data model, in this case the subscriptions and articles.
+
+The sync algorithm looks like this:
+
+# Download all the data that's been added to the remote log file since your last sync. Remember the file's ETag.
+# Parse that data into a sequence of log entries, and process them in order. Each entry names a model object (feed or article) and an action (subscribe, unsubscribe, mark read, mark unread). Apply those changes to the local data store.
+# Query your local data store to find all the changes that have been made since your last sync. _Ignore_ the remote changes you just applied in the previous step, and also any earlier local changes that duplicate a remote change (like marking the same article as read.)
+# Generate a series of log entries for those changes and concatenate them into a data blob.
+# Upload that blob, appending it to the remote log file. Remember the resulting ETag. In case of a conflict (someone else has changed the remote file since step 1), toss out the blob and return to step 1.
+
+You can think of the log file as a queue or message stream that's being collaboratively read and written by all of the clients. This sounds like something you'd need a fancy web-app to manage, but it turns out that all it takes is a typical HTTP 1.1 server and a trivial server-side script.
+
+The download is a conditional GET, as used for fetching feeds themselves. The difference is that you use a "Range:" header to request _only the bytes past the last known EOF_. For example, if the last time you read the log it was 123456 bytes long, you add the header "Range: 123456-" to the request. This ensures that you only get back the new bytes that were added to the end. (And since this is a conditional GET, if the file hasn't changed at all you just get back an empty 304 response.)
+
+That's all you need to do to track changes. Since the file is append-only, the only bytes you need to read are the ones added to the end. This request efficiently sends you just those bytes.
+
+What's cool is that this require _no server-side software_. If the log is a static file, any regular HTTP server like Apache will automatically handle GET requests for it, even byte-range ones. (Ranges are already used by browsers to resume interrupted downloads.) And it sends the response at high speed, since the server's just streaming from a file, without multiple back-and-forth requests and without expensive database queries.
+
+How about writing? Ideally you'd use the same approach, with a byte-range PUT that specifies that the request body should go at the end of the file. Unfortunately most servers don't support this for static files, even though it's basically just HTTP 1.1. But it's really easy to implement. Any PHP crufter should be able to whip up a one-page script that simply responds to a POST by reading the request body and appending it to a local file (while doing the necessary ETag and range verification.) The great thing is that this script doesn't have to know anything at all about RSS or subscriptions or unread counts; it's completely generic. You can upgrade the data model without having to touch the script, and you could use the same script to sync anything, not just RSS.
+
+(Yes, there is a semi-obvious drawback to this protocol: the file grows without limit. Surprisingly, this is not a problem most of the time, since clients only upload or download new data; the only real limit is the maximum file size or disk quota allowed by the server. But it does present a problem for a new client, whose first-time sync would download the entire file. This can be worked around by having new clients ignore very old data (only download the latest 10MB, say) or by periodically writing a compact subscription list to a separate URL.)

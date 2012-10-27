@@ -1,0 +1,9 @@
+---
+layout: post
+title: "BLIP-Protocol mailing list"
+---
+I've created a "BLIP-Protocol mailing list":http://groups.google.com/group/blip-protocol on Google Groups:
+
+<table border=0 style="background-color: rgba(255,255,255,0.5); padding: 5px;" cellspacing=0>  <tr><td><img src="http://groups.google.com/groups/img/3nb/groups_bar.gif" height=26 width=132 alt="Google Groups"/>  </td></tr>  <tr><td style="padding-left: 5px">  <b>Subscribe to BLIP Protocol</b>  </td></tr>  <form action="http://groups.google.com/group/blip-protocol/boxsubscribe">  <tr><td style="padding-left: 5px;">  Email: <input type=text name=email/>  <input type=submit name="sub" value="Subscribe"/>  </td></tr></form><tr><td align=right>  <a href="http://groups.google.com/group/blip-protocol">Visit this group</a></td></tr></table>
+
+Please join up if you're interested in learning, using, re-implementing, improving, extending...

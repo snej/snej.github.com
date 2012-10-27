@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Multisensory CPU meter"
+---
+It just occurred to me that my newish MacBook gives me no less than _four_ sensory modalities for detecting high CPU usage:
+
+# The scrolling bar-graphs [one per CPU] of the Activity Monitor icon in the Dock
+# The unobtrusive little purring fan that comes on every few seconds after the CPU's been busy for a while
+# The extra warmth of the computer against my palms and lap (I won't say it gets "hot"; maybe "toasty".)
+...and the number Four sensory modality I just recognized:
+# Faint, pleasant scent of warm electronics ("New Computer Smell")
+
+Still missing is taste, and maybe "balance":http://en.wikipedia.org/wiki/Sense_of_balance and "proprioception":http://en.wikipedia.org/wiki/Proprioception, but I think I don't _want_ my computer using those pathways to communicate with me.

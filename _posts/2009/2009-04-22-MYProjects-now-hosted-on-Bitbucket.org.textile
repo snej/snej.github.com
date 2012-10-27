@@ -1,0 +1,15 @@
+---
+layout: post
+title: "MYProjects now hosted on Bitbucket.org"
+---
+I've set up new homes for my various programming projects on "Bitbucket.org":http://bitbucket.org/snej, which is rather like "Github":http://github.com, only for Mercurial instead of Git. (<tt>hg clone github.com</tt>, perhaps?)
+
+In addition to Mercurial repository hosting, each project gets a nice source browser, a wiki, and a bug-tracker.
+
+<a href="http://bitbucket.org/snej"><img src="http://bitbucket.org/m/img/logo_myriad.png" /></a>
+
+To kick things off, I've put up a new release of "MYNetwork":http://bitbucket.org/snej/mynetwork/. It doesn't change the core functionality much, but it adds
+* A new "PortMapper":http://bitbucket.org/snej/mynetwork/src/tip/PortMapper/MYPortMapper.h class that lets you open up your TCPListener to receive connections from outside your local network, when behind a NAT;
+* "Bonjour":http://bitbucket.org/snej/mynetwork/src/tip/Bonjour/MYBonjourBrowser.h classes for browsing for network services.
+
+I've also restored the "BLIP protocol documentation":http://bitbucket.org/snej/mynetwork/wiki/BLIP/Protocol that went AWOL when my own local project server died last year.

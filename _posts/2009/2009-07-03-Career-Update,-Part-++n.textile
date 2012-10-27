@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Career Update, Part ++n"
+---
+I've been working at Google since last August. The Big G's hiring process is rather weird -- when you interview, it's not for any specific team. It's only after you get an offer that you decide which team to join, of the ones with open positions.
+
+I decided on "Google Sites":http://sites.google.com, which I knew and liked from its days as JotSpot, a hosted wiki with some powerful features. It ended up not being the right place for me, for a couple of reasons:
+
+* Currently, Sites' priorities are in website publishing, as a replacement for Google Page Creator (which is being phased out soon.) It's quite good at it, but I'm less interested in that than in collaboration features.
+* Google's server-side infrastructure is really, really, _really_ huge and complex. There is an endless landscape of internal technologies and tools -- the few that have been described in public (MapReduce, BigTable, Chubby, etc.) are just the tip of the iceberg. I have discovered that I am not very interested in this kind of stuff, and I quickly became frustrated by the deluge of technologies I needed to learn to get things done.
+* Running a large web service is like running a nuclear power plant or an electric power grid. It requires 24/7/365 monitoring, and at that scale, anything that can go wrong will go wrong, and frequently does. I do not have the right temperament for working with this, especially not when it comes to taking turns carrying a pager that wakes me up at 4AM because some service's latency has gone above 300ms.
+* I've been vocal about my frustration with centralized systems; Google's websites are kind of the ultimate in that (even though, ironically, they're implemented as P2P-like networks internally, as I believe all large web operations are today.)
+
+The good news is that Google encourages transfers between teams, and makes it easy to do so. The near-total transparancy inside the company makes it easy to find out everything that's going on, and there's a well-designed website for engineering transfers that helps you find teams that need people. I even went to an internal job fair.
+
+I've now ended up working on "Chrome":http://www.google.com/chrome, Google's web browser. The team I'm on is responsible for implementing "HTML 5":http://www.whatwg.org/specs/web-apps/current-work/multipage/ features, as well as designing and implementing other new features (for standardization) that will help web apps become as powerful as native apps. Much of what we do will go into the WebKit source tree, where it will also directly benefit Safari, Android, the Palm Pre, and other WebKit-based browsers.
+
+In fact, everything I work on (more or less) is going to be open source. Both the WebKit and Chromium source trees are public. You can view, if you care to, "the one patch I've contributed so far":http://codereview.chromium.org/151095 and "the one that's currently out for review":http://codereview.chromium.org/150188. That's kind of mind-blowing, in a good way, to me, steeped as I am in the secrecy of Apple.
+
+I'm pretty excited by this. There are quite a lot of things I'm interested in working on -- client-side storage, local apps, drag-and-drop, better font support, menus, even far-out stuff like peer-to-peer networking. Forward in all directions!

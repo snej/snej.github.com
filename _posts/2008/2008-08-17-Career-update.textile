@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Career update"
+---
+FYI, I ended up taking the position at Google. I started two weeks ago, and it's been quite exciting, despite (or because of) the "drinking from a fire-hose" aspect of learning my way around the big G.
+
+I'm on the "Google Sites":http://sites.google.com team. I've been interested in wikis for years, and now I get to actually work on one. (Although Sites, née JotSpot, is not a typical wiki.)
+
+I could write a lot about my experience of Google so far. It's quite an interesting place. Merely learning about how some of their internal systems operate has been jaw-dropping. (Do you have any idea how much hard disk space Google has? Or how many CPUs? Or how many search queries they handle? Unfortunately I don't think I'm allowed to tell...)
+
+For now I just wanted to say that I'm not in the job market anymore. Also, that I really like all the free food :-d

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Holding a Program in One’s Head"
+---
+Paul Graham [who is obnoxiously elitist, but frequently insightful] has a new essay, "<a href="http://www.paulgraham.com/head.html">Holding a Program in One's Head</a>", that is making me feel sad this morning.
+<blockquote><p>"A good programmer working intensively on his own code can hold it in his mind the way a mathematician holds a problem he's working on. Mathematicians don't answer questions by working them out on paper the way schoolchildren are taught to. They do more in their heads: they try to understand a problem space well enough that they can walk around it the way you can walk around the memory of the house you grew up in. At its best programming is the same. You hold the whole program in your head, and you can manipulate it at will."</p></blockquote><p>I know that feeling so well, and I want to be back in that [non-Euclidean] space again.</p>
+<!--more-->
+ (I'm fascinated by such spaces, as I've <a href="http://mooseyard.com/Jens/2005/06/little-boxes-of-words/">written</a> <a href="http://mooseyard.com/Jens/1995/08/piling-up-sheets-the-face-in-the-soup-bowl/">before</a>.) Currently my work is so fragmented into little bits — reading bug reports, figuring out what's going wrong, making little tiny changes, testing them, dealing with the bureaucracy of integrating changes. It's no one's fault, and it's a necessary part of finishing a large release, but I'm sick of it.
+
+The worst thing is that I can't even summon up the energy to focus deeply on anything else. When I'm not doing the above, I'm mostly sucking at the teat of incoming news-bites and emails. When all my unread counts hit zero I feel lost. I have any number of interesting in-progress projects I could work on, but I develop selective amnesia of them while at the keyboard, because I feel too lazy to put on those Goggles Of Omniscient Coding.
+
+I know this will go away. But I want it to go away NOW.
+<blockquote><p>"Whether or not understanding this can help large organizations, it can certainly help their competitors. The weakest point in big companies is that they don't let individual programmers do great work. So if you're a little startup, this is the place to attack them. Take on the kind of problems that have to be solved in one big brain."</p></blockquote>

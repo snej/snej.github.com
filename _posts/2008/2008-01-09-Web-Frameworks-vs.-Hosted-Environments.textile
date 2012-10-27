@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Web Frameworks vs. Hosted Environments"
+---
+There's a fascinating post on "DreamHost":http://dreamhost.com's blog about "how frustrated they are with trying to make Ruby On Rails work":http://blog.dreamhost.com/2008/01/07/how-ruby-on-rails-could-be-much-better/ for their bread-and-butter market of shared web hosting. I've run into this intermittently ever since I first tried out Rails two years ago. It's fun to develop in, it works great on my local machine, but it's been impossible to get any Rails app to run correctly on my DreamHost-ed web site. I've been told by experts that you pretty much have to step up to an expensive virtual-server solution (although I just heard about "HostingRails.com":http://www.hostingrails.com/, which is quite cheap.)
+
+As already pointed out in comments, this issue is not specific to Rails, or to Ruby. The same problems apply to any complex web-app (including Python and Java ones, and probably some of the larger PHP-based frameworks too) that has a large amount of set-up overhead. By running a separate app process you amortize the setup costs across large numbers of requests.
+
+This is a more complex model than a simple CGI or mod_whatever, but it’s a straighforward engineering problem and there’s no reason it shouldn’t be workable in a shared environment, without having to make every user rent their own server. I really hope this gets fixed — I was surprised to hear that it isn't considered a big deal by the Rails dev community.
+
+h4. Updates:
+
+* Rails founder David "DHH" Hansson just posted his view on "The Deal With Shared Hosts":http://www.loudthinking.com/posts/21-the-deal-with-shared-hosts, which sounds pretty reasonable to me (as an explanation of why shared hosting hasn't been a priority for Rails, and an invitation for sites like DreamHost to help make it so.)
+* "Peter Cooper points out":http://www.rubyinside.com/no-true-mod_ruby-is-damaging-rubys-viability-on-the-web-693.html how this is hurting Rails adoption, and suggests fixing mod_ruby to work in a shared environment. (Also pointed out in the comments to my post.)

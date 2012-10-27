@@ -1,0 +1,41 @@
+---
+layout: post
+title: "The Beauty Of 99¢ iPhone Apps"
+---
+After digesting yesterday's iPhone announcements [with fava beans and a nice Chianti] I started thinking about the pricing models made possible by the "Application Store". In particular,
+
+h2. How cheap can an iPhone app be?
+
+I think the answer's clear. The Application Store will obviously be based on the iTunes store, whose bread-and-butter is a product, the AAC audio file, that sells for … 99¢. Apple's clearly able to make a profit at that price point, despite credit-card processing fees, bandwidth costs, and comparable payments _[Updated. Thanks, Dru!]_ to the record labels. So I see no reason they wouldn't allow a developer to price an application that low.
+
+But why would a developer _want_ to sell an application for a net 70¢?
+
+h2. Micropayments
+
+Because at such a low price, with a one-click store a couple of taps away, it becomes an impulse purchase. It's a form of "micropayment":http://en.wikipedia.org/wiki/Micropayment, an idea that's been talked about for years but hasn't widely taken off due to the practical difficulties of collecting very small payments. The few areas where micropayments (albeit larger than the canonical 1/10¢ originally proposed) have worked include the iTunes store, and the downloadable-game stores for the Xbox and Wii.
+
+And let's not forget the most amazing example of what people will pay for if you make it convenient enough: _ringtones_. The practice of charging suckers $2 for a 30-second snippet of a song they already have, is a multi-billion-dollar industry.
+<!--more-->
+h2. Do the math
+
+Obviously we are not going to get Quicken or Spore or Excel at a $1 price point. But for a small app from an indie developer, I think it's quite reasonable. There are a lot of good free programs (I've written a few myself.) In some cases these are free for ideological reasons, either open source or just "giving back" to the community. In a lot of cases, though, I think they're free just because it's just too much work to set up the e-commerce infrastructure, or because the developer thinks no one would bother to pay just a few bucks.
+
+But if the product is on an Apple-hosted store, right there on the iPhone, billed directly to your credit card with a single tap, then more people will bother. Especially if there's no other way to get the app — buy-before-you-try may be a turn-off at higher prices, but I think people will do it for a $1 or $2 app, especially if they can read positive customer reviews right there on the purchase screen.
+
+So assume you spent some evenings and weekends writing a cool little utility or game. You submit it to the App Store and set the price at $1.43. You get $1 of pure, unadulterated profit from every user of the app. No bandwidth costs, no fees to PayPal or Kagi, no postage, no packaging, no extortionate demands by distributors and retailers to get shelf space. And note I said "from every user" — it's not just from the one or two percent of users who actually bother to pay shareware fees.
+
+I think that's a pretty good proposition. By the time the App Store goes live, Steve promises us there will be ten million iPhones in the world. If a one percent of them impulse-purchase your $1.43 app, that's $100,000. You could live off that. Even if it's only a _tenth_ of a percent (one in a thousand), you make $10,000 off your little hobby and can buy some nice toys for yourself (and for your significant other, as compensation for the time you spent ignoring them.)
+
+_[Updated, 8 March: Fixed my math. Oops. Really, I do know how to multiply...]_
+
+(I predict some readers will think I'm disparaging free software, or will see it as a Bad Thing that there'll be less free software. But I'm not, and it's not. Obviously open source software will be free, in both senses, and anyone who wants can publish freeware. But a lot of freeware gets abandoned by its developers, because the developers are just doing it for fun and run out of time or energy. That's sad. And I think a moderate infusion of cash can definitely help alleviate those problems. As a customer, I'd be very happy to know that my dollar was helping to keep the developer _totally enthused_ about adding new features and fixing my pet-peeve bugs.)
+
+h2. Revenue streams
+
+Then there's the matter of software updates. The app store will take care of them for you. Presumably, you just submit the new and improved version of the app, and all of your users get the offer to upgrade. I see no reason this wouldn't work for paid upgrades as well as free ones. And if the upgrade is cheap, and if you've done your job well and most of the customers like your app, then Ka-ching! That's another $100,000 (or $10,000, or whatever).
+
+It's an interesting model for games, too — you can add value by adding more content. Maybe the first version of your $1.43 platform game only has five levels. So after you release it you get to work designing another ten levels, then release version 2 for $2.86. Everyone who finished the game and wants more, will buy the update. (Especially if you gave the game a good plot, but sadistically interrupted it halfway through.) The game industry calls this "episodic content".
+
+h2. The Big Conclusion!
+
+I don't have one. I'm just thinking out loud, and posting it here because I haven't seen anyone else raise these possibilities yet. Someone else start thinking about this! We have three months to figure out where we want to set our prices...

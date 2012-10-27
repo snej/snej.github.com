@@ -1,0 +1,14 @@
+---
+layout: post
+title: "ZSync"
+---
+"ZSync":http://www.zarrastudios.com/ZSync/ZSync.html is a new Mac/iPhone library that uses my "BLIP":http://bitbucket.org/snej/mynetwork/wiki/BLIP/Overview P2P networking protocol:
+
+bq. "ZSync is an open source syncing library designed to allow easy syncing of data between an iPhone/iPod Touch and the OS X Desktop.
+ZSync utilizes the BLIP library and Apple’s Sync Services to allow easy and seamless syncing of data."
+
+It's still in early development though, with a first public release expected in January:
+
+bq. Right now the code is in a private GitHub repository while the initial framework and protocols are fleshed out.  This is expected to go public in January of 2010.  Until then we are keeping the development team very small so that we can flesh out the design without a lot of overhead.
+
+This looks like it'll be super useful for iPhone apps that want to integrate with their Mac siblings, especially since their design won't require you to have the Mac app running while you sync.

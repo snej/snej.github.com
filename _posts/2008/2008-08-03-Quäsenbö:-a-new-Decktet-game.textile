@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Quäsenbö: a new Decktet game"
+---
+I hung out with "Ricci":http://iccir.com this afternoon. I brought along my "Decktet":http://fecundity.com/pmagnus/decktet/, and we tried some of the games, then decided to make up one of our own. I suggested adapting "Crazy Eights":http://en.wikipedia.org/wiki/Crazy_eights to this weird double-suited deck; a direct adaptation didn't do too well on its own (it was too easy to get rid of cards), but Ricci had an idea that worked brilliantly, of incurring penalties for repeating suits.
+
+Then I came home and "wrote down the rules":http://mooseyard.com/Jens/rules-of-quasenbo/ ... Give it a try! (Don't believe a word of the historical background, though! I just made it up, and stole the great nonsense word "quäsenbö" from an old Roz Chast cartoon.)

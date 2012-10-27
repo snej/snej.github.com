@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Python 3.0: What’s The Point?"
+---
+"Python 3.0 is finally out":http://www.python.org/download/releases/3.0/. I like Python (though it and Ruby are always competing for my affections), and I'm always a sucker for new features in any language, but I'm having trouble getting excited about this. Despite the longtime code-name "Python 3000", it doesn't seem very futuristic; and it introduces a lot of compatibility problems. In fact, after reading the docs, I can't come up with any good reasons to install or use the new version. Am I missing something?
+
+Looking at the official "What's New page":http://docs.python.org/dev/3.0/whatsnew/3.0.html, my takeaway is that the benefits are:
+
+* A bunch of minor language features cleaned up
+* Better (at least less confusing) Unicode support
+* Some nice but minor new syntactic features
+
+while the drawbacks are:
+
+* Won't run any pre-existing Python software. Just one minor example: the xrange() function no longer exists; instead, range() behaves the way xrange did. I'm pretty sure I've written something like "for i in xrange(a,b)" in every significant Python program I've ever written, causing all of them to break in 3.0 until I update them. Which is trivial; but there are dozens and dozens of changes like this. And many of them won't cause easy-to-diagnose exceptions like the removal of xrange; some just cause subtle changes in behavior that will likely require debugging if they're overlooked. (There is apparently an automated code converter, but of course it won't fix everything.)
+
+* As a side-effect of the above: All existing Python books are now out-of-date. (Sure, much of each book's coverage is still accurate, but the reader who's not a Python 3 expert already won't know which parts are OK and which are now wrong.)
+
+* Programs written for Python 3.0 probably won't run in any earlier version of the interpreter, since most of the changes aren't backward-compatible.
+
+* _Slower_ performance: "Python 3.0 runs the pystone benchmark around 10% slower than Python 2.5."
+
+_Something seems wrong here!_ the benefits are minor, the drawbacks are huge. Where's the incentive to use it?
+
+Compare this to the Ruby 1.9 story: A number of language improvements; they're mostly backward-compatible, although with enough exceptions to break lots of large apps like Rails). But oh yeah: <i>"it's three times as fast":http://antoniocangiano.com/2007/12/03/the-great-ruby-shootout/. </i> That's a very big deal, considering the poor performance of today's Ruby (and Python). Once the 1.9 tech appears in a stable release, I am definitely upgrading.
+
+Or compare to an operating system upgrade. How would you respond to a pitch like: "The 'Meerkat' release is going to be incredible! We've made a number of improvements to the system libraries. Of course, all existing apps will break, so you'll have to get upgrades from the developers (which won't run on earlier OS's, by the way.) And afterwards you'll notice everything running 10% slower! But we're sure you're going to love the enhancements to iterators and Unicode support..."
+
+So what did I miss? I don't mean this as an attack; I'm just genuinely confused...
+
+*Update:* See also <a href="http://mooseyard.com/Jens/2008/12/james-bennett-â€œlets-talk-about-python-30â€">my further thoughts</a> in response to James Bennett's article.

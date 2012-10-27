@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Leopard Feature #301"
+---
+It was a great relief for Leopard to finally be finished, after more than two years of work. (And if you wonder why it took so long, consider some of the new products that have been released since Tiger shipped in May 2005: the Intel Macs, the Apple TV and the iPhone / iPod Touch. All of these contain system software that absorbed the attentions of significant subsets of the people who work on on OS X.)
+
+And now, a few weeks later, it's hit the streets. On Tiger Day in 2005 I helped out a bit at the Apple store in Santa Clara; that was fun, but tonight I stayed home because I'm recovering from a bad cold. Still, in between coughing fits, I can ring in the new OS by pointing out yet another little improvement, one that didn't make it into the official Top 300 list.
+
+h2. #301: Safari RSS Article-Reading Improvements
+
+You can now choose to leave new articles marked as "unread" until you explicitly mark them as read by clicking on them. This is more like other news-readers, and it's good if you want to skim through bucketloads of new articles and read a few of them, but still know which ones you skipped over so you can get to them later.
+
+To turn on this mode, go to the "RSS" pane in Safari's preferences, and look for the pop-up menu labeled "Mark Articles As Read:". Change the value to "After clicking them."
+
+You'll also want to make sure "Highlight unread articles" is checked, so that you can tell the read and unread articles apart. By the way, this highlighting has been improved, too. Instead of just changing the headline text to orange, Safari now draws a pale blue background behind the article, and adds the same blue bullet that Mail uses for unread messages. Click anywhere in an unread article to mark it as read. (There's also a "Mark All As Read" item under "Actions" in the sidebar.)
+
+If you _really_ want to speed-read through articles in a hurry, drag the article-length slider (in the sidebar at the top right) all the way to the left. In this view, the articles now display in a very compact single-line list view, with just room for the first bit of the text in between the title and the date. You can still click a headline to jump to its web page, or move the slider back to the right to expand the articles. (Clicking the blue bullet at the left marks an article as read without viewing it.)
+
+Nothing earth-shaking, I know, but I'm happy about these tweaks because they bring the Safari RSS experience more into line with the way we first prototyped it in 2004. Most of what my team-mates and I worked on for Leopard is hidden away behind the scenes (the new "PubSub" framework that supports Mail RSS as well as Safari) but it's nice to have contributed to a bit of more visible functionality too.
+
+(Speaking of the PubSub framework, it has a public API that makes it extremely easy to parse and subscribe to RSS or Atom news feeds. There are some sample applications using it in /Developer/Applications/PubSub, and I'll also try to post an overview here, now that I can finally talk about these things publicly.)

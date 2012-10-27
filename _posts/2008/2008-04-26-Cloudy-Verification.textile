@@ -1,0 +1,88 @@
+---
+layout: post
+title: "Cloudy Verification"
+---
+<i>Continuing from "the previous Cloudy post":http://mooseyard.com/Jens/2008/04/cloudy-networking/ ... </i>
+
+!http://mooseyard.com/Jed/Cloudy/Mars%204.jpg!
+
+The _first_ time you connect to someone, how do you establish that digital identifier you're communicating with is the human being you think it is? This is surprisingly difficult to do, because it's prone to what cryptographers call the "man-in-the-middle attack".
+
+(Those of you already wearing tinfoil hats can skip past the general explanation, down to "What Cloudy Does".)
+
+h2. 1. A Quick Overview Of Verification Attacks.
+
+First, consider the most obvious attack: simple spoofing.
+
+h3. Spoofing.
+
+Let's suppose there's an instant-messaging UI, and while working at home you receive a message from someone with an unknown key, whose nickname is "AliceLiddell", which happens to be the name of a co-worker.
+
+bq. "AliceLiddell": yo, this is alice
+You: hi alice, what's up?
+_You add this identity to your friends-list._
+Alice: i need the admin password to the web server to fix a template
+You: oh ok, it's wend4743kt
+Alice: kthxbye
+
+
+Fifteen minutes later your company's website is pwned by the hacker who posed as Alice. All he had to do was create a new identity with her name as the nickname, and pretend to be her.
+
+How do we get around this? You might think that asking questions before accepting someone's claimed identity would help, and it does help with spoofing, but there are nastier attacks.
+
+h3. Man-In-The-Middle
+
+bq. "AliceLiddell": yo, this is alice
+You: You haven't contacted me before ... how do I know you?
+"AliceLiddell": i'm down the hall next door to brad. i need to ask you a question but you're not in the office today.
+You: yeah, i'm working from home. sorry to be paranoid, but what's the poster on your wall say?
+"AliceLiddell": it used to say "hang in there baby" but i took it down when lolcats started getting too popular =)
+_You add this identity to your friends-list._
+You: cool ... hi alice, what's up?
+...
+
+Having established that this is really Alice, you go on to give her the password ... and fifteen minutes later your company's website gets pwned anyway. What went wrong? Well, it really _was_ Alice you were talking with; but the hacker was able to listen in and read the password. Wasn't the industrial-strength 2048-bit RSA encryption supposed to prevent this?
+
+The problem is that you and Alice were _talking_ with each other; but you weren't directly _connected_ to each other. Instead each of you was connected to the hacker, who was relaying your messages back and forth. In this scenario what probably happened was that Alice tried to look you up by your name, found the hacker's fake account instead, and the hacker's computer then quickly created an identity with the same nickname as Alice, connected to the real you using that identity, and started forwarding your messages to each other while recording them itself.
+
+What's even worse: That identity you added to your friend-list as Alice? It's really the hacker's identity. From now on the hacker can talk directly to you and you'll probably assume it's Alice.
+
+h3. How Do We Solve This?
+
+The man-in-the-middle attack is resistant to nearly any kind of _in-band_ verification. You can ask Alice any personal questions you want, but it won't reveal that you're not connected directly to Alice. You can ask Alice to type in her public key, but the hacker can edit her reply and substitute the key he's connected to you by.
+
+About the only practical way to solve this, unfortunately, is to use an _out-of-band_ channel. You need to talk with the real Alice and compare notes, before you can trust that her digital identity belongs to her. All you have to do, really, is get her _real_ public key and compare it to the key you're communicating with. (And she has to do likewise, of course.)
+
+The canonical way to do this is to meet Alice in person and swap public keys. (PGP users call this a "key-signing ceremony".) Or you and Alice can read your keys to each other over the phone (or Skype, or an iChat video conference.) Sending the keys over IM is somewhat less reliable, but enough so for many purposes, since forging centralized IMs is a fairly involved task.
+
+Of course, we don't want to read 512 hexadecimal digits to each other! One optimization is to compare secure hashes of the keys (as PGP does), but that's still 40 digits. And those "B"s and "D"s are so easy to mix up over the phone.
+
+h2. 2. What Cloudy Does.
+
+<div style="text-align:center;"><img src="http://jens.mooseyard.com/wp-content/uploads/2008/04//CloudyAlert.png" alt="CloudyAlert.png" border="0" width="500" height="306" /></div>
+
+Cloudy's verification scheme is blatantly stolen from the one used in Bryan Ford _et al_'s "Unmanaged Internet Architecture":http://pdos.csail.mit.edu/papers/uia:osdi06/#SECTION00021000000000000000. Instead of making you read a number as a string of digits, Cloudy converts it into a three-word phrase by mapping consecutive chunks of bits into words in an English dictionary, moreover a dictionary that's been "specially constructed":http://tothink.com/mnemonic/wordlist.html of words that are easy to recognize and hard to mix up.
+
+And instead of making you listen to the words and type them in, Cloudy (like UIA) presents a short list of phrases with radio buttons, for you to pick from. One of them is the one that will be correct if the connection is genuine, the others are chosen at random, and there's a catch-all "None of the above" at the end. If the user didn't select the expected phrase, something's wrong.
+
+<div style="text-align:center;"><img src="http://jens.mooseyard.com/wp-content/uploads/2008/04//CloudyVerification.png" alt="CloudyVerification.png" border="0" width="495" height="364" /></div>
+
+(An aside: the phrase only encodes 32 bits, which is far less than even the SHA-1 hash. Just hashing the key down to 32 bits would not be secure enough; instead Cloudy creates a one-time 32-bit key by combining the public key with a randomly-chosen integer that's sent to the other peer at the time of verification.)
+
+Ford points out another benefit of this interface: "its multiple-choice design prevents users from just clicking 'OK' without actually comparing the keys", which defeats the user's damnable tendency to just "dismiss all security-related alerts":http://www.macworld.com/article/132910/2008/04/pubsubagent.html.
+
+Once this is done, and the user chose the right verification phrase, Cloudy adds the other person's public key/identity to your "contact list" in its persistent storage. You can then decide to associate that key with an entry in your Address Book. Cloudy also mints a "relationship" certificate attesting that you have verified the other person's identity; you can choose to annotate the relationship with "XFN":http://gmpg.org/xfn/11 tags like "friend" or "co-worker". These certs can be passed to other friends to transitively extend trust.
+
+How well does this user interface work? Cloudy hasn't seen much real-world use yet, but I've gone through the initial setup with a half-dozen people, and the verification (once I debugged it!) is quite easy to follow and takes only ten seconds or so.
+
+h2. 3. Is This Too Paranoid?
+
+One of the unpleasant side effects of learning too much about computer security is that you start to become paranoid. You "swallow the red pill":http://www.arrod.co.uk/essays/matrix.php of the Internet and discover how much we take for granted, how much trust we implicitly place in things that are not trustworthy: domain names, centralized databases, passwords, emails. In severe cases, you start to self-identify as a cypherpunk and refuse to connect to any server through fewer than three anonymizing proxies. It's a bit like "Medical Student Syndrome":http://en.wikipedia.org/wiki/Medical_students_disease.
+
+On the other hand, I think a lot of this paranoia is justified. I remember the old days, when "spam" was just a Monty Python sketch and you could trust the "From:" line of an email. Nowadays most of the emails we get have forged senders, and even a message that _sounds_ like it came from a friend might have been sent by "some shady social-networking site he foolishly uploaded his address book to":http://www.djchuang.com/2008/blubet-sent-you-a-special-gift-too/. Not too many people worry about domain names yet, but DNS is "not hard to mess with":http://en.wikipedia.org/wiki/DNS_cache_poisoning, either by "hackers":http://www.pcworld.com/article/id,140465-pg,1/article.html or by "profit-motivated ISPs":http://blog.wired.com/27bstroke6/2008/04/isps-error-page.html.
+
+Eventually, anything that can be subverted, will. And since peer-to-peer software can't use the standard brute-force obstacles (centralized authority, locked-down servers) to delay attacks, it has to rely on _actually being secure_. And that means public keys, encryption, webs of trust. As many have pointed out, if you make security an optional add-on to a product, hardly anyone will use it. (How many people you know sign or encrypt their email?) It needs to be built in by default. And the more our privacy is invaded by advertisers, ISPs, search engines, phishers, monopolistic content owners and the like, the more that "drives the adoption of actually-secure software":http://www.shirky.com/writings/riaa_encryption.html by end-users.
+
+Having to go out-of-band and swap three-word verification codes with your buddies is an inconvenience. But you only have to do it once with any particular person; after that, Cloudy remembers their key. And I will probably, in the future, put in some form of transitive trust: if I haven't verified you, but I verified Jean-Claude and he's verified you [and signed a cert to that effect] then I'll decide to trust you too.
+
+*Next: Cloudy Gossip.*

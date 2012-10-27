@@ -1,0 +1,20 @@
+---
+layout: post
+title: "“Interview With An Adware Developer”"
+---
+Matt Knox, a Ruby developer and repentant former coder for an adware company, "explains how adware works":http://philosecurity.org/2009/01/12/interview-with-an-adware-author. Really fascinating stuff, and quite scary from a security point of view.
+
+bq. â€œAt the same time, we also made a virtual process executable. Iâ€™ve never heard of anybody else doing this before. Windows has this thing called Create Remote Thread. Basically, the semantics of Create Remote Thread are: Youâ€™re a process, Iâ€™m a different process. I call you and say â€œHey! I have this bit of code. Iâ€™d really like it if youâ€™d run this.â€ Youâ€™d say, â€œSure,â€ because youâ€™re a Windows processâ€“ youâ€™re all hippie-like and free love. Windows processes, by the way, are insanely promiscuous. So! We would call a bunch of processes, hand them all a gob of code, and they would all run it. Each process would all know about two of the other ones. This allowed them to set up a ring â€¦ mutual support, right?â€
+
+Later on he describes further Windows security fubars like undeleteable Registry keys. All of this further validates my obstinate refusal to give in to my children's pleas to install Windows so they can play all the games that only run on PCs!
+
+bq. <i>S: In your professional opinion, how can people avoid adware?</i>
+M: Um, run UNIX.
+
+And some well-expressed closing thoughts:
+
+bq. <i>S: Do you think that in our society we delude ourselves into thinking we have more privacy than we really do?</i>
+M: Oh, absolutely. If you think about it, when I use a credit card, the security model is the same as that of handing you my wallet and saying, â€œTake out whatever money you think you want, and then give it back.â€
+[...]
+<i>S: Is there anything else you wanted to comment on?</i>
+M: People can have things as good as they are willing to work for. If you want to have a system thatâ€™s clean of nasty software, you can do that. If you want to have personal privacy, itâ€™s possibleâ€“ very hard, but possible. And I think itâ€™s worth it.

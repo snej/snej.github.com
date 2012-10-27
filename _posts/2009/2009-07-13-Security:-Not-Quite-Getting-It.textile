@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Security: Not Quite Getting It"
+---
+I got an iPhone 3GS yesterday (yes, it totally rules.) While setting up online account access for billing, AT&T had me enter a password.
+
+There was one of those colored password-strength meters next to the text field, and it said the password I entered was "weak". Alright, I changed it to add some commas and dashes.
+
+Then I hit Submit, and was told that passwords can only contain letters and digits.
+
+sigh.

@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Unstealthing, Incrementally"
+---
+I got about 14 minutes of fame back in January with "a blog post":http://mooseyard.com/Jens/2008/01/gone-indie/, wherein I grumbled about (among other things) how I disliked Apple's culture of secrecy, and announced that I'd left Apple to work on my own, unspecified, project. In the intervening three months, I haven't said anything about what that project is, almost as though it were ... secret.
+
+The irony of this is not lost on me.
+
+Admittedly, there are things about my app that I do want to keep under my hat until they're ready to show off in their full glory. I want to spend my one minute of remaining fame wisely; ideally accompanied by a large friendly "BUY NOW" button on my website.
+
+But the main reason I haven't been talking is just that I've been lazy. Well, not _lazy_, but focused on _coding_ rather than _talking_. I'm mindful of a quote by (I think) John Crowley, which goes something like:
+
+bq. —There are two kinds of poems: the ones you write, and the ones you talk about writing. They're both important, but never get mixed up about which kind you have.
+
+I feel like I've been talking about writing this type of app (if only to myself) for a decade now, so it's really been time to buckle down and make it happen.
+
+But now I've got a lot of stuff up and running, and I'm excited about it, and feeling annoyed that I can't just blab about my progress. Oh wait, but I can! So starting now, I'll be writing about my project here — I want to post high-level overviews, geekier details of the innards, and progress notes. Sort of like those "developer diaries" the videogame sites love to run.
+
+The catch is that I'm going to talk about the architecture of the app, and its core functionality ... but not the primary user-level feature, the selling point. Not yet. Even without that, I hope this will still be interesting to some of you.
+
+h2. Meet Cloudy.
+
+*Cloudy* is "a comic-strip character":http://mooseyard.com/Jed/Cloudy/ my son Jed started drawing two years ago, when he was ten.
+
+!http://mooseyard.com/Jed/Cloudy/Bored.jpg!
+
+I've already appropriated Cloudy in the past for "a mix CD":http://mooseyard.com/recordings/mub41/ and "a t-shirt":http://www.zazzle.com/mooseyard/product/235833027556892190, so it was a no-brainer to make her the mascot of my new project as well.
+!http://mooseyard.com/Pictures/CloudyAboutBox-20080412-143053.png!
+
+I suspect the app itself will have a more descriptive name by the time it ships, but Cloudy's a good name to keep for the underlying architecture. And what's that?
+
+<b>Next: "What Cloudy Is":http://mooseyard.com/Jens/2008/04/cloudy-as-buzzwords/. </b>

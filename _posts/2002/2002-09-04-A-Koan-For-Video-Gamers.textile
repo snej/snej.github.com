@@ -1,0 +1,21 @@
+---
+layout: post
+title: "A Koan For Video Gamers"
+---
+The Zen master Yoshi was playing a video game. Seated in the lotus position, he expertly maneuvered the controller with his gnarled hands. Nevertheless, on the screen Mario failed to leap from one block to the next and plummeted screaming into the void.
+
+Again, Yoshi began the same level. Again, the moving platforms eluded the sprite onscreen.
+
+Seventeen more times, master Yoshi caused the hapless plumber to fall into nothingness and lose another life.
+
+Still, his pose remained serene, and a bud of a smile played on his lips.
+
+At last the novice Ohta, who had been watching the whole time, could not contain himself. "Master," he blurted out, "how can you remain so calm in the face of so excruciatingly difï¬cult a level? Even when the platforms evaporate into thin air when you are yet a split second from reaching the Shine that is your goal? How do you restrain yourself from throwing the controller through the nearest _shoji_?"
+
+Master Yoshi replied:
+
+<i>"The platform is not moving.
+Mario is not moving.
+Only the mind is moving."</i>
+
+At that instant, Ohta attained enlightenment.

@@ -1,0 +1,27 @@
+---
+layout: post
+title: "The Lost Lesson Of Instant Typing"
+---
+Farhad Manjoo "writing in Slate":http://www.slate.com/id/2232311/pagenum/all about Google Wave:
+
+bq. The trouble is, everything you type into Wave is transmitted live, in real time -- every keystroke was getting sent to Zach just as I hit it. This made me too self-conscious to get my thoughts across.
+
+bq. ... Maybe I should just delete what I'd written and say, "Twitter works because it's simple." But I couldn't do that, because Zach was watching me. He could see me struggling right now—he could see that I'd gotten myself stuck in a textual cul-de-sac and that I was desperately searching for a way out without looking foolish. Now I saw Zach beginning to type: "Don't let the live-typing get you down!" The game was up; what was the point of making a point now? I ended my thought clumsily and then resolved never to attempt to say anything very deep on Wave.
+
+The same thing happened seven years ago with the live-typing feature that I implemented in iChat 1.0 (which was only supported for Bonjour chats.) I thought it was an awesome idea, and I'd wanted to have it in a chat program since about 1997. But it turned out that, in actual use, people hated it, for exactly the reasons Manjoo describes: it makes you self-conscious. We took it out in the next release.
+
+(Interestingly, I hate video chat for a very similar reason. Somehow, the fact that my picture is being shown in real time to the remote person makes me horrifically self-conscious, even though it wouldn't bother me at all to talk face-to-face with that person. I don't know whether it's the little preview on my screen, or the fact that the person is spookily both present and not-present, but the few times I've tried video-chat have been really unpleasant.)
+
+I'm usually on the side of more technology. I believe that our online communications tools are still horribly primitive and have only scratched the surface of what's possible. But this was a case where more technology was bad.
+
+<pre>The low-tech alternative that lots of people use in IM, 
+is to write in short fragments,
+each a separate message,
+so the other person can see them one by one
+without waiting for you to finish the whole sentence.</pre>
+
+The difference is that you're in control over when to send a partial message, and the other person knows you're in control, and so on. I still think it might be possible to do this in a higher-tech way, like using a hot-key to send a partial message on demand without having the funky line-breaks, but the current approach isn't so bad as long as you're not embarrassed about unintentional free verse.
+
+I could have told the Wave people about what I'd learned, except I didn't know Wave existed until April (shortly before the public announcement), and even then I was just some guy lost in the crowd at the demos....
+
+Part of the problem, in both cases, is that live typing is one of those Cool Demo Features that looks really awesome when showing off the app. Features like that can be dangerous because they are legitimately very useful during the app's gestation, when exciting demos are a key survival trait; but then they can't be removed later on because they're so well-known, even if they turn out to be useless. Sometimes these features aren't actually harmful to the user experience, they just make the code more complex and harder to maintain. Instant typing is both, unfortunately. (The clever sync algorithms and rapid-fire network messages Wave uses would be needed even without live typing, but the fact that they have to run on every few keystrokes, not just every minute or so, pushes those things so much harder.)

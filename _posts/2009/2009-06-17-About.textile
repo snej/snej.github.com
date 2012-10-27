@@ -1,0 +1,15 @@
+---
+layout: post
+title: "About"
+---
+This is the blog of Jens Alfke.
+
+<strong>Introverted, intuitive, thinking, perceiving.</strong> I live to make things: most often software, sometimes designs or mixes or stories or photos. (I wish I could make music.)
+
+<strong>Father, husband.</strong> My home is a nest of family. Outside is overrun with flowers and vines and shade trees, inside with books and CDs and kids’ drawings and game pieces and game cartridges.
+
+<strong>Worker, dreamer.</strong> I’m driven by visions of things that could be.
+
+<h2>Contact</h2>
+
+Send friendly correspondence to <tt>thought-palace</tt> at this domain.

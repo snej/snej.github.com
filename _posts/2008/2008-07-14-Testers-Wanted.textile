@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Testers Wanted"
+---
+I need a few brave people to test a pre-beta app for me. No, this is not Cloudy; it's another app I've been working on in parallel. It's called *Your Move*, and it's the expanded version of my "GeekGameBoard":http://bitbucket.org/snej/geekgameboard/ sample code. It lets you play board games against a human opponent; either at the same machine, over a local network, or by sending moves via email or iChat.
+<div style="text-align:center;"><img src="http://mooseyard.com/Jens/wp-content/uploads/2008/07//YourMovePreview.jpg" alt="YourMovePreview.jpg" border="0" width="503" height="438" /></div>
+Obviously this would make a great iPhone app, and now that I have my iPhone developer certification I'll start working on that. But for now it's Mac-only.
+
+To test Your Move you need to
+
+* Have Mac OS X 10.5.
+* Enjoy playing board games ... in particular, Go and/or American checkers, as those are the main games it knows so far.
+* Have at least one friend who will play board games with you (I'll do in a pinch, but I don't have time to play against everyone. Plus, ironically, I suck at Go and checkers.)
+* Be willing to tolerate bugs, and committed to sending in bug reports, crash logs and such.
+
+If you're interested, please
+
+# Register an account on the "Mooseyard projects website":http://projects.mooseyard.com ; then
+# Email me at "jens" c/o this domain and tell me your username, so I can give you access to the project.
+
+Thanks!

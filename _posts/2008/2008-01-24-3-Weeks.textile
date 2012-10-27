@@ -1,0 +1,13 @@
+---
+layout: post
+title: "3 Weeks"
+---
+I've been on my own for three weeks now, and I'm definitely enjoying it. I know that one of the general issues with self-employment is whether one can stay motivated without the external structure imposed by The Man. Fortunately I seem to have no problem with this — I've been coding at top speed. Mostly I work in the detached office, which is now clean and cozy, but sometimes I hang out on the couch in the living room. I have some Things running ... they don't look like much yet, but that's because they're infrastructure. This stuff ends up being harder than it seems it ought to, but I remind myself that if it weren't hard, it wouldn't be worth doing. And also: if it's hard for me, it's also probably hard for anyone else to do, which means less competition. ;-)
+
+I'd like to thank everyone for their encouraging & thoughtful comments on my "Gone Indie" post. So: "Thanks!". I just now turned off further comments on that post, because it's been up a few weeks and the page is getting rather long.
+
+I plan to write a few posts about what I'm working on, at a high level. I just don't feel quite ready yet, mostly because right now my mind is more on how to make things work than on how to explain them. But the explaining is important too.
+
+For now I'll just teasingly post a cryptic list of things I've been working with:
+
+BEEP, Bonjour, CDSA, CMS, FSEvents, Keychain, Mercurial, "Mnemonic encoding":http://www.tothink.com/mnemonic/, NAT Port Mapping, NSCollectionView, SSL/TLS, X.509, Vortex.

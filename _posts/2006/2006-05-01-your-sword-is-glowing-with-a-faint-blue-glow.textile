@@ -1,0 +1,28 @@
+---
+layout: post
+title: "your sword is glowing with a faint blue glow"
+---
+I dabbled in Interactive Fiction, aka Text Adventures, "long ago":/Jens/2004/04/my-geek-history --- I played Adventure on my Apple ][ and Dungeon/Zork on a VAX; I wrote a primitive game in BASIC and later in college partially implemented a language for building games in yacc; and then after graduating, my first serious Mac program was a souped-up and nearly finished version of that language. After that I was too busy with "real" jobs, but others kept the flame alive even after Infocom tanked, building their own adventure-design languages like TADS and Inform and spawning a cult scene of increasing complexity and literary merit. I kicked the tires of TADS and Inform a few years back, then got distracted by other shiny things. You know how it is.
+
+Anyway: now I turn around and there's "Inform 7":http://inform-fiction.org/I7/Inform%207.html, a thing of splendor beyond my dreams. Not only does it have an "IDE":http://inform-fiction.org/I7/Gallery.html with a really interesting form of "integration testing":http://inform-fiction.org/I7/Gallery%2015-16.html, but the syntax itself has become an ambitious attempt at natural language. I haven't started coding yet -- I have a dreamlike apprehension that the whole concept will melt like cotton-candy if I touch it -- but as an example here is an unmodified section of the source code of "a real game":http://inform-fiction.org/I7Downloads/Examples/bronze/ that I've just been playing:
+
+<blockquote><font size="-1"><tt>
+Section 2 - Smells
+
+A thing has a property called scent. The scent of a thing is usually "nothing".
+
+A procedural rule: ignore the block smelling rule.
+
+Carry out smelling something:
+say "From [the noun] you smell [scent of the noun]."
+
+Instead of smelling a room:
+if a scented thing can be touched by the player, say "You smell [the list of scented things which can be touched by the player].";
+otherwise say "The place is blissfully odorless."
+
+Definition: a thing is scented if the scent of it is not "nothing".
+
+Before printing the name of something scented while smelling a room: say "[scent] from the "
+</tt></font></blockquote>
+
+Now that's *wild*!

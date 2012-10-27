@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Go with AI comes to the iPhone"
+---
+My plea for more iPhone board games is really getting results! Now there's a Go game with an AI, so I can get my butt spanked in privacy without the humiliation of losing to an actual human (such as my son).
+
+<img src="http://www.igoapps.com/images/apps/3759/screenshot_1_10489.jpg?rand=952326735" align="right" width="240"/>"iGo":http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=297094975&mt=8 is pretty good, for $2.99. It supports board sizes from 7x7 to 19x9, and several levels of AI strength in addition to a customizable handicap. There's even Undo, so I can back-pedal on my lamest moves and try again.
+
+The only things I can say against it are:
+
+* For some reason its hit-detection is too high, so it places a stone on the space _above_ the one tapped.
+* You don't get a chance to confirm your move, so if you tapped the wrong space [see above] the AI immediately replies, so you have to open the drawer and press the Undo button.
+* When starting a new game, the first thing it does is make you type in a name for it. I have no idea what I'd call a particular Go game, so I go "Duhhh..." and type in something random. It could at least fill this in with the date and time, by default.
+
+(Also, totally off the topic of games, I love the Amazon and OpenTable apps. Each of them is so much faster and smoother than navigating their respective websites.)

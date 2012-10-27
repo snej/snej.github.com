@@ -1,0 +1,53 @@
+---
+layout: post
+title: "The Fine Line Between Clever And Stupid"
+---
+...and which side of that line am I on? Not in general; just in respect to my latest decision in Cloudy. It's the old "make vs. buy" trade-off, or "write vs. reuse" in this case: do you go with an existing library, even if it's problematic, or do you write your own implementation from scratch?
+
+What am I talking about? The networking code in Cloudy. From the very beginning I wanted to use "BEEP":http://beepcore.org, a generic and flexible protocol for sending request/response messages over a socket. It has good support for parallelism, nice abstractions like multiple channels and feature negotiation, and supports SSL.
+
+The BEEP implementation I'm using is "Vortex":http://vortex.aspl.es. It has the benefits of existing (there aren't a lot of BEEP implementations around), being written in native code, and being within my capabilities to get running on Mac OS X. Unfortunately it's also got a very complex and unintuitive C API, spawns lots of threads and calls my code from them (so I have to deal with thread-safety), and isn't quite finished yet. So over the months I've put a lot of work into writing an Objective-C API, figuring out how to get that working reliably, and diving into the Vortex code to fix bugs and add new features.
+
+At some point -- I think it was last Thursday -- I crossed a line and started to wonder whether putting more effort into Vortex was throwing good money after bad. I wanted to use some of BEEP's MIME features, but found that Vortex only implements a tiny subset, and that even that implementation doesn't work right. Going down the path of fixing and improving, I found that I would have to break compatibility with any earlier versions of Vortex (which all send wrongly-formatted data), and that every patch I added was exposing more bugs, whether existing ones or newly-added ones of my own. And all this meant hacking on complicated code in plain C, with "very long functions, and liberal usage of 'goto' statements":https://dolphin.aspl.es/svn/publico/af-arch/trunk/libvortex/src/vortex_sequencer.c.
+
+Unfortunately, there are not many BEEP implementations to choose from (it's hard to compete against HTTP, the hammer everyone reaches for.) There's a private BEEP.framework inside OS X, but I'd have to be a fool to use it (for legal reasons if not technical.) I found that SubEthaEdit has one, and I've asked the developers about it, but I'm sure there will be financial terms.
+
+h3. So yeah, I'm writing my own.
+
+No, I am not writing my own BEEP implementation! Stupid sensationalistic headlines. I thought about it for a few hours on Friday, but BEEP is actually pretty complicated and I knew it would end up taking longer and being harder than I would like.
+
+But then I started to think about what BEEP features I need, and which ones I don't, and realized I could make do with a subset. Things I need:
+
+* Multiple messages and replies over a single socket
+* Parallelism (don't have to strictly alternate messages and replies)
+* Message metadata (some type of MIME-like headers)
+* SSL support
+
+But I don't need:
+
+* Multiple channels (that's a biggie! Quite complicated.)
+* Well-defined schema ("profiles") with negotiation over which to use
+* FIFO message delivery
+* Negotiation of whether to use SSL
+* SASL and other authentication schemes
+* Interoperability with any other clients
+
+On Saturday morning, a bit of pen-and-paper doodling convinced me I could create a simpler protocol that used some of the ideas of BEEP, and would give me just the features I needed. And since I could build on top of the Foundation and CFNetwork classes, in Objective-C, I could do it with a whole lot less code than Vortex.
+
+So I started coding...
+
+h3. BLIP.
+
+It's almost ready now, Monday night. I don't have message metadata implemented yet, and flow-control needs work, but the rest is running pretty reliably. I'm calling it BLIP, for "BEEP-LIke Protocol" (or maybe "BEEP-Lite Imitation Protocol", like some kind of suspect canned food product you might find in a dingy supermarket.)
+
+What does BLIP do? It lets you open a TCP socket and then use it to send messages back and forth. Each message is a data blob of arbitrary length, with an optional set of key/value properties [once I implement that]. Each message can have a reply associated with it, so you can send a message and then wait for the reply. Either peer can send messages, at any time (as opposed to most protocols that only let the "client" who opened the connection send messages, and only the "server" reply.)
+
+Multiple messages can be in flight at once, in either direction: sending a 10MB file doesn't block the transfer of other data. Messages can request high priority to get more bandwidth, or they can request gzip compression.
+
+And it's only 1500 lines of code, so far! Vortex is about 34,000. Even my Obj-C wrapper for Vortex is bigger than BLIP is. [All those figures ignore comments and blank lines.]
+
+I'm sure BLIP will end up doubling in size before it's really ready; and I'm also sure it'll take a lot more time than I've spent on it. But both of those figures are cheap compared to what I've invested in something that ultimately wasn't working for me. So I think in this case re-inventing the wheel is justified.
+
+...Meaning that I've answered the implied question of this post's title, coming down on the side of "clever". Whew! (What else did you expect? it's _my_ blog, after all.)
+
+[PS: Yes, if BLIP does work out, I'll certainly open-source it. I wouldn't call it a replacement for BEEP, as it's a lot more limited, but I think it'll be useful.]

@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Dream apps and the perils of screen-scraping"
+---
+There's an interesting online competition going on called "My Dream App":http://mydreamapp.com/. The idea is that a bunch of people pitch their ideas for a Mac application, and the set of ideas gets winnowed down in several rounds of public voting, until one is left. A group of experienced developers have promised to implement the winning idea as a shareware app, whatever it turns out to be.
+
+It's a fun concept, but it highlights some of the problems of having end users design software. A number of the proposals give me a particular sinking feeling I associate with user-interface design meetings: lots of ideas that sound super-cool as one-sentence pitches, accompanied by irresistibly glitzy faked-up screen shots (all replete with translucency, rounded corners, and this year's _de rigeur_ reflections). But too often there's no "there" there. It's all so vague that I can sense that these people haven't thought through the difficult bits or worked out a coherent idea of what the app will do.
+<!--more-->
+
+It's kind of like being a writer and having someone come up to you at a party and say "I have this _brilliant_ idea for a novel..." followed by a rambling series of plot twists, closing with "…and I've done the hard part, now you just have to write it down!"
+
+h2. Case In Point
+
+The idea that frustrates me the most is called "Hijack". (I'd link to it, but the site is thoroughly Ajax-y that I can't find a URL for this page. You'll just have to start at the home page and click on "Hijack". Oh well; permalinks are so 2004 anyway.) This is to be a super-duper native GUI interface to web forums. Like an email app or RSS reader, it will show all the posts of every forum you subscribe to in a consistent interface, tracking new unread posts and threads. Great stuff! What server does this work with? _All of them!_
+
+Yup. In an amazing feat of hand-waving, this app is going to Just Work with every BBS program under the sun, through the miracle of screen-scraping. An army of volunteers are going to code and maintain scripts that will strain through the murky tag soup and extract every bit of information you need. Even though every single installation of every single brand of web forum is different, and they get redesigned all the time, and in many cases some sort of AI would be required to figure out how to reassemble the semantics from the stuff on the screen.
+
+(I'm sure that by now my colleague Jessica is shivering uncontrollably, if she's still reading. Jessica did a lot of work on Sherlock, including continued maintenance of the channels. Many of the channels work this way, by scraping the HTML of various web sites. They are frustrating to maintain because the sites keep changing their design, which breaks the scripts that run the associated channel. Few people know that the channels are dynamically updated, with new versions downloaded when necessary whenever you launch Sherlock. It has to be that way, because otherwise Sherlock itself would have to be Software-Updated many times a year. Now, consider that Apple only ships/supports a handful of channels, and that these are vastly simpler than a web content-management system. The task of doing this kind of development and maintenance for every damn BBS is just mind-boggling.)
+
+h2. Thinking Inside The Box
+
+But what bothers me the most is not just that it's infeasible. It's that it's a _horrendous kludge_. It's thinking completely inside the box. "I read so many of these forums, and they're ugly and I can't track them. I know! I'll make an app that will read the forums for me!" It reminds me of Gopher and Archie, which were now-quaint attempts to spackle over the old ARPAnet by putting a textual menu system and a searchable index on top of the maze of FTP servers. They were kind of neat, but as soon as NCSA Mosaic appeared they were history.
+
+Don't get me wrong, I absolutely love the idea of an elegant, unified user interface for distributed many-to-many discussions. I've been obsessed by it for years, in fact. But the real way to do this is to build protocols and servers that make it work, and then robust and reliable clients can be plugged into them. The need for this has been obvious to me since about 1997. The world keeps getting closer and closer to it, in incremental steps starting with RSS.
+
+I think that we actually have most of the necessary pieces now — the "Atom format":http://tools.ietf.org/html/rfc4287 and "publication protocol":http://tools.ietf.org/wg/atompub/draft-ietf-atompub-protocol/, the "Atom threading extensions":http://tools.ietf.org/wg/atompub/draft-snell-atompub-feed-thread-12.txt, and decentralized identity systems like "OpenID":http://openid.net. All it takes now (he said with slight sarcasm) is getting the BBSs to adopt some of these standards in a coherent and compatible way, so that news-readers can follow and track all of the threads, posts and identities involved.

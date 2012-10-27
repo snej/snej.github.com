@@ -1,0 +1,13 @@
+---
+layout: post
+title: "hash musings"
+---
+I've been thinking about writing an essay about the beauty & weirdness of "cryptographic hash functions":http://en.wikipedia.org/wiki/Cryptographic_hash_function. The way any digitized data, however huge, can be named by a short fixed-size binary string. The way there are in theory an infinite number of hash collisions, but in practice zero. I was talking to myself about it, this morning, and two quotes appeared, which I write down here to remember:
+
+"Hashing is my favorite computer-science concept."
+
+and
+
+""SHA":http://en.wikipedia.org/wiki/SHA_hash_functions is the Dewey Decimal code of "Borges's Universal Library":http://en.wikipedia.org/wiki/The_Library_of_Babel."
+
+(except that there's a fallacy in the second statement, which I leave as an exercise for the reader.)

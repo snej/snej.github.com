@@ -1,0 +1,23 @@
+---
+layout: post
+title: "I Has A Hash Table"
+---
+I know, three weeks ago I said I was "building me a B-Tree":http://mooseyard.com/Jens/2009/08/im-building-me-a-b-tree/. I did build it, even the parts I listed under "What's next?" in that post, and it works. But it became apparent there was a more urgent need for a hash table, for work-related reasons, so I switched gears to build one of those on the same principles.
+
+The biggest principle is Append-Only Storage, as described in the prior post. So I thought back to the simplest on-disk hash table I know of -- "Dan Bernstein's CDB":http://cr.yp.to/cdb.html -- which is very clever, but read-only. I implemented something similar, and then mashed in the CouchDB-like approach of incrementally appending only the modified sub-components.
+
+Initially I made the file a series of key-value pairs, followed by the hash-table index as an array of {hash code, position} structures, each of which pointed to the position of the corresponding key and value. Very simple. To save changes, I'd write out the changed pairs, followed by a new copy of the index. The problem with that was that the index gets large as the number of records increases, so with a 100,000-record file, changing even one record would append almost a megabyte.
+
+I had a brainstorm about how to fix that -- add a bit of tree structure. So now there's a root index of 256 pointers to sub-indexes. The 8 most significant bits of the key's hash code are looked up in the root index to find the sub-index (hash table) in which to look up the value. The advantage is that every value change only alters one sub-index; when saving, only sub-indexes that were modified, plus the root, have to be written out. So if only one key changes, that's just one sub-index, meaning only 1/256 as much data to append as before.
+
+[I thought I was really clever for coming up with this, but then when I went back and looked at the original CDB, which I hadn't seen in a year and a half, it turns out "it does it too":http://cr.yp.to/cdb/cdb.txt! I guess I'd just forgotten about that...]
+
+h2. What I have now
+
+What I have now is a persistent dictionary whose keys and values can be arbitrary data blobs. You can make changes in memory, and then save them back to disk, where they're appended to the file. (Or you can rewrite the file from scratch, which takes a bit longer but reclaims wasted space.) The file format should be virtually un-corruptible by crashes, <strike>unlike a traditional database such as sqlite</strike>. An interesting extra benefit is better concurrency -- the file doesn't require any form of read-locking, because it's perfectly safe for one client to write to the file while another is reading from it.
+
+(The grand total's about 3400 lines of C++, for both the tree and hash table.)
+
+I plan to upload this to Bitbucket soon, but I keep brutally refactoring the classes, or maliciously changing the file format, neither of which would endear me to other people trying to use the code. Hopefully things will settle down soon, now that I've got nearly all the functionality I want. I'll let you know.
+
+[Update: Struck out a comparison that's probably unfair to current versions of sqlite, judging by  "descriptions of how it saves transactions":http://www.sqlite.org/atomiccommit.html.]

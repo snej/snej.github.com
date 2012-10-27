@@ -1,0 +1,57 @@
+---
+layout: post
+title: "Apple Never Promised Us It Wouldn’t Be Evil"
+---
+Here is the latest absurdity to come out of Apple's deeply, endemically fucked-up App Store approval process: Jamie Montgomerie's "Eucalyptus":http://th.ingsmadeoutofotherthin.gs/eucalyptus/ app, an e-book reader that can download public-domain books from Project Gutenberg -- about the most innocuous thing you could imagine, right? -- "gets rejected not once but _three times_":http://www.blog.montgomerie.net/whither-eucalyptus for containing "obscene, pornographic, offensive or defamatory content".
+
+Leaving aside the issue of whether Apple has any business deciding what constitutes obscenity (a task that's driven grown Supreme Court justices to drink) --
+
+And leaving aside also the fact that Apple's censors have three times now been too dim to comprehend that the application does not contain any books, obscene or otherwise, but downloads them from the Internet much like Safari --
+
+No, the really outrageous issue is that the supposed obscenity here consists of a text-only English translation of the "Kama Sutra":http://en.wikipedia.org/wiki/Kama_sutra. Apple specifically called out some pages of steamy advice for "when a man wishes to enlarge his _lingam_". (No, "really":http://www.blog.montgomerie.net/user/files/Whither%20Eucalyptus/Rejection2-1.PNG.) [1]
+
+Now, Richard Burton had to get his 1883 translation of this ancient text "printed privately":http://en.wikipedia.org/wiki/Kama_sutra#Translations when no publishers would accept it, but that was in the Victorian era. The current authoritative translation is nowadays published by that infamous smut peddler, Oxford University Press. Much harder-core fare like _Ulysses_ and _Lady Chatterley's Lover_ -- books which go so far as to use _recognizable English names_ of the naughty bits -- were judged after some controversy to be free of obscenity in the 1930s. By 1970 the obscenity statutes had been lifted from nearly all printed material, and nowadays anything goes -- take a look at some of the e-books available for sale on the iTunes store.
+
+Montgomerie has now, humiliatingly, been driven to self-censorship: his latest message to Apple states "I have now submitted a new version that specifically blocks access to the Kama Sutra book you identified. Is this what you mean?"
+
+bq. [<b>Update, May 24:</b> "Mongomerie reports":http://www.blog.montgomerie.net/hither-eucalyptus that on the 23rd he "received a phone call from an Apple representative. He was very complimentary about Eucalyptus." The whole matter was, of course, resolved, and Eucalyptus is now "available for purchase":http://tr.im/ptus.  A happy ending, certainly, and congratulations on the release! ...But I don't believe it invalidates my argument below. After all, this isn't the first time an outrageous rejection has been reversed after mass humiliation of Apple. It's the overall default policies and behaviors, and their chilling effects, that I'm complaining about, and there's still no sign of those changing.]
+
+h2. The "E" word.
+
+I don't think anyone but a card-carrying member of the Christian Coalition or Taliban would disagree that this was a _stupid_ decision on Apple's part. (And it was a considered decision, not a 'glitch in the approval process', given that Apple repeated it twice.)
+
+I feel the need to step up to a stronger word. How does *evil* sound?
+
+Hear me out. I'm not talking "evil" as in killing babies or nuclear blackmail, rather in the sense it's meant in Google's corny motto "Don't Be Evil", or alluded to in the older proverb "With great power comes great responsibility". But yes, I do mean "evil" as malign, the opposite of good, etc. etc.
+
+Last year Apple put itself into an ethically very delicate situation with the App Store, by creating a market in which it has the sole power to make 3rd party software available (or to take it away). As has been amply discussed before, iPhone developers have no choice (if they want to be iPhone developers) but to put tremendous effort into developing the product, only finding out at the very end whether or not Apple will let it be sold.[2]
+
+There are definitely some good reasons for such a model, primarily that it helps keep the platform secure from malware, and that by preventing piracy it allows developers to collect a lot more revenues per user, allowing them to set prices far lower than those in other software markets.
+
+But in return Apple had the obligation to be very, very careful to be ethical, upright and transparent in its dealings with developers and the public, to minimize the dangers (of censorship, of conflicts of interest, of stifling innovation) inherent in its position.
+
+And being Apple, it completely and utterly fucked it up. Because it's in Apple's genetic code to be about as transparent as a lead brick. This has always annoyed the press, and it has frequently enraged developers, who suffer from the consequences of blank silence from Apple in between carefully-scripted WWDC keynotes and PR-scrubbed announcements. But in the context of the App Store, Apple's inscrutability and arbitrariness has become actively malign.
+
+h2. Evil is as evil does.
+
+I'm not saying that Apple _is_ evil; it isn't run by bluestockings or monopolists or cackling supervillains. But evil is a result of what you _do_ [3], and actions are not excused by good intentions; in the real world those who do evil (excepting psychopaths) uniformly believe they're working for the good.
+
+Apple's App Store approval process has, over the past year, shown that the company is:
+
+* acting like a Victorian-era book censor;
+* quashing competition by blocking apps that improve on Apple's products;
+* blocking innovation by denying 3rd party apps access to the user's legally-owned data (such as MP3s);
+* attempting to deny end-users the freedom to do what they want with the hardware they bought and paid for (viz. its current efforts to have jailbreaking declared illegal);
+* and causing undue hardship to small developers by arbitrarily withholding their ability to sell the apps they've developed.
+
+Nor has Apple engaged in the slightest bit of dialog with its developers and users to work through any of these issues. The best that's happened is that, after much public ridicule, Apple has without comment released some apps that it had previously blocked.
+
+Maybe you think "evil" is too strong or melodramatic or exaggerated a word for this. Then feel free to substitute something that has fewer loaded connotations to you -- "unethical" or "anticompetitive" or whatever. But if you're one of those who, like me, has applied the "e" word to the past actions of Microsoft, or to groups that try to ban books from libraries, then I think there's really no option but to use the same blunt language here and now.
+
+<hr /><font size="-1">
+
+[1] By these standards, Apple should have banned its own Mail app, too. It sends me these kind of _lingam_-enlargment messages all the time.
+
+[2] This is arguably worse than the console video-game industry's similar monopoly on approving games, because those companies listen to developer pitches up-front before development. (Also, this kind of restraint is much nastier when applied to all types of software, including books, than just to games.)
+
+[3] This semantic distinction is one I'm not sure Google gets either. "Don't _Do_ Evil" would have been a better motto. But in its defense, Google does in practice seem to understand its responsibilities and is admirably open about its actions.</font>

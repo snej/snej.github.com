@@ -1,0 +1,25 @@
+---
+layout: post
+title: "So Many Fonts, So Little Print"
+---
+I went on a free-font-downloading bender last weekend. I still love typography, and I'm glad to see the arcane art of type design isn't dying out. Back in the old days of Desktop Publishing, you had a choice between high-quality but expensive fonts from reputable foundries, or a bunch of cheap but crappy knockoffs done in Fontographer.
+
+But now, thanks to mass amateurization, there are people who actually know what they're doing, who design new typefaces for the fun of it and give them away. (The cannier ones give a few away as teasers and charge for the rest.) Collecting these makes for a fun evening once in a while, at least it does if you share my predilections. There's the surprise of discovery, the glee of downloading it for free, and then later the avaricious satisfaction of organizing the fonts on your computer, like Scrooge McDuck running coins through his fingers.
+
+The problem is that these days I don't actually have a whole lot of _use_ for fonts. Desktop Publishing is passé, I hardly ever print anything, and when I design something for the web I can't use obscure fonts that other people don't have. It's frustrating! It makes me want to start a zine.
+
+h3. "Free fonts, huh?"
+
+Now everyone's waiting for me to cough up the links to these beautiful fonts. Well, I did say it was a "bender", and one of the aspects of a bender is that you're not paying a lot of attention to how you got where you are ... as when a friend of mine in college famously regained consciousness late one evening hanging from the dining room chandelier. So you can understand that I wasn't carefully bookmarking everything. Still, from the leftover detritus I can piece together links to a few of the sites I crawled through:
+
+* The candidly-named "FontLeech":http://fontleech.com/
+* "Smeltery.net":http://www.smeltery.net/ [Warning! Clicking this link will resize your browser window too large, and then perversely open a new one; but the delights within will make everything all better]
+* Smashing Magazine breathlessly reveals "Five Freefonts You Shouldn't Have Missed":http://www.smashingmagazine.com/2007/01/19/7-freefonts-you-shouldnt-have-missed/
+* "Vitaly Friedman's listings":http://www.alvit.de/blog/article/20-best-license-free-official-fonts of free quality fonts, which send you off in a dozen directions at once
+* "COM4t":http://com4t-fff.seesaa.net/ has several lovely fonts scattered over a site that makes it hard to tell where the avant-gardery ends and mere Engrish begins
+
+h3. Show & Tell
+
+I should _show_ you at least one of these ... my pick is COM4t's gorgeous "Spirequal Light":http://com4t-fff.seesaa.net/article/16625385.html, which would have been quite at home in the legendary "American Type Founders 1923 catalog":http://exhibits.itchyrobot.com/ostend.pl?exhibition=ATF23&pageset=22:
+
+<img src="http://com4t-fff.up.seesaa.net/image/Spirequal-L-Typography.gif"/>

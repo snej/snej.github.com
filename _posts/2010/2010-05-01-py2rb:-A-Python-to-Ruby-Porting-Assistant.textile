@@ -1,0 +1,15 @@
+---
+layout: post
+title: "py2rb: A Python-to-Ruby Porting Assistant"
+---
+I've never figured out whether I prefer Python or Ruby, so I've written things in both languages. Sometimes I start in one, then change my mind and decide I'd rather use the other. Unfortunately, changing over is painful, even though both have fairly similar syntax. For instance, converting to Ruby means inserting zillions of "end" statements!
+
+Having a need to do this recently, I lazily looked around for a script that would do the grunt-work of Python-to-Ruby translation. I couldn't find one, so I ended up writing one myself. And I've uploaded it for the benefit of others who might have the same need, and who might even improve it.
+
+So here it is: "*py2.rb*":http://bitbucket.org/snej/py2rb/src/tip/py2.rb. Use it wisely. In particular, pay attention to the caveat found in the file's header comments:
+
+bq. This script just does the obvious, easy transformations, giving you more time to work on the harder ones :) It is NOT a real parser, just a bunch of kludgy regex operations, so it can't do anything fancy. It may get some things wrong, and won't even attempt some other things that it's very likely to get wrong. The output will definitely have to be hand edited by someone familiar with both languages, before it can be expected to compile as Ruby, much less run correctly. The goal is simply to require _less_ hand editing, and less mechanical replacing, than you would have had to do without this script.
+
+It's in the public domain. "Do what thou wilt" shall be the whole of the law.
+
+*Note:* Please don't comment with Python advocacy or, worse, anti-Ruby flames. That's not the point. I like Python fine; I just prefer to remain promiscuous. And I think it's ultimately in everyone's interest for ideas to be able to flow from one form of expression to another.

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Why They’re Doing This"
+---
+I don't want to make a habit of replying on my blog to posts on other blogs, because (a) it's dorky in an autistic way, and (b) it only encourages the annoying practice of blogs that stick their fingers in their ears.
+
+But I've seen a couple of references now to "Dean Allen's complaint about sites that offer multiple RSS feed formats":http://textism.com/2008/04/19/please.stop.doing.this, but no place to post a comment about it; and since it directly relates to my past job monkeying with feeds, I feel like I should answer.
+
+There are two reasons why a web page would link to multiple feeds.
+
+# To support feed-readers that don't understand every format. The XML-syndication-format field has a totally ludicrous history of incompatible versionitis, and the only format that's actually sanely designed (Atom) is new enough that for a while some major clients, such as BlogLines, didn't support it. So it's reasonable during such a transition period to generate both formats.
+# Because there might be feeds with different content. Some sites offer headlines-only feeds and full-content feeds. Some blogs offer a feed of all the comments on one post, as well as the usual feed of all the posts. Some wikis offer a feed of revisions of a single page.
+
+The problem for a client like Safari is that there isn't a clear way to tell the difference between those two cases. When a site offers multiple feeds (by including multiple LINK tags in its HTML) do they have the same human-readable content or not? Answering that would require, at a minimum, downloading and parsing both feeds and trying to match the contents of the entries.
+
+The first version of Safari RSS (in Mac OS X 10.4) went for simplicity, by indicating in its UI only that there _was_ a feed available, not how many. If the user pressed the "RSS" button, it would pick one of the feeds to switch to. The heuristic was to give priority both to order (picking the first feed listed) but also to format (preferring Atom to RSS, because the format is much better-defined and less prone to nasty ambiguities and parsing problems.)
+
+But some people complained that, on sites that offered multiple feeds with different content (like articles vs. comments) you couldn't use the button to pick which one you wanted. So in Mac OS X 10.5 we decided to make the button into a pop-up if there were multiple feeds listed.
+
+The problem now is that you more commonly end up being offered a choice between two formats with identical content, which is what Dean and others complain about, because most blog engines are configured to offer both Atom and RSS (and sometimes multiple flavors of each.)
+
+Here's where I _could_ talk about the design problems of the feed auto-discovery mechanism, and describe better ways it could have been designed to support multiple feed formats [hint: HTTP 1.1 already supports content-type negotiation] or even future improvements that could be made to reduce this annoyance in the future. But you know what? I don't care about Trendy XML-Based Syndication Formats anymore. OK, all right, I clearly care enough to write a multi-paragraph explanation and post it to my blog. But not any more than that.

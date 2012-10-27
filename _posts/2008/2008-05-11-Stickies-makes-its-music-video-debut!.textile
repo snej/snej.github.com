@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Stickies makes its music-video debut!"
+---
+Stickies and I hadn't spoken in a while, but it called me this morning to announce it's made its acting debut in a music video! That was unexpected, to say the least, but it's an exciting career move, and I had to congratulate it; it does a great job:
+
+<object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/6kxDxLAjkO8&rel=0&color1=0x234900&color2=0x4e9e00&hl=en"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/6kxDxLAjkO8&rel=0&color1=0x234900&color2=0x4e9e00&hl=en" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+
+Stickies makes its entrance at 0:53, if you want to skip directly to it, but really the entire video (and song) are excellent. I just wish they'd used Stickies in the opening scenes instead of Word -- face it, Word is over the hill, especially that old Office 2004 version. (Did you see the bags under the Office Assistant's eyes? Stickies told me they dragged it straight out of the Betty Ford Center to shoot those scenes, and it couldn't remember any of its lines even though they were right up on the screen next to it in giant print. It's sad, really. At least it hasn't OD'd yet like that pathetic paperclip.)
+
+This seems to be a fan-made video, by the way; but I think it's better than "the official one":http://www.youtube.com/watch?v=xDlEXQaMBpk. Now the question is: will Apple use this in a commercial? I think they should!
+
+[via "37signals":http://www.37signals.com/svn/posts/1020-how-to-make-a-music-video]

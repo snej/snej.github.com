@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Cloudy Networking"
+---
+Next I need to talk about networking; having an identity and minting certificates isn't very interesting until you can connect to someone else.
+
+<img src="http://mooseyard.com/Jed/Cloudy/Too%20Much%20Electricity.jpg" width=600/>
+
+h2. Point-to-Point Communications.
+
+When one Cloudy peer wants to communicate with another one, it opens a TCP socket to its IP address â€”
+
+[Hang on, there are two issues I suddenly glossed over in that last phrase. First, how did this peer find out the others' IP address? These are just random computers, not servers, so they don't have their own domain names or even stable addresses. This is indeed a problem with any unstructured peer-to-peer network, but the solution involves things I won't get to until the next installment, in an unfortunately but necessary violation of layering.]
+
+[Oh, and issue #2 is that most home computers are now behind "Network Address Translators":http://en.wikipedia.org/wiki/Network_address_translation (usually some kind of WiFi base station or broadband router), which means they don't have their own real IP addresses and can't receive incoming connections. Fortunately, most NATs now "support":http://en.wikipedia.org/wiki/UPNP "protocols":http://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol that allow clients to open listening ports to the outside world, and doubly fortunately, Mac OS X 10.5 includes "an API for making such connections":http://developer.apple.com/documentation/Networking/Reference/DNSServiceDiscovery_CRef/dns_sd/CompositePage.html#//apple_ref/c/func/DNSServiceNATPortMappingCreate. Cloudy opens such a port whenever it finds itself behind a NAT.]
+
+â€” and runs a protocol called BEEP over the socket.
+
+h3. BEEP.
+
+"BEEP":http://beepcore.org is a sort of generic application protocol that multiplexes a TCP socket into multiple virtual channels, each of which can send and receive binary messages. It's very handy for designing your own protocols, since it lets you focus on the high-level tasks of defining how your messages are encoded and when to send them and what to send in response.
+
+I'm using an open-source (LGPL) implementation of BEEP called "Vortex":http://vortex.aspl.es/. Its API is in C, but I've written a Foundation-level Objective-C wrapper around it. (I'll probably open-source that code sometime.)
+
+One nice feature of BEEP and Vortex is that they handle SSL for you. The BEEP protocol lets the two peers negotiate what type of SSL they support, before switching over to it, almost transparently to the application code. Since the first thing that happens in SSL setup is exchanging certificates, each instance of Cloudy immediately learns the identity of the peer it's connecting to. (In normal HTTP-over-SSL, only the server has a certificate and the browser remains anonymous; but SSL supports bidirectional authentication and Cloudy uses it.) Unlike most client-server protocols, Cloudy has no need for a login: each peer has seen the others' public key, and the ability to use that public key proves that the other peer owns the private key, and hence that identity.
+
+So now the two peers are connected, they've identified and authenticated each other, and their communication channel is encrypted. They can now open BEEP channels and send each other messages across them. The primary types of messages Cloudy sends are signed objects (certificates); I'll get into those later.
+
+h2. Local Area Discovery (Bonjour).
+
+As you'd expect, Cloudy also uses "Bonjour":http://en.wikipedia.org/wiki/Bonjour_%28software%29. This is somewhat orthogonal to BEEP -- Bonjour's a _discovery_ protocol, so its main purpose is to let peers on the same LAN find out each others' names and addresses. But Bonjour does support a thing called a "TXT Record":http://files.dns-sd.org/draft-cheshire-dnsext-dns-sd.txt, which is a small chunk of arbitrary metadata that a service can associate with itself. For example, iChat stores your availability and status message in its Bonjour TXT record, which is how its Bonjour buddy list can show that information for everyone on your network.
+
+Remember the "CallingCard" I used as an example of a signed object in the last post? Well, that's what Cloudy puts in its TXT record. The CallingCard contains your availability and status, but what's really important is that it contains your public key, which is your identity.
+
+So Bonjour solves, at least on a LAN, the discoverability problem I pointed out at the start of this post. At this point, if the peer you want to send messages to is on the same network, Cloudy can easily find it via Bonjour, open a BEEP socket, and authenticate over SSL.
+
+What's more, Cloudy's view of who's on the network is actually _trustworthy_. The CallingCard is _signed_ with your public key, proving that you created it. iChat's Bonjour IM has always been insecure in that there's no way to tell whether anyone else is who they say they are: all you know about someone is their name, which they can easily change to anything they want by editing their address book. In Cloudy, on the other hand, once you've communicated with someone once, your app remembers their public key, and it can identify in the future whether a peer appearing on the network is that person or not. (To make this clear in the UI, the name of anyone you haven't previously vouched for is shown â€œin quotesâ€.)
+
+â€” Oops, I just skipped over a tricky problem again. The _first_ time you connect to someone, how do you establish that the digital identifier you're communicating with corresponds to the human being you think it is? This is surprisingly difficult to do, because it's vulnerable to what cryptographers call the "man-in-the-middle attack":http://en.wikipedia.org/wiki/Man_in_the_middle_attack. It's worth a post by itself...
+
+<b>Next: "Verifying Identities":http://mooseyard.com/Jens/2008/04/cloudy-verification/. </b>

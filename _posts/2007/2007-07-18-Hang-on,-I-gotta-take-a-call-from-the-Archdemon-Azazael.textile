@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Hang on, I gotta take a call from the Archdemon Azazael"
+---
+"37signals gripes about those annoying Bluetooth cellphone headsets with even-more-annoying blinky LEDs on them.":http://www.37signals.com/svn/posts/516-blinking-bluetooth-headsets
+
+I once had the idea of a charity that would collect discarded headsets from yuppies and distribute them to mentally ill homeless people. Just by wearing the headsets, they would eliminate the social stigma attached to talking to themselves on the street; this would help re-integrate them into society.

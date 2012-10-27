@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Rails Help, Please? (How to create a login/account system)"
+---
+I hope some of you reading this are Ruby On Rails experts and have a moment to help me out ...
+
+h3. The problem in a nutshell:
+
+_What Rails generator/plugin should I use to create a user account / login system, preferably with OpenID, in a new app?_
+
+h3. The gory details:
+
+I haven't done any Rails work in quite a while. The app I was working on was circa Rails 1.0. I've now updated all my gems so I have Rails 2.0.2. Of course the app doesn't work: it crashes and burns immediately with Ruby errors in the generated code. Not surprising since I'm sure a lot has changed since 1.0.
+
+So I thought I'd start over by generating a fresh Rails app, and then start moving pieces of my app over. But I'm immediately stuck at the first step, setting up a user account/login system.
+
+(Which is a hurdle every newbie runs into, right? Because nearly every web app needs this, but it's strangely the one area where DHH, the Man With An Opinion On Everything, didn't have enough of an opinion to settle on a standard account system. So instead, chaos reigns.)
+
+What I've done so far is —
+
+1. Looked in my brand new copy of _The Rails Way_. There's a whole chapter on Login and Authentication, yay. They say that the best authentication plugin is Acts As Authenticated. (Actually they say there are two best ones, but then they never reveal what the other is.)
+
+2. Typed "script/plugin install acts_as_authenticated" as it says in the book. And get an error, no such plugin.
+
+3. Looked up Acts As Authenticated online. The "readme on the author's website":http://svn.techno-weenie.net/projects/plugins/acts_as_authenticated/README starts with a big warning that it's deprecated and not maintained. Huh? Why is my $50 hot-off-the-press Rails book pushing an obsolete library?
+
+4. I really want OpenID support anyway. There's an openid-login-generator gem, so I installed and ran that. All it did was create one (1) migration file, nothing else. WTF?
+
+5. After much searching I found that the ruby-openid library, which I already have, contains in its examples subdirectory a Rails generator. I just have to copy it into the right place, and run the "generate" script. So I did that. It generated scaffolding and such. Hooray.
+
+6. I tried to run my app and, as the directions say, went to /account/login. Blam. Ruby errors. First it complained about "end_form_tag", which it turns out was deprecated in Rails 1.2 and removed in 2.0; I found out how to fix that, and next it died in the generated AccountController scaffolding itself, saying OpenID::FilesystemStore doesn't exist. Which it doesn't -- looks like that class was renamed OpenID::Storage::Filesystem. _So the example code isn't even compatible with the library it's part of!_ Looks like no one's updated it in quite some time.
+
+7. I look at the clock (11:30PM), sigh, and decide to give up and ask Teh Lazywebz for help. But my battery dies while I'm typing this, so I don't actually post it till the next morning.

@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Gossip For Lakitu"
+---
+Last year I wrote "a series of blog posts about a peer-to-peer system called Cloudy":http://mooseyard.com/Jens/?s=cloudy that I was developing. I was going up the stack, from messaging to identity, but didn't finish documenting all the layers I'd built. I mostly stopped working on Cloudy after I went back to gainful employment, but I keep thinking about this stuff.
+
+h2. "Lakitu"?
+
+I've since heard about another unrelated project nicknamed Cloudy; and the whole term "cloud" has gotten so debased in the past year that it now stands for outsourcing to giant hidden server farms, which is the antithesis of what I stand for. So I've decided to use the name *Lakitu* instead. Nintendo fans will recognize "Lakitu":http://www.mariowiki.com/Lakitu as a bit character in the Mario games -- he's a goggled turtle who rides a little one-seater cloud. This makes him an appropriate mascot for P2P technologies, I think.
+
+[I'm sure Nintendo has a trademark on the character, but they don't appear to have copyrighted the _word_ "Lakitu". He's not even known by that name in Japan, where he's called "ジュゲム" or "Jugem". I have been unable to find out what "Lakitu" means or why they decided to use it in the English translation. I could also note threateningly that I have some intellectual-property issues of my own with Nintendo's depiction of Lakitu's smiling cloud, which is _clearly infringing_ on my son's comic-strip character "Cloudy":http://mooseyard.com/Jed/Cloudy/. So let's call it a draw, Iwata-san?]
+
+My last Cloudy post was about "verifying people's identities":http://mooseyard.com/Jens/2008/04/cloudy-verification/, and the next one was going to be about gossip. I've become unhappy about the rather kludgy way I designed gossip in Cloudy, so yesterday I started designing a new protocol for it, which I'm going to write about.
+
+h2. "Gossip"?
+
+A "gossip protocol":http://en.wikipedia.org/wiki/Gossip_protocol is a means of broadcasting information in a distributed system. Pairs of computers periodically connect and swap new bits of information with each other; the result is that the information gets dispersed through the whole network (provided it's a connected graph.) The tricky part is avoiding infinite loops and combinatorial explosions, and optimizing the way pairs of computers swap messages so it scales well.
+
+I started defining a protocol, based on stuff I've been thinking about for a while. I don't think it's as advanced as what's reported in research papers, but I'm hoping it will work well enough when used in a socially-driven network -- one where the connections between machines are driven by the social connections between their users. Social networks have short horizons, so any particular participant only "sees" a constrained number of near-neighbors even though the entire network may be huge.
+
+I'm making this protocol agnostic as to the type of messaging being used. "BLIP":http://bitbucket.org/snej/mynetwork/wiki/BLIP/Overview will work well, but it ought to be possible to use Jabber or even email; anything that can send messages between two participants. It's also agnostic as to message content, beyond a few simple assumptions that a message has an author, a timestamp, and some arbitrary "topic" tags.
+
+For example, it ought to work fine at distributing tweet-like micro-blog posts.
+
+Right now I have the protocol written down as an outline in "Notebook":http://www.circusponies.com. I'll flatten it out, expand it and post it here in a day or two.

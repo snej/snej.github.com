@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Little Boxes Of Words"
+---
+Much of what I'm consumed with (at work) boils down to a question of: what is the right <i>shape</i> for the small but plentiful bits of writing that we are all creating daily? Here <i>shape</i> means largely visual representation but also sequencing and topology.
+
+It's a problem of hypertext, primarily. The World Wide Web established one shape for hypertext: individual pages with one-way links in the text, replacing one another in a back-forwards chain. It's proven to be a pretty good shape, but it's not the only one, and earlier thinkers like Engelbart and Nelson had lots of other ideas.
+<!--more-->
+
+
+The texts I'm thinking of are, as I said, 'bits'. Smaller than pages, mostly. Notes, posts, comments. Again, blogs established a shape for these: aggregated into [reverse-]chronological series of boxes on web pages, linking to their own pages, with [forward(!)-]chronological series of comments.
+
+For a long time I've loved this idea of a vertical flow of boxes of text, each box big enough to hold its contents, no more. For a time, around 1988, I wrote people letters in the form of stacks of index cards, with a different thought on each card. After I finished the first release of Stickies, in 1995, I started to design a new version with container windows for stickies, where they could be peeled off the desktop and live in a slightly more structured space; but I lost the code in a disk crash and lost heart. When I saw LiveJournal in 2001 I saw this idea implemented on the web: you type, and when you're done it's in a neat box on the page, above the other boxes you wrote before.
+
+(And yes, I did get to implement boxes-o-text, first at the micro-level in iChat, after doodling those balloons in 1997. Then in Safari RSS, even if they're only boxes of <i>other people's</i> words.)
+
+But that's not enough. The text is, after all, hyper-, and resists being constrained into one dimension. The comments and categories stick out and threaten to turn into trees, and beneath it all, everyone's trees of text have root systems that entangle with each other. On another tack, wikis are fascinating messes that are nothing but tangled roots, messy drawers. You can aggregate this stuff with RSS and turn it back into lines, but no matter what you do it won't lie flat.
+
+When I focus on this problem, it's a yearning. It's a deep-seated irrational conviction that there's an <i>answer</i> that I should be able to see. But as with all mystical problems, the answer that can be seen is not the true answer. I sketch one on paper or try to implement one or try out the 30-day free demo of someone else's ... but they're not the true shape. <a href="http://mooseyard.com/Jens/1995/08/piling-up-sheets-the-face-in-the-soup-bowl">As I put it ten years ago</a>:
+
+<i>There's a character in William Gibson's </i>Mona Lisa Overdrive<i> who believes that cyberspace (the Net, the sum total of everyone's data and whatever else lives out there) has a Shape, some sort of higher-dimensional transcendent pattern, and lives his life in an obsessive attempt to hack together software that will display that Shape to him. Needless to say he comes to a bad end.</i>

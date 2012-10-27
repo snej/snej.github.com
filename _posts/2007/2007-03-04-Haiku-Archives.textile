@@ -1,0 +1,128 @@
+---
+layout: post
+title: "Haiku Archives"
+---
+h3. 2001
+
+Figs cover the ground
+The children step over them
+Or sometimes they donâ€™t
+
+
+A hug and a kiss
+A heart outlined with ï¬ngers
+And a wave goodbye
+
+
+To the very end
+of the quivering green branch
+clings a black squirrel
+
+
+So much depends on
+a red Mario beanie
+left out on the lawn.
+
+
+Yellow leaves dancing
+in the air, two stories up
+against green windows.
+
+
+I cannot get up.
+I am excused from all work:
+Cat purrs on my lap.
+
+
+h3. 2002
+
+Hunting millipedes;
+Earthworms and a defunct grub
+Are all our trowel found
+
+
+A caterpillar
+tiny ... bright green ... wriggling
+ï¬‚oats by on a thread
+
+
+The cardboard stove box
+lawn parallelopiped
+packed with my children
+
+
+Squirrels found a ripe ï¬g
+All the ones I see are green
+What do the squirrels know?
+
+
+With my big pushes
+she swings high on blue chain links.
+Above, ï¬gs ripen.
+
+
+A huge durian
+hidden on the tile rooftop.
+Kick it, Mario!
+
+
+A surplus mouthpart
+transmuted into silver
+beneath his pillow
+
+
+Outside the window,
+Past my feet and sleeping cats,
+Trees are shivering.
+
+
+h3. 2003
+
+Outside: balcony.
+Two hundred forty thousand
+miles above: the moon.
+
+
+green surface stretches
+â€™round a smaller volume now:
+four-thirds Ï€ r cubed
+
+
+h3. 2004
+
+On November lawns
+The rain and shade have planted
+A mushroom forest
+
+
+Prufrock 2K4:
+"I have measured out my life
+In eggnog lattes."
+
+h3. My Java haiku / Are funny because they're true / But rather geeky
+
+(Circa 1998)
+
+I got an Object
+I was sure it was a Point
+ClassCastException
+
+
+Garbage collection
+The unused objects are gone â€“
+Knew you wouldnâ€™t mind
+
+
+AWT
+Peers come from some secret place
+So mysterious
+
+
+Server wants linefeeds
+But println just sends CR
+The sockets deadlock
+
+
+"Java For Dummies"
+Yee Haw! Are we coding yet?!
+Whenâ€™s our IPO?

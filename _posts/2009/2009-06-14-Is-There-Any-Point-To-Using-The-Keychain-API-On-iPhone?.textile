@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Is There Any Point To Using The Keychain API On iPhone?"
+---
+I've always liked the Keychain technology in Mac OS X. Sure, the API is notoriously confusing and awkward, but the end-user benefits are compelling:
+
+# Secure, encrypted storage for all passwords and keys.
+# Items can be shared between applications -- so in principle you don't have to enter a given password more than once, since other apps will find the existing item in the keychain.
+# Items have access control lists, so they can be restricted to certain apps.
+# The user can "lock" the keychain, requiring a passphrase to be entered before there's any further access to it. This happens by default when the system goes to sleep, which is a good security feature especially for laptops.
+# If an app's code changes, it has to ask permission to use the keychain again (protects against malicious code patches)
+
+For the past few weeks' worth of Copious Spare Time, I've been trying to get my "MYCrypto":http://bitbucket.org/snej/mycrypto/wiki/Home framework, which is in part a friendly API to the Keychain, to run on iPhone. The iPhone has a Keychain API, but it's a _different_ API than the Mac OS one. At first glance it looks simpler and easier to use, and maybe it would be if it were properly documented, but in practice the item-storage part of it (the SecItem* functions) is incredibly frustrating because the documentation is both incomplete and just plain wrong.
+
+Currently I've gotten a lot of it working, but I'm stuck on some issues that seem like either major Keychain bugs or philosophical differences (parts of the API don't seem to work at all with items that exist in memory but haven't been persistently added to the Keychain store.) I've filed at least six bug reports to Apple in the last week, including the kind of basic unit tets that I would have hoped Apple QA engineers would have written before iPhone 2.0 ever went to developers. I'm very frustrated.
+
+h2. All this for what?
+
+After finishing the bug reports, I had the crazy idea: _why should I be using the Keychain store at all on iPhone?_ Going through my above list of benefits, I realized that hardly any of them apply:
+
+# The iPhone security model relies on app sandboxing to protect data. Even malicious app code can't reach the keychain file because it's outside the app sandbox. <strike>(I have some data that implies that the file is in fact just a plaintext SQLite database, not the fancy encrypted store it is on OS X.)</strike> [ _Update:_ I now have confirmation that "the Keychain file is encrypted on the device and in backups":http://developer.apple.com/DOCUMENTATION/Security/Conceptual/keychainServConcepts/02concepts/concepts.html#//apple_ref/doc/uid/TP30000897-CH204-DontLinkElementID_3, making it secure against most attacks.]
+# iPhone apps can't share keychain items. Every app effectively has its own sandboxed keychain. So there's no usability benefit of putting passwords in it.
+# No sharing means no point in access control lists, of course.
+# There's no keychain passphrase or lock/unlock behavior on iPhone. Once you unlock the iPhone itself, all apps can access their keychains freely.
+# Since all apps are signed, there's no question of malicious patches.
+
+<strike>So much for that. What you're left with is a rudimentary flat-file database, specialized for just a few data types, with a really clunky and badly documented API. Other than the fact that it happens to already exist, there's nothing about it that's as good as something you could write in a few hours using CoreData, or your favorite high-level SQLite API like FMDB or QuickLite. Heck, for simple needs you could just use a property list, for example an NSDictionary mapping URLs to [username, password] pairs. It ought to be just as secure, because the sandbox prevents any other apps from being able to access the file.</strike>
+
+_Updated:_ What you're left with is an encrypted flat-file database, specialized for just a few data types, with a really clunky and badly documented API. As I wrote above, its functionality could be duplicated, with a better API, without much effort. The encryption part is significant, though, since its primary purpose is to keep keys and passwords safe. A DIY key database could be protected by encrypting it with a symmetric key, and then putting _that_ key in the Keychain.
+
+I'm not sure where that leaves MYCrypto. I'm not sure I'm motivated to write a general-purpose version of this data store myself. If I can get some good answers and workaround to my Keychain API bug reports, I may just continue to tough it out.

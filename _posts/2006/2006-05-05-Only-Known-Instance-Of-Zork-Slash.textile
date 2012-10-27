@@ -1,0 +1,50 @@
+---
+layout: post
+title: "Only Known Instance Of Zork Slash"
+---
+My friend Tanya asked her friends to write her a short bit of <a href="http://en.wikipedia.org/wiki/Slash_fiction">Slash fiction</a> as a birthday present. Which is not something I'm accustomed to, but here goes...
+
+<tt>>N
+
+The Troll Room
+This is a small room with passages to the east and south and a forbidding hole leading west. Bloodstains and deep scratches (perhaps made by an axe) mar the walls.
+A nasty-looking troll, brandishing a bloody axe, blocks all passages out of the room.
+
+Your sword has begun to glow very brightly.
+The troll swings his axe, but it misses.
+
+>SWING SWORD
+Whoosh!
+The troll swings, you parry, but the force of his blow knocks your sword away.
+
+>INVENTORY
+You are carrying a brass lantern, a key, an elongated brown sack smelling of hot peppers, a bottle, and a heart-shaped box of chocolates.
+
+>GIVE BOX TO TROLL
+"For me?!" The troll grunts in disbelief as he eagerly pulls off the lid and eyes the Super-Deluxe Truffle Assortment of the Frobozz Magic Chocolate Company (By Royal Appointment To Lord Flathead). Unable to make up his mind, he stuffs all the chocolates into his maw at once and chews noisily.
+The troll has dropped his axe.
+
+>GO EAST
+Too late -- the magic chocolates have done their work, and the troll's attentions now return to you, although in different form. You're crushed in his hairy and odorous embrace as he bellows sweet nothings into your ear.
+
+>FIGHT TROLL
+You can't move a muscle.
+The troll has, surprisingly dextrously, removed your adventurers' tunic and flung it into the corner.
+
+>RUN
+You can't move a muscle.
+The troll is struggling with the buttons of your Frobozz Magic Boxer Shorts.
+Your terror is beginning to dissipate, and the scuffle is not-unpleasantly reminiscent of scrimmage back at Great Underground University, not to mention some post-scrimmage locker-room hijinks you'd nearly forgotten about. (Perhaps you shouldn't have been sampling those chocolates, earlier?) You attempt to reach toward the recalcitrant buttons...
+
+"What's all this commotion, then?" drawls an amused voice from the doorway. As the troll abruptly drops you, you turn your head and see a seedy looking gentleman carrying a large bag, into which he is depositing your sword.
+
+>HIT THIEF WITH BOTTLE
+"Ooh, rough trade!" chortles the thief as he dodges your chocolate-smeared blow.
+"You boys mind if I join in?" He pulls from his bag a lava lamp, a silk scarf decorated with a scenic view of Flood Control Dam #3, and a set of rusty handcuffs.
+
+>|
+</tt>
+
+— Excerpt from <i>Zork IV: Time Considered As A Helix Of Little Twisty Passages</i>, by P. David Lebling and Samuel Delany, which Infocom refused to release in 1988.
+
+(Here's <a href="http://jerz.setonhill.edu/if/canon/Zork.htm">some</a> <a href="http://en.wikipedia.org/wiki/Characters_in_Zork">context</a>, for the perplexed.)

@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Masculine And Feminine In Operating Systems"
+---
+My friend Tanya is a gateway to the strange and exotic worlds of fan- and slash-fiction. Today she pointed out a whole LiveJournal community, "mac_hearts_pc":http://community.livejournal.com/mac_hearts_pc/, devoted to mostly-smutty extrapolations of Apple's anthropomorphized Mac-vs-PC ads. Wow.
+
+In her post about this, she says
+
+<i>"I tend to think of Macs as so feminine as to be, well, female"</i>
+
+which is really making me think...
+
+How do we map computer behaviors onto 'male' and 'female'? In American culture the æsthetic sense, intuition and readiness to please that exemplify "Mac-ness" bring to mind images of women, but if I challenge myself I can also imagine them as aspects of a courtly gentleman, like a royal servant or even a knight. Or perhaps of the British "gentleman's gentleman", such as Bunter or Jeeves ... though here the details of the æsthetics don't work, as this calls to mind a much darker, subtler UI theme, all leather, oak, brass and polished silver. The colors in Aqua fit better with the color scheme of medieval Europe or Japan.
+
+From my perspective as a programmer, I consider the underpinnings as well. The Unix core of Mac OS is undeniably male: strong, efficient, taciturn, more rugged than pretty, ready to do exactly what you told it with no backtalk and no second-guessing about what you might have "meant instead". And this core is there for anyone who wants it, it hasn't been suppressed or denied. Yet the OS has learned that getting along in the world, and taking a role subservient to its user, requires it to adopt feminine traits as well.
+
+h3. Enter Jung
+
+At this point a -light bulb- LED turns on and I say "Aha! Jungian psychology!" According to "Carl Jung":http://en.wikipedia.org/wiki/Carl_Jung and his successors, every male has a feminine aspect to his personality (the "anima") and every female a masculine aspect (the "animus"). They're like the small dots in the yin/yang symbol. If they're not acknowledged or consciously used, they're still there, and we may unconsciously use them in our relations with others, to generally negative results — like acting a role we haven't properly rehearsed, adopting only the stereotypes without the essence. [John A. Sanford's <i><a href="http://www.amazon.com/Invisible-Partners-John-Sanford/dp/0809122774">The Invisible Partners</a></i> is a fascinating book on this topic.]
+
+Do you see where I'm going with this? Both Mac and PC (and PC's hippie cousin Linux) are essentially male, because the innards of any machine embody traits we see as stereotypically masculine (rigid, powerful, unforgiving, rule-based...). But in most of our interactions with computers, we want a more even gender balance, or even one that's weighted toward the feminine archetypes (intuitive, harmonious, calming...) In other words, we want the computer to have gone through some Jungian analysis, to have acknowledged its anima and integrated it into its personality, to have "gotten in touch with its female side".
+
+h3. Case histories
+
+Of course I think the Mac is pretty well advanced psychologically these days, though it's had a tumultuous past. It started out practically denying its masculine self, projecting a totally femininized image, in reaction to the crudity of its then-peers. This caused all kinds of interior strain and complexes — which I can vouch for, having been one of its many therapists during that era. The masculine traits were there, but deeply repressed inside and revealed only to experienced programmers, and the strain made any further growth nearly impossible. (This also got the Mac beaten up a lot by "bullies":http://dvorak.org.) The key to progress was a reunion with NeXT, which had similar goals but had attained a different balance. The early relationship was rocky, but by 2001 the partners had fused in an "alchemical wedding":http://en.wikipedia.org/wiki/Chymical_Wedding_of_Christian_Rosenkreutz and the stage was set for serious growth.
+
+I don't want to stoop to Windows-bashing, but I'll just say briefly that in my opinion it still has more therapeutic work to do to get over its hyper-masculine DOS past (complicated by its promiscuous desires to run on any hardware it sees.) Its progress toward integrating its anima has been steady, though slow, but I believe it still relies too much on adopting stereotypes ("are my windows translucent enough?", like a neophyte cross-dresser) and on following fashions set by the Mac, without yet fully integrating the feminine strengths into its core being. But at least all parties have similar goals nowadays, which is a good thing for all.

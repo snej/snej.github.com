@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Japanese Advertisers Discover Zooko’s Triangle"
+---
+Cabel Sasser, of indie developer "Panic":http://panic.com, reports from Japan:
+
+bq. <i>"Within minutes of riding on the first trains in Japan, I notice a significant change in advertising, from train to television. The trend? No more printed URLs. The replacement? Search boxes! With recommended search terms!"</i> "[*]":http://www.cabel.name/2008/03/japan-urls-are-totally-out.html
+!http://www.cabel.name/images-post/2008/03/search-2.jpg!
+
+He goes on to note how common it is for people to type URLs or domain names into their browser's search box instead of the address field. To American geeks this seems clueless, but Cabel points out that in Japan it makes more sense, since URLs are in a _foreign alphabet_, so search words are much more memorable.
+
+First off, this instantly reminded me of two favorite jokes:
+
+* Homer Simpson, picking up the phone: "Operator! Get me the number for '911'!"
+
+* <a href="http://scottpilgrim.com/">Scott Pilgrim</a>, on finding out that the cute girl he saw at a party in Toronto works as a delivery courier for Amazon.ca: "Hey, Amazon.ca, that's the online bookstore or whatever, right? ... What's the website for that?"
+
+But seriously: This is another example of <a href="http://www.skyhunter.com/marcs/petnames/IntroPetNames.html">Zooko's Triangle</a>, which basically says "names cannot be global, securely unique, and memorable, all at the same time". URLs are global and unique, but not memorable, especially not in Japan; search terms are global and memorable, but not unique. Japanese advertisers are betting that you're more likely to reach their site through keywords, even if nine competing sites show up next to it on Google, than if you forget the URL before you even get to a browser.
+
+Marc Stiegler, on that page, predicted this:
+
+bq. <i>"A good example of a nickname management system is Google. Type in a name, and Google will return a list that includes all the entities Google knows, to which the name refers. Google makes a mapping between these nicknames and their keys (if we think of the url of a page as a trusted-path-style key, which will be discussed later). Often enough to be interesting, the first item in the list will be the one you wanted. But it fails often enough, and endless pages of other choices appear often enough, to never leave us in doubt that these identifiers are not unique mappings to single keys. As is already true in the current world, in a world filled with petname systems, a key goal of marketing would be to get your nickname listed at the top of the Google rankings for that nickname."</i>
+
+I wrote about this earlier, somewhere in the middle of my post <a href="http://mooseyard.com/Jens/2007/12/facebook-and-decentralized-identifiers/">FaceBook And Decentralized Identifiers"</a>.

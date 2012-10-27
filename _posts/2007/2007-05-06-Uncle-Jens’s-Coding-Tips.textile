@@ -1,0 +1,108 @@
+---
+layout: post
+title: "Uncle Jens’s Coding Tips"
+---
+Ever since Brent "NetNewsWire" Simmons posted his "Thoughts On Large Cocoa Projects":http://inessential.com/2007/04/25.php the other week, I've wanted to add some of my own tips. I've worked on some big projects (iChat, Apple's Java runtime, OpenDoc) and have sometimes had to find my way around in others (Safari, Mail), so I know what Brent means when he says:
+
+bq. There’s no way I can remember, with any level of detail, how every part of [my app] works. I call it the Research Barrier, when an app is big enough that the developer sometimes has to do research to figure things out...
+
+It's been said many times that "the main person you're writing comments for is yourself, six months in the future." It's always a good idea to keep that shadowy figure in mind while you code. Here are some other techniques I've found invaluable:
+
+<!--more-->
+
+
+h3. Prefix your instance-variable names
+
+*Make instance variables instantly identifiable by prefixing their names with a particular character, so you can tell them apart from local variables.* I use "_", so my ivars have names like "_delegate" or "_name". I've seen "m", for "member", used in C++ code. MacApp used to use "f" for "field". But it doesn't matter what you use as long as you do something to distinguish them.
+
+Also useful, to a lesser degree, is *Prefixing global/static variables* with a different character like "g" or "s".
+
+Why do this? Because the _scope_ and _lifespan_ of a variable are incredibly important things to know about it. When I'm figuring out a piece of code, I want to know "where did this variable come from? What does it affect? How long doesit last?" I also want to be able to see at a glance what state of the object a method uses or changes.
+
+I find this notation applied in most large projects at Apple; and I always notice the lack of such prefixes when I'm trying to figure out some code that doesn't use them. I must confess that I've sometimes gone as far as to insert the prefixes into other people's code myself just so I can keep things straight while working on it.
+
+(Note: Some might dismiss this as being a form of "Hungarian Notation":http://en.wikipedia.org/wiki/Hungarian_notation. Not so. Hungatian Notation annotates a variable with its _type_. This was useful in the distant past, when languages like BCPL and pre-ANSI C didn't have much type-checking, so it was up to the programmer to make sure s/he didn't pass the wrong type to a function call. Nowadays the compiler does that for us, making it much less important to tag that onto the variable name. By comparison, the _scope_ of a variable remains very useful for the programmer to know, and can be identified using a single unobtrusive character like "_".)
+
+h3. "TEMP" and "FIX" markers
+
+*If you're making a temporary change, put a magic word like "//TEMP" in a comment right next to it, so you'll remember to take it out ASAP.* By "temporary" I mean something that's just for your own immediate debugging/testing purposes and shouldn't be left in the code for long. We all do this -- verbose logging inside inner loops, commenting out a block of code to see whether it caused a regression, quickie scaffolding to get something up and running. The kind of thing you don't want to check in, or put into a build. So put in a special marker word the moment you make the change.
+
+Then (just as important) search your project for "TEMP" before any checkpoint such as "svn commit", or just before you finish work for the day, and take out any of those temporary changes that are left.
+
+(Apparently it's possible to configure your Subversion repository to do such a check for you, and prevent you from submitting any changes containing the word "TEMP", but I've never looked up how to do it.)
+
+*If you know something needs to be fixed or finished up in a piece of code, but you're not going to do it right away, put a different magic word like "FIX" or "TODO" in a comment right next to it, along with an explanation.* This creates a sort of integrated to-do list inside your project. I've found it invaluable because (a) I'm forgetful, and (b) I'm lazy. Or more charitably: _I can only think so many layers deep at a time_. Robust code needs to handle any possible combination of circumstances, but that whole tree can be too complex to keep in mind, especially when first writing that code. So what I do is focus on the "normal" flow of control, and maybe one or two likely others, but leave little "FIX" breadcrumbs behind to remind me to tackle the other circumstances later. Things like "FIX: Retry on timeout" or "FIX: This assumes the text is a single line". It's also useful if I notice a mistake in a part of the code I'm not working on right now, and don't want to derail my current task by going to fix it.
+
+At a later point in the project, though, it becomes important to search for all the remaining "FIX" comments and give them a more formal representation as items in your bug database.
+
+h3. Your own special logging function
+
+*Define and use your own "Log()" function/macro, instead of the built-in ones.* Console logging is your friend. Breakpoints and single-stepping are the microscope, but logging is the stethoscope, the EEG, the higher-level view of what the whole program is doing. (It's hard to believe now that, until OS X, the Mac didn't have a console. If you wanted to do even the most basic logging, you had to use a third-party tool or else DebugStr() which dropped you into MacsBug on every call.)
+
+But logging can become too much of a good thing. You don't want your program to spew lots of stuff to the console in normal use, because that slows it down a lot and makes the console less useful for anyone else. So you should turn off all your excellent logging except when you need it.
+
+The lazy way to do turn off logging is to comment out, or even delete, all of those NSLog() calls. _Don't do that!_ You'll probably need them later on, when your supposedly 100%-debugged code turns out to have one more problem. Instead, make your own "Log()" macro that you can turn on or off with a single switch:
+<pre>
+        // Logging.h
+        extern BOOL gLogging;
+        #define Log   if(!gLogging) ; else NSLog
+        #define Warn(FMT,...)   NSLog(@"WARNING: " FMT, ##__VA_ARGS__)
+</pre><p>That's all it takes. Now you can use "Log()" just like "NSLog()", except that nothing will get logged unless you set the value of gLogging to YES. Initialize that variable based on a "Logging" user default [code left as an exercise for the reader] and you can then go into Xcode's Executable inspector and add the command-line arguments "-Logging YES" to enable logging whenever you run your app in Xcode.
+
+But sometimes you want to log warnings about Bad Stuff, which should always appear, even if Log() is turned off. You could always use regular NSLog for this, but I find it useful to have a Warn() function:</p>
+<pre>
+        #define Warn(FMT,...)   NSLog(@"WARNING: " FMT, ##__VA_ARGS__)
+</pre><p>Again, Warn() is called just like NSLog(). But it's always enabled, and it prefixes the message with "WARN:", which looks important and stands out even in the midst of a bunch of logorrhea. It looks distinctive in your source code, too.
+
+h3. Break your functions into paragraphs
+
+*Try to organize the code inside a function into "paragraphs" of no more than a dozen lines, prefixed with a comment describing what that paragraph does.* Most people nowadays have the good sense not to write functions/methods that are more than a page long. But even a page of unadorned code can be hard to figure out six months later. So give yourself the Cliff's Notes, little sub-headings that describe what's going on:</p>
+<pre>
+        // Build a header dictionary out of the input:
+        ...
+        // Serialize that into RFC822 format:
+        ...
+        // Send it:
+        ...
+        if( ok ) {
+                // Success! Now parse the response:
+                ...
+        } else {
+                // Failed; interpret the error code:
+                ...
+        }
+</pre><p>You can think of these comments as being the labels inside the boxes in an imaginary flow-chart of the code. I find them very useful later on -- for example, if there's some problem in that RFC822-format data, I can find at a glance the dozen lines that are responsible for it.
+
+h3. Zero tolerance for compiler warnings
+
+*As soon as you begin a project, turn on "Treat Warnings As Errors" and enable "All" warnings.* This will prevent any warnings from creeping into your project.
+
+"Treat Warnings As Errors" has its own checkbox in the "Warnings" section of the "Build" tab of the project/target inspector. There's no checkbox for "All Warnings", so you'll have to edit "Other Warning Flags" and add "-Wall". (Don't be fooled by the name: "All Warnings" doesn't enable _all_ warnings; it skips some annoyingly pedantic ones. There's also "-Wmost", which skips even more, but I couldn't tell you which ones.)
+
+Compiler warnings must seem like a good idea to compiler writers. They point out things that are _likely_ to be mistakes, but which are still valid code, so the compiler shouldn't lay down the law and make the programmer fix them. A warning passes the buck. But for a developer, warnings are bad to leave in your code:
+
+# They stick around. The first time you get a warning on line 348, you might look at the code and decide that it's not a problem. Unfortunately, that doesn't make the compiler warning go away. It'll reappear every time that source file is recompiled, without any indication of whether or not you've OK'd it.
+# They mutate. Even if you remember that the warning on line 348 isn't a problem, and even if you haven't edited line 348, the warning _could_ become a real problem in the future if you change something that line 348 depends on (such as the declaration of a variable that it uses.) If you ignore the warning, you won't know about the problem.
+# They accumulate. If you don't keep your code clear of warnings, they grow and grow. By the time a source file has a dozen warnings in it, you're not likely to notice a new one. It's also annoying wading through warnings when you're looking for the actual errors.
+
+Unfixed warnings are especially bad when you're making architectural changes to your code. A real-life horror story: A colleague of mine was tasked with making someone else's library 64-bit compatible. She didn't know the code, but fortunately gcc has a number of warnings that point out typical 64-bit issues, such as casting a pointer to an integer that's too small to contain it. Unfortunately, though, this library _already_ generated thousands of compiler warnings when it built in regular 32-bit. So the first order of business was to clean up the code and get rid of those warnings, before she could flip the 64-bit switch and get to those warnings. And guess what? She found that the old warnings were pointing out two serious bugs, one of which had been reported but wasn't reproducible enough for the original programmer to track it down.
+
+I've seen some people complain that "there's no way I can get this perfectly-legal code to compile without warnings!" All I can say is that I've never run into such a problem. Sometimes you have to make the code a little bit more verbose, like adding type-casts or breaking an expression into two statements, but not often, and these changes don't affect the quality of the compiled code.
+
+h3. Jumping to definitions (Cmd-double-click)
+
+This is just a basic Xcode goodie, but once in a while I find an experienced developer who's never heard of it, so it's worth pointing out:
+
+*In Xcode, hold down Command and double-click on an identifier to jump to its definition.* This works for classes, methods, functions, variables, even #defines. It works for identifiers in system frameworks too -- it'll jump to the declaration in a header. If there are multiple choices (like a method name used in several classes) you'll get a pop-up menu listing them.
+
+A related tip is to *Option-double-click to look up the documentation of an identifier* in Xcode's documentation window.
+
+h3. Don't use tab characters in source files!
+
+The world will never come to an agreement on whether a tab character indents 8 spaces or 4, especially on the Mac, where lots of Unix tools (and Unix source code) are hard-coded for 8. So since different people will have their tab-width preferences set differently, just *don't use tab characters in your source code if you want everyone to be able to read it*.
+
+In Xcode, go to the Indentation pref pane and uncheck "Tab key inserts tab, not spaces". In Textmate, check "Soft Tabs" in the tabs pop-up at the bottom of the editor window. You won't notice a difference in editing text, but your source code will now look properly indented to everyone.
+
+h2. EOF
+
+That's all for now ... I hope some of you actually read this far, or even found some of these tips novel/useful. I have a few others in mind that I might write up later, especially if people liked this post.</p>

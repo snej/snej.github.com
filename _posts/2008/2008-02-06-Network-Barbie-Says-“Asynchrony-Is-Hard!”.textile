@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Network Barbie Says “Asynchrony Is Hard!”"
+---
+You can't avoid asynchrony when writing network code, since operations can take an arbitrary amount of time, and often do. To keep the app responsive it has to be able to get other things done while a slow operation is in progress.
+
+My first exposure to network programming was in Java, whose approach to asynchrony is to use threads. Lots of 'em. The API calls are [almost] all blocking, so you run them on background threads. This is good because it makes the way the API works more intuitive: you call a method, and it returns a value when it finishes. This makes your own code more intuitive, as it just performs the operations in order, like: open connection, send request, read response, parse response, close connection, return.
+
+The downside is that making heavily threaded code work correctly can be very hard, and the problems are subtle, hard to understand and debug, and sometimes almost impossible to reproduce. Edward Lee's paper "The Trouble With Threads":http://www.artist-embedded.org/artist/The-Trouble-With-Threads.html describes a complex Java server that was excruciatingly well-designed, code-reviewed and tested.
+
+bq. "No problems were observed until the code deadlocked in April 2004, four years later. Our relatively rigorous software engineering practice had identiï¬ed and ï¬xed many concurrency bugs. But that a problem as serious as a deadlock could go undetected for four years despite this practice is alarming."
+
+My teammates and I had similar experiences while implementing the Java AWT libraries on Mac OS 9 and 10.0. We kept running into weird concurrency bugs, fixing them (which often meant restructuring code and making it more complex), and then running into more. By the time we were done, threading didn't seem like such a good idea anymore.
+
+Cocoa (and the underlying CFNetwork framework) instead make the asynchrony explicit, by using an event- and callback-based model. When you invoke a network operation, the call returns immediately; but you set up a delegate object or callback function that will later be invoked when the operation completes. A fancy event loop called a "runloop" at the top level takes care of dispatching events in order. For the most part, you can write your code using only a single thread and still let your app perform tasks in parallel without blocking the UI.
+
+The drawback is that your code gets more complex, since the high-level control flow no longer matches the semantics of the programming language. A multi-step operation now involves a separate function to implement each step, and any state has to be stored externally in instance variables. Explicit state machines often pop up. There's a lot of boilerplate for setting delegates, adding and removing observers, parsing notification dictionaries, and so forth, which obscures the actual logic of the code.
+
+As you can guess, I'm knee-deep in this sort of thing right now. Just like many times before, I'm wishing there were a third way. I'd like to be able to keep each operation's flow of control simple, as with threads, but at the same time limit the interactions between operations to keep the _overall_ flow of control from turning into race-condition spaghetti.
+
+Oh, and I want to keep writing in Objective-C. There are intriguing multiprocessing techniques in some higher-level languages, like "Lua":http://lua.org's coroutines and "Io":http://iolanguage.com's actors, but I don't think I'm ready to start writing the core of my app in one of them. I wonder if there's a way to implement some of those techniques cleanly in Objective-C.
+
+I'm not offering any solutions, just describing the problem I see. Maybe I'll get one of those great "What, you're not using XYZ? It does exactly what you want" comments! Or maybe not. Anyway, here are some things I've run across that offer useful techniques:
+
+* "Higher-Order Messaging":http://www.dpompa.com/HigherOrderMessaging framework -- adds some higher-level functional primitives for Cocoa programming, that makes delegation and callbacks simpler to use. ( *Update 3PM:* Appears to be incompatible with 10.5. It compiles, with warnings, but the self-tests quickly fail, with exceptions raised by NSInvocation. Dang!)
+
+* "libcoroutine":http://www.dekorte.com/projects/opensource/libcoroutine/, a cross-platform implementation of "coroutines":http://en.wikipedia.org/wiki/Coroutine (similar to "cooperative threads":http://en.wikipedia.org/wiki/Cooperative_multitasking) in C. (There are several of these; this is a newish one by Steve Dekorte which, unlike others I've tried, works correctly on Mac OS X.)
+
+* Actors, as found in the "Io language":http://www.iolanguage.com/scm/git/checkout/Io/docs/IoGuide.html#Concurrency-Actors and others. An actor is basically an object that runs a private event loop and thread: you communicate with it by sending it messages. This helps encapsulate state, since the object itself is only doing one thing at a time, and its internal state is hidden from other threads.
+
+* *Update:* I forgot to list NSOperation and NSOperationQueue, new classes in OS X 10.5. These aren't "magic" in the way the above are, they're just a little framework for managing simultaneous tasks, but they're useful. I'm just getting started with NSOperation: it's what I'm using for now to manage the nasty asynchronous bits.
+
+Got any more useful links or ideas? Post them, and I'll add 'em here.

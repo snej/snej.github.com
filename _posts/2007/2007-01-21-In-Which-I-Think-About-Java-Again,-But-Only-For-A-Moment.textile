@@ -1,0 +1,30 @@
+---
+layout: post
+title: "In Which I Think About Java Again, But Only For A Moment"
+---
+It's amusing how Steve Jobs' remarks disparaging the idea of Java on the iPhone have ignited controversy. His point was, obviously, that the iPhone's browser won't support Java applets; which is a no-brainer because applets were killed dead-dead-dead by Flash and Ajax. But this seems to have riled up everyone who still cares about non-server-based Java, leading to the weird situation of seeing "Java" and "Mac" in the same sentence again*. Apparently some people still cling to the glorious dream of writing cross-platform GUI applications, waving tattered "Write Once Run Anywhere!" banners and clutching 'Little' Red Books with Duke's picture on the front.
+
+<h3>Flashback</h3>
+
+Me, I defected long ago. I'm another of those Apple Java engineers who dropped out. I spent five years as a raving Java fanboy, but I gave up after optimizing AWT, implementing drag and drop, and trying to make 1,200 pages of crappy APIs do the right thing on the Mac. Then I took a one-week Cocoa training course, and wrote the first prototype of iChat.
+
+Desktop Java never worked because Sun tried to build their own OS on top of the real OS, duplicating every API and feature. This led to terrible bloat, making every app as heavyweight to launch as Photoshop. Worse, the GUI portions of the Java platform are awful, because Sun is a server company with no core competency at GUIs. The APIs are too clumsy to code to, and compared to any decent Mac app, the results look like a Soviet tractor built on a Monday.
+
+<h3>Why Cocoa Pwnx0rz</h3>
+
+That Cocoa training class was, as I've said before, one of the biggest eye-openers of my career. It was so damn easy to build beautiful, functional applications that I walked out feeling like I'd climbed into some giant mecha robot and could now lift huge girders with a wave of my pinky.
+
+Three important things you need to be able to make apps with great human interfaces:
+<ol><li> You need to lay out the user interface components visually, by hand, with total control over where they go. Automated LayoutManagers don't cut it. A corollary of this is that you can't move a UI layout from one platform to another and have the computer make everything fit. Computers don't lay out interfaces by themselves any better than they can translate French to English by themselves.
+</li><li> You need to be able to change the UI around really easily during development — after user testing, or a Steve Jobs encounter session — even after you've attached a lot of code to it. That means no RAD tools that write code for you, because once their code mingles with your code, it gets hard to disentangle. Instead, the UI should be described with data, like an Interface Builder ".nib" file.
+</li><li> Changing the UI around also requires being able to change your own UI code easily. As the Ruby and Agile Programming zealots always point out, strict type checking can really get in the way of this. Writing endless Listeners and Adapters and inner classes was one of my least favorite parts of Java programming. Objective-C and AppKit have a good approach, letting you use type-checking where it's important but leaving looser connections at the UI level so you can plug and re-plug connections easily.</li></ol>
+
+<h3>My Theory</h3>
+
+My theory is that Java desktop apps succeed only in niches where UI design and usability don't matter: development tools and enterprise software. Programmers expect things to be crude and complicated: anyone who'll voluntarily use 'vi' in the 21st century will put up with anything**. And the poor users of enterprise software don't have a choice: they have to run the damn app no matter how awful it is, because it was selected by an MIS department that could care less about usability.
+
+<h4>Footnotes</h4>
+
+ * Not that this controversy has anything to do with the Mac. The iPhone is not a Mac, the Mac still runs Java, and no one is talking about taking it away.
+
+ ** And that goes for 'emacs' too (with apologies to my boss). I thought emacs was really cool, in 1986. That's when it was really cool to have a DEC VT220 terminal in my dorm room with a 9600 baud connection to a VAX running BSD 4.3. Also, I listened to Depeche Mode.

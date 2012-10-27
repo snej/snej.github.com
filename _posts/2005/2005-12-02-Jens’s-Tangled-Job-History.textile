@@ -1,0 +1,119 @@
+---
+layout: post
+title: "Jens’s Tangled Job History"
+---
+I write code for a living. After all these years I still find it really exciting -- I was instantly and permanently addicted at age 11, it's just that the programs have gone from 20-line BASIC powers-of-two table printers, to enormous Java and Objective-C juggernauts -- and moreover I've found it's the one thing that I can work on consistently enough over a long period of time to finish a project of any size. My childhood was littered with unfinished stories, unfinished plans for undersea cities, unfinished D&D maps. But the programs got finished. (Most of the time.)
+
+Herewith, entirely too much detail about the different programs people have paid me to write. Read on if you want, but you're in the driver's seat so feel free to hit that Back button if your eyes glaze over...<!--break-->
+
+I went through the usual sequence of summer jobs, most interestingly three at Xerox where I wrote cool stuff in Smalltalk-80. There was a low point in '87-'88 when I had just moved to Tucson and was intermittently under- and un-employed (which did give me the time to learn Mac programming and write an interesting compiler) but after that the career swung into action.
+
+h2. ATF Type Designer
+
+At *Kingsley/ATF Type Corporation* (no, I didn't expect you to have heard of them, unless you're well versed in the history of typography) I wrote a typeface digitization tool, *ATF Type Designer*, for the company to use in converting their priceless legacy of metal type masters (Caslon 471, Agency Gothic, Bernhard Modern, ...) into PostScript and TrueType. The typefaces were classics, undergoing a revival in the late '80s, and my program was pretty spiffy, I thought. I got to write it all by myself, and it was being used in-house so I had users practically from day one, whose comments and suggestions helped make the program better. My co-workers were a fun and creative bunch.
+
+Too bad I had a boss from hell and the management didn't understand the computer industry. (Actually that's unfair; the main problem was a lack of money, and the owners of the company had no interest in getting venture capital.) So I left after two years, a decision made easier by Tucson's awful summer climate.
+
+(Incidentally, you can make a lot of amusing [[anagrams]] from the letters in "Kingsley/ATF" and "Kingsley/ATF Type Corp.".)
+
+h2. Wallpaper
+
+Rewind a year or so; after buying a Mac IIcx I was frustrated that there was no way to create desktop patterns larger than 8x8 pixels, even though QuickDraw supported larger sizes. So I started writing a small program called *Wallpaper* to edit and install large patterns. It was going to be shareware, until a wannabe-software publisher saw a copy and asked to publish it. This led to about two and a half years of increasingly unhappy spare time work in which I learned that I had trouble working consistently in my spare time, the program grew steadily larger and more complex (there was that animated about box...), and relations with the publisher became emotionally fraught.
+
+Wallpaper did ship, in January 1992, after Jeremy Bornstein and Anne Jones stepped in and spent entirely too much time finishing it, but all in all it ended up as kind of an unhappy experience. In particular, it pointed out the horrible problems of the software business in the pre-Web days: a product was utterly dependent on physical distribution, on shelves or in the pages of mail-order catalogs, but the costs of getting that distribution were outrageous, especially for inexpensive software. By all rights Wallpaper should have cost $20, but to have any chance of making a profit it needed to retail for double that; and even then, the profits were minimal despite good publicity and healthy sales.
+
+h2. AppleScript
+
+After leaving Tucson and K/ATF, I went to Apple Computer (which you may have heard of) and have been there ever since [with one small hiatus, q.v.]
+
+The first project I worked on [1991-93] was *AppleScript*, a high-level scripting language for the MacOS. It's built on top of Apple Events, a robust interprocess communication protocol, so its strengths are in tying scriptable applications together. AppleScript has an English-like syntax (similar to HyperCard's scripting language) with Japanese-like and French-like alternate syntaxes also available. The syntax of the language is extended by applications, so scripts that tell a particular application what to do can use its vocabulary.
+
+I participated in the design of AppleScript, including the Open Scripting Architecture (OSA) API. I wrote the Script Editor that ships with AppleScript (it's pretty basic, but it works) and wrote the shell that supports script applications or applets, which are scripts saved as applications that can be run by launching them from the desktop.
+
+bq. [Apple's marketing group and the  [mis]managers of the tools group didn't really understand  AppleScript and gave it little or no promotion. So most of the  team quit and the rest moved to other projects. Fortunately, two  of the first scriptable apps were QuarkXPress and FileMaker Pro,  which together with AppleScript made a dy-no-mite automated  publishing solution. AppleScript spread as a cult, and entire  service bureaus and publishers ended up automating their work  around it. By the time Apple realized what was going on,  AppleScript turned out to be literally one of the major things  saving Apple's butt in the publishing world -- there was nothing like it on Windows. Starting in 1997 AppleScript got revived and  has since prospered.]
+
+h2. Stickies
+
+I invented & wrote the *Stickies* utility which is included with MacOS system software 7.5 and later. It's a simple but useful doodad that simulates Post-It(tm) notes on your screen. It was originally going to be shareware (does this sound familiar? I have yet to finish a shareware project as such) but the system software people saw it and "they made me an offer I couldn't refuse":/Jens/1997/04/they-made-me-an-offer-i-couldnt-refuse...
+
+The official (pre-Mac OS X) Stickies easter egg: Type the word "Antler!" into any open note, capitalized as shown, then press Return. (For best effect, first resize the note to at least two inches on a side.) Like those rub-on tattoos, the effect is harmless and temporary and will go away when you close the note or quit Stickies.
+
+Stickies has even made it into OS X. It was rewritten in the Cocoa (née OpenStep) framework by some talented people in Ireland, so it doesn't share a lot of code with my version, but the design is basically the same. (It supports styled text and images, though!) I did add a few simple features for Jaguar (OS X 10.2), like floating and translucent notes.
+
+h2. OpenDoc
+
+I worked on *OpenDoc* from August 1993 until its death in March 1997. OpenDoc was an open, cross-platform compound document architecture featuring structured storage and sophisticated layout negotiation for software components.
+
+...In other words, a way to mix and match any kind of editable content in a document, where different editor components from different vendors can co-exist. The terms content and document should be considered very generally; OpenDoc was usable for much more than text and spreadsheet data in a page layout.
+
+The eventual goal was that monolithic applications that try to do everything at once would generally be replaced by suites of components, or parts, each managing a very specific task with very specific types of data.
+
+bq. [This hasn't happened, even though  the superficially-similar ActiveX and Java Beans technologies are  still around. The component software that exists today is aimed at  developers, not end users: the developers put together  micro-components like table views or database widgets into  applications, but to the end user the result is still a monolithic  app. OpenDoc was about letting users combine components in  the same intuitive way that they combine data into documents. I  don't know if this goal will ever be resurrected. For the most  part, the momentum of software design has shifted away from  document-oriented desktop software, towards Web-based  client-server stuff. OpenDoc revolutionized documents at the very  time that documents ceased to be sexy to anyone but the  bean-counters at Microsoft's Office division.]
+
+Oh yes: what pieces of the pie did I work on? For OpenDoc 1.0, I was responsible for OpenDoc's imaging classes (shapes, transforms and the like) as well as OpenDoc's memory manager and exception handler, and our grab-bag of utilities. I also worked on size/speed optimization, and fixing lingering low-memory bugs. I did a few months' work building a framework for use by the Parts team for the OpenDoc Essentials Kit. I did some further optimizations for OpenDoc 1.1 and 1.2, but from May 1996 on I focused mostly on Java, both investigation and building a prototype.
+
+On March 14th, 1997 it was announced that Apple was suspending new development on OpenDoc. Later that month IBM (the remaining partner) made a similar announcement. Oh well. After moping about for a month, I decided that a change of scene was in order and this was a good time to move on...
+
+h2. Novita Communications
+
+In May 1997 I became employee #16 of Novita Communications, a small Java startup located in Sunnyvale. Novita was developing Java-based Internet client applications for consumers, namely *NovitaMail*, a mail client with a simple browser-style UI and support for rich HTML-based content including pictures and embedded Java applets.
+
+bq. [NovitaMail was an extension of the  HotJava browser. It seems to me, though, that building a mail  client atop a web browser is exactly the wrong way to do it. You still have the page-flipping browser UI -- which isn't appropriate  for mail reading -- so you can't really do much better than any of  the ubiquitous web-based  mail services, but you don't get their  advantages: zero client admin, accessibility from any web browser  in the world. Moreover, this project was where I became acutely aware of Java's significant footprint and performance problems.  (Of course, this was back in the days of 16MB PCs!)]
+
+While there were lots of interesting things to do at Novita (once I got away from bug-fixing and into prototyping) it became more and more apparent that I missed working at a larger company; and the work environment at Novita was quieter and more formal than what I was used to or comfortable with. So after a mere four months I left for ...
+
+h2. Javasoft (a tiny little division of Sun Microsystems)
+
+On 22 September 1997 I started work at Javasoft -- conveniently located right across the street from my former digs at Apple. I was in the Intranet Clients group, working on future technologies for the "*HotJava Views*":http://java.sun.com/products/hotjavaviews/index.html webtop client and possibly other products for internet-enabled devices, and deeply enmeshed in new Java technologies like Swing and the Java Activation Framework.
+
+When I originally wrote this (soon after I started at Sun) I wrote "Javasoft has the energy and enthusiasm of the Old Apple". Unfortunately it quickly turned out that it also has the chaos, lack of direction and counterproductive religious fervor of the Old Apple too. No one really had any idea of what HotJava Views should be used for, and it turned out to be huge and slow (unusably slow on Sun's "JavaStation" network computers, even with a then-mighty 64MB of RAM). Javasoft, or at least its marketing and upper management, took the "write once run anywhere" and "100% Pure Java" slogans too much to heart and actually believed that they expressed concrete truths rather than laudable goals.
+
+And I quickly discovered that -- despite Sun's self-righteous stance as the force of good against Microsoft -- in my own working life I would infinitely rather use a Microsoft operating system rather than Sun's.
+
+bq. [Working with a bunch of Unix geeks  -- who were all lovely people, I hasten to add -- was like  stepping back in time fifteen years, only instead of people  running 'csh' and 'vi' on a single VT220 terminal on their  desktop, they now had a nice 20" color monitor displaying six or  seven VT220s running 'csh' and 'vi'. This is progress?? Unix geeks  are the Amish of the computer world.]
+
+But of course I would still much, much rather use an Apple operating system (crashes, short filenames and all) than either a Sun, Microsoft or even Linux one.
+
+h2. Back at Apple, working on Java
+
+So I came back to Apple, on 20 April 1998, and never looked back. (I very nearly went to Be instead, but ultimately decided [correctly, it turned out] that they were too unlikely to succeed, and that I really didn't want to go back to coding in C++. Sweet little OS, though.)
+
+I went to work in the Java group, on the *Mac OS Runtime for Java* (MRJ) product. (It used to be called that in the Classic OS days; in OS X it's just called "Java".) This is the mainstream Java runtime for Mac OS, so the group is largely responsible for how well Java applications and applets work for a significant fraction of the world's computer users. As the tech lead for Apple's implementation of AWT (the Java GUI framework, which has to interface with the native GUI frameworks), my first step was to nuke the old implementation and start over. In hindsight this was a really rash thing to do, and I had no idea of how many really trickly little bits of behavior we would need to rediscover and re-implement in the months to come. Nevertheless it was the right thing to do. By writing nearly all of the code in Java we got the job done pretty quickly and well, and the resulting release (MRJ 2.1) was very warmly received by Java developers since it ran AWT apps much more quickly and more compatibly than before.
+
+I then worked on the implementation of Java2 for Mac OS X. Part of the team ported Sun's JDK 1.2 for Solaris (Solaris is a kissing cousin to the "Darwin" underpinnings of OS X, they both being BSD-derived Unices) and the other part -- including me -- ported our class libraries to the modernized "Carbon" Mac OS APIs. It all turned out pretty well, although as usual the project was just a complete and utter mess for a long time during its development.
+
+h2. Radio Station
+
+At one point (late 1999, I think, right after the SoundJam MP3 player shipped) I started collecting together all my favorite ambient music from various CDs and collecting the tracks on disk in MP3 format. And after that I wanted a way to broadcast these tracks so other people could listen to them. But the ShoutCast MP3 server only ran on Windoze and didn't have source available, and IceCast did but the source was deeply horrifying to behold (simply trying to configure the server on one of our PCs drove me into a rage.)
+
+So of course I wrote my own. It turns out to be fairly easy to stream pre-encoded MP3 files, and it takes very little CPU horsepower. I wrote the server in Java and it worked fine. Eventually I added some bells and whistles like the ability to read the artist and track info from the ID3 tags in the file, and use them to update an HTML file so the machine could also serve the playlist.
+
+I wanted this to be an open source project, but The Man told me that wasn't happening, so instead it got released as "sample code":http://developer.apple.com/samplecode/Sample_Code/Java/JavaRadioStation.htm. You can download it, try it out, look at the code, improve it, release your own mods, sell it, whatever. Go crazy.
+
+h2. iChat
+
+I left the Java team in September 2000. Too many months working on porting the awful AWT API without benefit of any kind of specification or decent documentation; of dealing with indignant developers who discovered that our platform didn't reproduce a particularly essential bug in Sun's; of having my brain exploded by odd threading issues in Carbon; of tweaking frameworks so _other_ people could write their dumb apps instead of me getting to write my cool apps.
+
+I found a cool app to work on when I by chance discovered an Apple job opening for writing an instant messaging application. Having been excited by IM ever since my Novita days, I leapt at the chance and got the job, as part of the same team that builds OS X's Mail application. My first task was to take a week-long training course on "Cocoa":http://developer.apple.com/cocoa/, Apple's insanely cool object-oriented application frameworks based on NeXT's "OpenStep", which so totally kick black-clad Ninja ass over all other GUI frameworks I've used that it isn't even funny.
+
+Within about _a week_ of taking the training class I had a little prototype I called "Fezz" that drew a chat as a series of colorful speech balloons. About a week after _that_ I had a buddy list that showed pictures and status messages for people. With some help from Eric Peyton I hooked my front end to the libfaim library (an ugly but functional open source reverse-engineered implementation of the AIM protocol) and had a useable IM client. Time to ship it!
+
+Well, in reality, there was about a year and a half of work still to be done. AIM started blocking 3rd party clients, so I switched to the open "Jabber":http://www.jabber.org/ protocol. Meanwhile Apple's negotiations with AOL continued. I added lots of features like chat rooms and file transfer and transmitting buddy icons. I helped out on *Address Book* and a little tiny bit on *Mail*.
+
+Finally in October 2001 the AOL contract was signed, we got AOL's official AIM library, and we were ready to go. Several more engineers were hired, I explained the code to everyone and we divvied up the work. There was re-architecting, gluing the AOL code into place, more features, and bug-fixing. And most importantly, the HI designers were now working on the look and feel and holding séances with Steve Jobs every week to fine-tune everything. Keeping up with that is hard work, as features and behaviors changed on a week-by-week basis. But we managed to release *iChat* as part of the Jaguar release, OS X 10.2.
+
+After that we went on to iChat 2, which came to be called iChat AV since the major new feature was audio/visual conferencing. A group from the QuickTime team built the core AV framework and several of the iChat engineers integrated it in. I focused on some other new features, some of which shipped (like buddy groups) and others didn't, at least not yet. Oh, and lots of bug fixes!
+
+h2. Safari RSS
+
+You know how it goes: I was frustrated with the direction of iChat (I admit that video conferencing is neat, but I'm not interested in implementing it); in fall 2003 I got wind of another exciting project; I did my song-and-dance routine involving showing the acting manager my knowledge of the topic and a demo of a prototype app I'd whipped up in my spare time. After many, many changes in direction, this project ended up being:
+
+<img src="http://images.apple.com/macosx/tiger/images/safaritop_20040628.jpg" width=500/>
+
+"Safari RSS":http://www.apple.com/macosx/tiger/safari.html is an RSS/Atom news-reader and aggregator built into Apple's Safari web browser. It auto-detects news feeds, lets you toggle to the feed view, and lets you subscribe to feeds by bookmarking them. Subscribed feeds are updated in the background and saved in a database so you can read news while offline. A search field in the Safari toolbar lets you search the news database for keywords.
+
+To tell the truth, I didn't join this project wanting to write a news-reader. But I learned a lot of interesting things in the process, such as SQL and SQLite (I _love_ SQLite) and AJAX.
+
+h2. And now?
+
+It's December 2005 and time for another update. This spring I thought back to the ideas I had before the last project solidified as a news-reader -- in fact, ideas I've been having for years -- and started implementing them as an experimental project. I gave some demos, it got a good reception, and it's been working its way toward official status as a feature of Apple's next operating system, Leopard. As of this writing it's about 90% of the way to being approved. Wish me luck!

@@ -1,0 +1,23 @@
+---
+layout: post
+title: "sneJ’s Law of Toolbars"
+---
+*The Pessimistic Form*
+The set of commands available in a toolbar (even via customization) is restricted to those that are either:
+(a) painfully obvious (New, Save, etc.), or
+(b) useless to you (Save As EBCDIC, Post To CompuServe, Bilinear Zeta-Regression, etc.)
+
+*The Optimistic Form*
+Combine this with the well-known principle that, while everyone uses only a subset of an application's features, everyone uses a _different_ subset. Conclusion:
+
+To be useful, a toolbar's customization UI should allow _every single command in the application_.
+
+h2. Discussion
+
+There are three difficulties that stand in the way of making every command available in a toolbar:
+
+# Every toolbar item needs an icon. Icons are hard to design, especially for the more unusual commands, and usually require payment to a designer or a stock-icon service.
+# Toolbar items need to be enabled/disabled immediately after every user action, as opposed to menu items that only need to be updated when the menus are pulled down. In some cases it's too expensive to check the status of the command that often (especially during typing.)
+# I suspect the OS X "Customize Toolbar..." UI won't scale well to the number of commands available in a decent-sized app. (I'm not even sure if the sheet even has a maximum height and a scrollbar.) Listing the commands in alphabetical order might be sufficient, though.
+
+[Update, 1:45PM: Clarified the wording a little bit, to make it clear I'm talking about the customization options, not what's in the toolbar by default.]

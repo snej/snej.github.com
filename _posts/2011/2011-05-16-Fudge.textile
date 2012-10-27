@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Fudge"
+---
+I've just released a new open-source project, a small one -- "Fudge-Cpp":https://bitbucket.org/snej/fudge-cpp, a fast C++ library for reading and writing "Fudge":http://fudgemsg.org/ messages.
+
+I hadn't heard of Fudge either, till a few weeks ago, but it's a type of thing that's always interested me: a generic structured binary data format. A quick elevator pitch would be "it's sorta like JSON, except more compact and faster to parse". (It's also sorta like Mac property-lists, YAML, etc.) So, it lets you turn collections of scalars, strings, arrays and dictionaries into a "standardized blob of data":http://fudgemsg.org/display/FDG/Encoding+Specification that can be sent over a network or stored on disk or whatever.
+
+From the Fudge website:
+
+_"Fudge is primarily useful in situations where you have:_
+
+* _Data exchanging between nodes in a distributed system; where_
+* _You want to be able to do meaningful work with data without knowing at compile time the precise message format; and_
+* _Performance and message size are important; or_
+* _A requirement to encode data and translate between efficient binary encodings, and more accepted text encodings (XML, JSON) depending on the communications channel."_
+
+The obvious advantage of a binary format for this is that it's faster to parse. Instead of having to tokenize the input and walk through it counting braces and commas, and converting sequences of digits into numbers, you just read big-endian numbers from the stream and interpret them as types and byte-counts. This can also make the data smaller, if the format is careful to use the smallest number of bytes to represent a number (which Fudge does). It's especially compact for messages containing payloads of binary data like images, audio, or digital signatures, since those blobs don't have to be converted to Base64 (which is 25% larger.)
+
+A more subtle advantage is that the library can use less memory. In fact, Fudge-Cpp basically _allocates no memory at all from the heap_. How does it manage this? When the library returns the caller an object representing a data value from the parsed message (a scalar, string, array, etc.) it doesn't allocate that object on the heap. Instead, it just returns a pointer to where that value is stored in the binary message itself. This really is a valid C++ object pointer; it's just that the object's members have the exact same layout as the corresponding Fudge data.
+
+(Now, there is a bit of impedance mismatch that adds overhead to accessing the data this way. For one thing, on a little-endian CPU every multi-byte numeric value will need to be byte-swapped when accessed. And random access to dictionaries and object arrays is O(N) since they are basically linked lists. But the overhead is low.)
+
+This library isn't a world-changing project; it was more of a fun diversion for me over a few weekends. I've done this sort of thing before -- "Ottoman":http://bitbucket.org/snej/ottoman uses similar memory-saving pointer tricks, and AEGizmos was literally the first code I ever wrote at Apple back in 1991 -- and it's always fun to twiddle bits this way.

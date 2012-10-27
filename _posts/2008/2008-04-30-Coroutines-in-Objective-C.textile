@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Coroutines in Objective-C"
+---
+I've started using NSOperation in a few places in Cloudy, which means I'm backsliding into using threads and locking and so forth. It definitely makes writing network code easier than Cocoa's asynchronous API, but I really don't want to get into a morass of threads.
+
+What I'd really like to use are "*Actors*":http://revactor.org/philosophy. In a nutshell, an Actor is an object that has its own [cooperative] thread and message queue. Actors interact by message-passing instead of shared state. The idea is to eliminate the need for standard synchronization primitives like semaphors and locks, and get rid of the race conditions and deadlocks that plague multi-threaded programs.
+
+The page I linked to above is from "Revactor":http://revactor.org/, a new Actor implementation for Ruby 1.9; Actors are also built into languages like Erlang and Io.
+
+The only hard part about implementing Actors in Obj-C appears to be the underlying dependency on "*coroutines*":http://en.wikipedia.org/wiki/Coroutine. Steve Dekorte [author of Io] has a "C coroutine implementation":http://www.dekorte.com/projects/opensource/libCoroutine/ ; when I discovered that last year, I then found an "Objective-C wrapper for it":http://www.dpompa.com/?p=83, but that relies on a HigherOrderMessaging library which is incompatible with OS X 10.5 and hasn't yet been updated.
+
+h3. So I've gone DIY.
+
+I started with Steve Dekorte's coroutine library, but unfortunately it doesn't build on 10.5 ... and when I got it to build, I then ran into a bug in the system header &lt;ucontext.h&gt; ... and by the time I'd worked around _that_, I knew the code well enough that I pretty much rewrote it. Doing this made it much shorter and clearer, since Steve's code is cross-platform and supports three different implementations, while all I care about is OS X 10.5. I got it down to 150 lines of C.
+
+Then I wrote a pretty simple Objective-C wrapper around it, under 200 lines. ("Here's the header":http://mooseyard.com/hg/hgwebdir.cgi/Actors/file/tip/Coroutines/MYCoroutine.h.)
+
+h3. Come 'n' get it...
+
+The work in progress is "in my Mercurial repository":http://mooseyard.com/hg/hgwebdir.cgi/Actors/ if you want to check it out. It's grandly titled "Actors", but all that's in it so far is the coroutine implementation.
+
+Needless to say, this is currently *for amusement purposes only*; do not use it in real code. In particular, I strongly suspect that there are going to be problems getting Objective-C exceptions and autorelease pools to work correctly in coroutines. I'll try to explore that next.

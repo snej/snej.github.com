@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Apple slashdots itself"
+---
+This is what happens when Steve Jobs announces that an iPhone SDK will be available for download within the hour:
+<!--more-->
+
+
+<img src="http://mooseyard.com/Pictures/ADCOverload-20080306-112856.jpg" alt="ADCOverload"/>
+
+If I can just hit "Reload" faster, maybe I'll be able to get in...
