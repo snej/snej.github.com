@@ -8,7 +8,7 @@ My first exposure to network programming was in Java, whose approach to asynchro
 
 The downside is that making heavily threaded code work correctly can be very hard, and the problems are subtle, hard to understand and debug, and sometimes almost impossible to reproduce. Edward Lee's paper "The Trouble With Threads":http://www.artist-embedded.org/artist/The-Trouble-With-Threads.html describes a complex Java server that was excruciatingly well-designed, code-reviewed and tested.
 
-bq. "No problems were observed until the code deadlocked in April 2004, four years later. Our relatively rigorous software engineering practice had identiï¬ed and ï¬xed many concurrency bugs. But that a problem as serious as a deadlock could go undetected for four years despite this practice is alarming."
+bq. "No problems were observed until the code deadlocked in April 2004, four years later. Our relatively rigorous software engineering practice had identified and fixed many concurrency bugs. But that a problem as serious as a deadlock could go undetected for four years despite this practice is alarming."
 
 My teammates and I had similar experiences while implementing the Java AWT libraries on Mac OS 9 and 10.0. We kept running into weird concurrency bugs, fixing them (which often meant restructuring code and making it more complex), and then running into more. By the time we were done, threading didn't seem like such a good idea anymore.
 
