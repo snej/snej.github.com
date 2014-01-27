@@ -7,10 +7,11 @@ body {
 
 // Headings
 // --------------------------------------------------
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	font-family: @heading-font;
 }
 h1 {
+    font-family: @h1-font;
 	.font-rem(32);
 }
 
@@ -91,14 +92,14 @@ figcaption {
 // Blockquotes
 // --------------------------------------------------
 blockquote {
-	font-family: @alt-font;
+	font-family: @quote-font;
 	font-style: italic;
-	.font-rem(18);
+	//.font-rem(18);
 	@media @medium {
 		margin-left: -28px;
 		padding-left: 20px;
 		border-left: 8px solid @border-color;
-		.font-rem(24);
+		//.font-rem(24);
 	}
 }
 

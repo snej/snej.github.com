@@ -1,14 +1,24 @@
 // Typography
 // --------------------------------------------------
 
-@base-font: 'Lato', Calibri, Arial, sans-serif;
-@heading-font: @base-font;
-@caption-font: @base-font;
-@code-font: monospace;
-@alt-font: serif;
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:500,700,700italic,500italic|Alegreya:400italic,700italic,400,700|Alegreya+SC|Cutive);
+// font-family: 'Alegreya Sans SC', sans-serif;
+// font-family: 'Alegreya Sans', sans-serif;
+// font-family: 'Alegreya', serif;
+// font-family: 'Alegreya SC', serif;
+// font-family: 'Cutive', serif;
 
-@doc-font-size: 16;
-@doc-line-height: 26;
+@base-font: 'Alegreya Sans', Georgia, serif;
+@small-caps-font: 'Alegreya Sans SC', sans-serif;
+@body-font: 'Alegreya', Georgia, serif;
+@quote-font: 'Alegreya Sans', sans-serif;
+@h1-font: 'Cutive', serif;
+@heading-font: 'Alegreya Sans', sans-serif;
+@caption-font: 'Alegreya Sans SC', sans-serif;
+@code-font: monospace;
+
+@doc-font-size: 14;
+@doc-line-height: 20;
 
 
 // set-up the body font-size / line-height
@@ -22,6 +32,7 @@ body {
 @base-color				: #222;
 @body-color      		: #e8e8e8;
 @text-color      		: #222;
+@title-color            : #050;
 @comp-color 	 		: spin(@base-color, 180); 
 @border-color    		: lighten(@base-color,60);
 @white           		: #fff;
