@@ -2,7 +2,7 @@ title:            Thought Palace
 description:      "Little boxes made of words, by Jens Alfke"
 disqus_shortname: 
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://snej.github.com
+url:              http://snej.github.io
 #url:             http://localhost:4000
 
 excerpt_separator: "<!--more-->"
