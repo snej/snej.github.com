@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Systems"
+tags: [poetry]
 ---
 The last paragraph of the poem "Systems" by "Kristy Bowen":http://www.kristybowen.net/:
 

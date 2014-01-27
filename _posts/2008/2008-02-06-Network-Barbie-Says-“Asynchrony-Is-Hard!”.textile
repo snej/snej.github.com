@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Network Barbie Says “Asynchrony Is Hard!”"
+tags: [me, computers, cocoa]
 ---
 You can't avoid asynchrony when writing network code, since operations can take an arbitrary amount of time, and often do. To keep the app responsive it has to be able to get other things done while a slow operation is in progress.
 

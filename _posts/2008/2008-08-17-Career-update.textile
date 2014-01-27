@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Career update"
+tags: [me, work, google]
 ---
 FYI, I ended up taking the position at Google. I started two weeks ago, and it's been quite exciting, despite (or because of) the "drinking from a fire-hose" aspect of learning my way around the big G.
 

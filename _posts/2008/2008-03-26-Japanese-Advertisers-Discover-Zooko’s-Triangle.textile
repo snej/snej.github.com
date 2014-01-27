@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Japanese Advertisers Discover Zooko’s Triangle"
+tags: [computers, psychology]
 ---
 Cabel Sasser, of indie developer "Panic":http://panic.com, reports from Japan:
 

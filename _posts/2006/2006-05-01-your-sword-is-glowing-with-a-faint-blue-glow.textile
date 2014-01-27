@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "your sword is glowing with a faint blue glow"
+tags: [computers, games]
 ---
 I dabbled in Interactive Fiction, aka Text Adventures, "long ago":/Jens/2004/04/my-geek-history --- I played Adventure on my Apple ][ and Dungeon/Zork on a VAX; I wrote a primitive game in BASIC and later in college partially implemented a language for building games in yacc; and then after graduating, my first serious Mac program was a souped-up and nearly finished version of that language. After that I was too busy with "real" jobs, but others kept the flame alive even after Infocom tanked, building their own adventure-design languages like TADS and Inform and spawning a cult scene of increasing complexity and literary merit. I kicked the tires of TADS and Inform a few years back, then got distracted by other shiny things. You know how it is.
 

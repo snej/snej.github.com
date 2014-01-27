@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "So Many Fonts, So Little Print"
+tags: [design]
 ---
 I went on a free-font-downloading bender last weekend. I still love typography, and I'm glad to see the arcane art of type design isn't dying out. Back in the old days of Desktop Publishing, you had a choice between high-quality but expensive fonts from reputable foundries, or a bunch of cheap but crappy knockoffs done in Fontographer.
 

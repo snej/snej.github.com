@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Hero Passes"
+tags: [fiction]
 ---
 bq. We love to play the Hero — exploring dungeons, grabbing treasure, saving the world from evil. But I started wondering about the reasons behind some of the actions in such games, and especially about what my Heroic deeds looked like to the ordinary people of the lands I passed through. (As my wife once put it: "Why isn't there a Hug button?") The result is this story.
 I don't normally write this sort of antiquated prose, but the genre does require it. It was actually a fun exercise, and I've tried to affect more of a "James Branch Cabell":http://en.wikipedia.org/wiki/James_Branch_Cabell or "Lord Dunsany":http://en.wikipedia.org/wiki/Lord_Dunsany voice, rather than the tiresome faux-Tolkien of most current heroic fantasy.

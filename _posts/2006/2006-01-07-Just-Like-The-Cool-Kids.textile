@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Just Like The Cool Kids"
+tags: [me, computers]
 ---
 Like most geeks, as a kid I not only despised the Cool Kids, but also wanted to be one of them too. My own school-age development trajectory took me from a state of total ignorance of what that required[1], to brave attempts to fit in[2], to a realization that different was cool[3].
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Hang on, I gotta take a call from the Archdemon Azazael"
+tags: [psychology]
 ---
 "37signals gripes about those annoying Bluetooth cellphone headsets with even-more-annoying blinky LEDs on them.":http://www.37signals.com/svn/posts/516-blinking-bluetooth-headsets
 

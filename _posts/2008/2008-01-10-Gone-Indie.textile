@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Gone Indie"
+tags: [me, work, apple]
 ---
 Here's a career update, for those of you who care: I've left Apple, and I'm now working on my own, from home, as an indie software developer. I have plans for at least two kick-ass Mac apps, I'll probably contribute to a few open source projects, and I may dabble in some web stuff.
 

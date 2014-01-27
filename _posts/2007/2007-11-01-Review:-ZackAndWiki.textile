@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Review: ZackAndWiki"
+tags: [computers, games, humor]
 ---
 It's a sure sign that <a href="http://en.wikipedia.org/wiki/Wiki">wiki</a>s are going mainstream when one appears for a video-game console. "<a href="http://wii.ign.com/articles/829/829301p1.html">ZackAndWiki</a>" has the requisite goofy name (like <a href="http://info.tikiwiki.org/tiki-index.php">TikiWiki</a> or <a href="http://wikkawiki.org/HomePage">WikkaWiki</a>), but once you try it out, you'll find it approaches its job very differently than you're probably expecting.
 <!--more-->

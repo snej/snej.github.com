@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Fine Line Between Clever And Stupid"
+tags: [me, work, cloudy, networking, blip]
 ---
 ...and which side of that line am I on? Not in general; just in respect to my latest decision in Cloudy. It's the old "make vs. buy" trade-off, or "write vs. reuse" in this case: do you go with an existing library, even if it's problematic, or do you write your own implementation from scratch?
 

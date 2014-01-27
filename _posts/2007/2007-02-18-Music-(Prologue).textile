@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Music (Prologue)"
+tags: [me, music]
 ---
 The problem with "writing about something I dislike":/Jens/2007/01/in-which-i-think-about-java-again-but-only-for-a-moment/ is that, after the momentary pleasure of getting it off your chest, there's not a lot of motivation to read people's responses (especially the argumentative ones.) Better to pick as a topic something that I _do_ like very much ... such as music.
 

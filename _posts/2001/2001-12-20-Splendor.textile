@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Splendor"
+tags: [fiction, poetry]
 ---
 We stepped out our back door into splendor:
 – the rain-choked hills casting off their muddy carapace of topsoil

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "We (had black boxes)"
+tags: [fiction]
 ---
 ...each of us had a little box. We didn’t know each other, not at first; we weren’t even aware of each other. "We" was a grouping defined solely by the fact of our having these little boxes. Each box was black lacquer and about two inches on a side. A network of fine black raised lines covered it. The lid could be opened, revealing nothing much inside.
 

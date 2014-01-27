@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "AppleScript team photo, 1993"
+tags: [me, apple]
 ---
 Warren just emailed me this photo, commemorating the release of the first Apple product I worked on. That's me on the second row, second from the right, with the dopey expression (but no gray hairs.)
 <!--more-->

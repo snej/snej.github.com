@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My Geek History"
+tags: [me, work]
 ---
 Time to bore you young whippersnappers with my early history in computers. (I saw a couple of other people do it and thought hey! I can do that too!) First we have to set the Wayback Machine for the darkest depths of the '70s, a decade that's oh-so-much funner as retro than it was to live through...<!--more-->
 

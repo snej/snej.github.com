@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I Made A Decktet"
+tags: [me, games]
 ---
 Sometimes it's nice to make physical objects. It's usually messier and more time-consuming than doing it on the computer, but in the end you have something you can actually touch.
 

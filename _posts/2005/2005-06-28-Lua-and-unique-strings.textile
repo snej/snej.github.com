@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lua and unique strings"
+tags: [computers]
 ---
 "Lua":http://www.lua.org/ is an interesting scripting language. I can't say I have much familiarity with it; I've only read the "book":http://www.inf.puc-rio.br/~roberto/book/, and a couple of papers, and downloaded and built the interpreter (which takes less than a minute). But what I've seen of it gives me a warm feeling, like reading a concise little poem, a haiku. It's a small language, but what's there is well-considered, and it appears that you can build bigger things (like object models, whether class- or prototype-based) out of its building blocks pretty easily.
 

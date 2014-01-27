@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cloudy Verification"
+tags: [me, work, security, cloudy]
 ---
 <i>Continuing from "the previous Cloudy post":http://mooseyard.com/Jens/2008/04/cloudy-networking/ ... </i>
 

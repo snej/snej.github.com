@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My Debt To Arthur C. Clarke"
+tags: [me, sf]
 ---
 Arthur C. Clarke's death hit me harder than other recent obituaries, even though it's been decades since I read much by him. His were some of the first science fiction stories I read, at the age of ten or eleven; and for several years after that he was my favorite author.
 

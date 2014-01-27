@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Haiku Archives"
+tags: [fiction, poetry]
 ---
 h3. 2001
 
@@ -109,7 +110,7 @@ ClassCastException
 
 
 Garbage collection
-The unused objects are gone â€“
+The unused objects are gone —
 Knew you wouldn’t mind
 
 

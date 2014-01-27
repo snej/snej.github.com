@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Little Boxes Of Words"
+tags: [me, computers, philosophy]
 ---
 Much of what I'm consumed with (at work) boils down to a question of: what is the right <i>shape</i> for the small but plentiful bits of writing that we are all creating daily? Here <i>shape</i> means largely visual representation but also sequencing and topology.
 

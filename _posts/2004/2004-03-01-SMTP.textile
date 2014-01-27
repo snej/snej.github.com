@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "SMTP"
+tags: [computers, networking]
 ---
 The Simple Mail Transfer Protocol is by no means perfect -- its lack of authentication is a prime reason why spam is such a problem -- but I think it got one thing right: it has the right topology for building a person-to-person communications system.<!--more-->
 

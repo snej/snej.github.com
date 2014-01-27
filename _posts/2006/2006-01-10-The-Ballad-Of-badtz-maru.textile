@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Ballad Of badtz-maru"
+tags: [fiction, poetry, computers, humor]
 ---
 I had a "tiny Linux box":http://206.14.132.88/products/Travla/c138/C138.html
 Its name was "badtz-maru":http://www.badtzmaru.com/ ;

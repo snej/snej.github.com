@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Unstealthing, Incrementally"
+tags: [me, work]
 ---
 I got about 14 minutes of fame back in January with "a blog post":http://mooseyard.com/Jens/2008/01/gone-indie/, wherein I grumbled about (among other things) how I disliked Apple's culture of secrecy, and announced that I'd left Apple to work on my own, unspecified, project. In the intervening three months, I haven't said anything about what that project is, almost as though it were ... secret.
 

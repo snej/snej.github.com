@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Facebook and Decentralized Identifiers"
+tags: [computers, social]
 ---
 I finally made myself a Facebook account, mostly to see what it's like. Overall, I'm pretty impressed: the UI is nicer than most such sites, particularly the still-antiquated LiveJournal and the disaster that is MySpace. The biggest issue there seems to be that the main profile page absolutely doesn't scale up to handle the exploding number of apps/widgets people are stuffing into it, so you end up with mile-long profiles containing box after box of junk.
 

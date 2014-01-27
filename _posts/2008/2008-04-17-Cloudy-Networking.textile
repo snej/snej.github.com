@@ -7,13 +7,13 @@ Next I need to talk about networking; having an identity and minting certificate
 
 h2. Point-to-Point Communications.
 
-When one Cloudy peer wants to communicate with another one, it opens a TCP socket to its IP address â€”
+When one Cloudy peer wants to communicate with another one, it opens a TCP socket to its IP address —
 
 [Hang on, there are two issues I suddenly glossed over in that last phrase. First, how did this peer find out the others' IP address? These are just random computers, not servers, so they don't have their own domain names or even stable addresses. This is indeed a problem “y unstructure”to-peer network, but the solution involves things I won't get to until the next installment, in an unfortunately but necessary violation of layering.]
 
 [Oh, and issue #2 is that most home computers are now behind "Network Address Translators":http://en—ia.org/wiki/Network_address_translation (usually some kind of WiFi base station or broadband router), which means they don't have their own real IP addresses and can't receive incoming connections. Fortunately, most NATs now "support":http://en.wikipedia.org/wiki/UPNP "protocols":http://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol that allow clients to open listening ports to the outside world, and doubly fortunately, Mac OS X 10.5 includes "an API for making such connections":http://developer.apple.com/documentation/Networking/Reference/DNSServiceDiscovery_CRef/dns_sd/CompositePage.html#//apple_ref/c/func/DNSServiceNATPortMappingCreate. Cloudy opens such a port whenever it finds itself behind a NAT.]
 
-â€” and runs a protocol called BEEP over the socket.
+— and runs a protocol called BEEP over the socket.
 
 h3. BEEP.
 
@@ -32,8 +32,8 @@ Remember the "CallingCard" I used as an example of a signed object in the last p
 
 So Bonjour solves, at least on a LAN, the discoverability problem I pointed out at the start of this post. At this point, if the peer you want to send messages to is on the same network, Cloudy can easily find it via Bonjour, open a BEEP socket, and authenticate over SSL.
 
-What's more, Cloudy's view of who's on the network is actually _trustworthy_. The CallingCard is _signed_ with your public key, proving that you created it. iChat's Bonjour IM has always been insecure in that there's no way to tell whether anyone else is who they say they are: all you know about someone is their name, which they can easily change to anything they want by editing their address book. In Cloudy, on the other hand, once you've communicated with someone once, your app remembers their public key, and it can identify in the future whether a peer appearing on the network is that person or not. (To make this clear in the UI, the name of anyone you haven't previously vouched for is shown â€œin quotesâ€.)
+What's more, Cloudy's view of who's on the network is actually _trustworthy_. The CallingCard is _signed_ with your public key, proving that you created it. iChat's Bonjour IM has always been insecure in that there's no way to tell whether anyone else is who they say they are: all you know about someone is their name, which they can easily change to anything they want by editing their address book. In Cloudy, on the other hand, once you've communicated with someone once, your app remembers their public key, and it can identify in the future whether a peer appearing on the network is that person or not. (To make this clear in the UI, the name of anyone you haven't previously vouched for is shown "in quotes".)
 
-â€” Oops, I just skipped over a tricky problem again. The _first_ time you connect to someone, how do you establish that the digital identifier you're communicating with corresponds to the human being you think it is? This is surprisingly difficult to do, because it's vulnerable to what cryptographers call the "man-in-the-middle attack":http://en.wikipedia.org/wiki/Man_in_the_middle_attack. It's worth a post by itself...
+— Oops, I just skipped over a tricky problem again. The _first_ time you connect to someone, how do you establish that the digital identifier you're communicating with corresponds to the human being you think it is? This is surprisingly difficult to do, because it's vulnerable to what cryptographers call the "man-in-the-middle attack":http://en.wikipedia.org/wiki/Man_in_the_middle_attack. It's worth a post by itself...
 
 <b>Next: "Verifying Identities":http://mooseyard.com/Jens/2008/04/cloudy-verification/. </b>

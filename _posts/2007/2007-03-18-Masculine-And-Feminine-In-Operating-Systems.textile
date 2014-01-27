@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Masculine And Feminine In Operating Systems"
+tags: [computers, psychology]
 ---
 My friend Tanya is a gateway to the strange and exotic worlds of fan- and slash-fiction. Today she pointed out a whole LiveJournal community, "mac_hearts_pc":http://community.livejournal.com/mac_hearts_pc/, devoted to mostly-smutty extrapolations of Apple's anthropomorphized Mac-vs-PC ads. Wow.
 

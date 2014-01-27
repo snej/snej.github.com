@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Multisensory CPU meter"
+tags: [computers]
 ---
 It just occurred to me that my newish MacBook gives me no less than _four_ sensory modalities for detecting high CPU usage:
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "FakeSteved!"
+tags: [me, work]
 ---
 I used to think it was the Big Time if I got a link from "Daring Fireball":http://daringfireball.net, but now someone just pointed out to me that the Fake Steve Jobs has "taken note of my post":http://fakesteve.blogspot.com/2008/01/if-youre-going-to-leave-leave-but-dont.html.
 

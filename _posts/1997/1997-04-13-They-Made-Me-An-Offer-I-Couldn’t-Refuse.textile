@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "They Made Me An Offer I Couldn’t Refuse"
+tags: [work, me, apple]
 ---
 System Software were looking for a Post-It Notes(tm) type of program for System 7.5. They were already buying several other utilities -- including Find File, Scrapbook, SuperClock -- from third parties, and offered Antler Software (me) the same lump sum deal for the “Antler Notes” utility I was working on. It was a nice piece of change. I was happy.
 

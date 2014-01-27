@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Koan For Video Gamers"
+tags: [fiction, poetry, games, philosophy]
 ---
 The Zen master Yoshi was playing a video game. Seated in the lotus position, he expertly maneuvered the controller with his gnarled hands. Nevertheless, on the screen Mario failed to leap from one block to the next and plummeted screaming into the void.
 

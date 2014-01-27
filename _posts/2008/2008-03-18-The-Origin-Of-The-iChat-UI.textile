@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Origin Of The iChat UI"
+tags: [me, apple, ui]
 ---
 I had lost this historical document for a long time, but finally found it the other day on an old backup CD. It's the original 1997 sketch I made of a chat user interface based on speech balloons.
 <!--more-->

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Uncle Jens’s Coding Tips"
+tags: [computers, cocoa]
 ---
 Ever since Brent "NetNewsWire" Simmons posted his "Thoughts On Large Cocoa Projects":http://inessential.com/2007/04/25.php the other week, I've wanted to add some of my own tips. I've worked on some big projects (iChat, Apple's Java runtime, OpenDoc) and have sometimes had to find my way around in others (Safari, Mail), so I know what Brent means when he says:
 

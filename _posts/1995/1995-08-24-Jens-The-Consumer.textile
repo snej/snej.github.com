@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Jens The Consumer"
+tags: [me]
 ---
 bq. The problem of leisure
 What to do for pleasure

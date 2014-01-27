@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Gnostic argument for agnosticism"
+tags: [philosophy]
 ---
 In some online forums I list as interests both "gnosticism":http://en.wikipedia.org/wiki/Gnosticism and "agnosticism":http://en.wikipedia.org/wiki/Agnosticism, which is a bit of a joke since the two words are literally contradictory, but is true in that both are interesting and important to me. Agnosticism as my attitude toward religion: that the existence of a God or gods is fundamentally unknowable, undecidable, unprovable. Gnosticism as a mystic tradition, a suppressed early fork of Christianity, whose beliefs have more recently had a large impact on the literature of the fantastic and on postmodern philosophy (notably Philip K. Dick's SF novels, the _Matrix_ films, Philip Pullman's _His Dark Materials_ trilogy, and Jean Beaudrillard's cultural theorizing.)
 

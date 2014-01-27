@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Beauty Of 99¢ iPhone Apps"
+tags: [apple, ios]
 ---
 After digesting yesterday's iPhone announcements [with fava beans and a nice Chianti] I started thinking about the pricing models made possible by the "Application Store". In particular,
 

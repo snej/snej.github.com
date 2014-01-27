@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "BLIP-Protocol mailing list"
+tags: [me, work, networking, blip]
 ---
 I've created a "BLIP-Protocol mailing list":http://groups.google.com/group/blip-protocol on Google Groups:
 

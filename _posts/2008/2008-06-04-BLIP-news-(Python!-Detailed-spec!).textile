@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "BLIP news (Python! Detailed spec!)"
+tags: [me, work, networking, blip]
 ---
 * I've now "implemented BLIP in Python":http://mooseyard.com/hg/hgwebdir.cgi/MYNetwork/file/tip/Python/. That officially makes it cross-platform! If we get a third implementation, can we call it an "industry standard"?
 * There's some "detailed protocol documentation":http://projects.mooseyard.com/wiki/1/Protocol, too.

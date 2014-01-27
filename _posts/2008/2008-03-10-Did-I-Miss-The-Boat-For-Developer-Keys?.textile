@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Did I Miss The Boat For Developer Keys?"
+tags: [me, work, ios]
 ---
 Am I the only one who hasn't yet gotten a response to their iPhone developer program application … including the precious, precious developer certificate that lets you download apps to an actual iPhone?
 

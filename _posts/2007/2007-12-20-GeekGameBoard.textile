@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "GeekGameBoard"
+tags: [computers, games, cocoa]
 ---
 Santa has an early Xmas present for all you good Leopard programmers: "GeekGameBoard":http://developer.apple.com/samplecode/GeekGameBoard/index.html, a new piece of sample code by the anonymous engineer elves at Apple.
 

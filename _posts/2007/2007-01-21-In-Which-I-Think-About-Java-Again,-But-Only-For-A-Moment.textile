@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "In Which I Think About Java Again, But Only For A Moment"
+tags: [computers, me, apple, languages]
 ---
 It's amusing how Steve Jobs' remarks disparaging the idea of Java on the iPhone have ignited controversy. His point was, obviously, that the iPhone's browser won't support Java applets; which is a no-brainer because applets were killed dead-dead-dead by Flash and Ajax. But this seems to have riled up everyone who still cares about non-server-based Java, leading to the weird situation of seeing "Java" and "Mac" in the same sentence again*. Apparently some people still cling to the glorious dream of writing cross-platform GUI applications, waving tattered "Write Once Run Anywhere!" banners and clutching 'Little' Red Books with Duke's picture on the front.
 

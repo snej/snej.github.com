@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "hash musings"
+tags: [computers]
 ---
 I've been thinking about writing an essay about the beauty & weirdness of "cryptographic hash functions":http://en.wikipedia.org/wiki/Cryptographic_hash_function. The way any digitized data, however huge, can be named by a short fixed-size binary string. The way there are in theory an infinite number of hash collisions, but in practice zero. I was talking to myself about it, this morning, and two quotes appeared, which I write down here to remember:
 

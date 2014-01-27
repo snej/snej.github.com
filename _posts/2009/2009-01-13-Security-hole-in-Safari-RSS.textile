@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Security hole in Safari RSS"
+tags: [me, work, security]
 ---
 Brian Mastenbrook has discovered "a really bad security hole in Safari RSS":http://brian.mastenbrook.net/display/27:
 

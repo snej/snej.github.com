@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "BLIP: Come ‘n’ get it!"
+tags: [me, work, networking, blip]
 ---
 I've released the source code to my "BLIP" protocol implementation, as part of a project I call "MYNetwork", for "Mooseyard Networking Libraries". "API documentation":http://mooseyard.com/projects/MYNetwork/ is available online, and you can "check out or browse the source code":http://mooseyard.com/hg/hgwebdir.cgi/MYNetwork/ from its Mercurial repository. For the really curious, there's even a sketchy "overview of the protocol's wire format":http://mooseyard.com/hg/hgwebdir.cgi/MYNetwork/raw-file/tip/BLIP/BLIP%20Overview.txt.
 

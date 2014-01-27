@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Apricot Jam Recipe"
+tags: [recipe]
 ---
 Here's my family recipe for apricot jam, handed down through generations. One generation, really — my mom got it from a pamphlet put out by some local womens' group, after we moved to an old ramshackle house in the middle of a huge but disused apricot orchard. The trees were old, but a lot of them still produced fruit, and it was no trouble to walk around and collect bucketsful. So we needed some way to make use of all that fruit...
 

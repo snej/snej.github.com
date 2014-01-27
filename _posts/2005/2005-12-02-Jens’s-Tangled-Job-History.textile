@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Jens’s Tangled Job History"
+tags: [me, work, apple]
 ---
 I write code for a living. After all these years I still find it really exciting -- I was instantly and permanently addicted at age 11, it's just that the programs have gone from 20-line BASIC powers-of-two table printers, to enormous Java and Objective-C juggernauts -- and moreover I've found it's the one thing that I can work on consistently enough over a long period of time to finish a project of any size. My childhood was littered with unfinished stories, unfinished plans for undersea cities, unfinished D&D maps. But the programs got finished. (Most of the time.)
 

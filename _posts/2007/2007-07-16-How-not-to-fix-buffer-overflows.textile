@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How not to fix buffer overflows"
+tags: [computers, languages, security]
 ---
 "This tale of woe":http://use.perl.org/%7EAristotle/journal/33448 is making me rethink whether I want to be running any "PHP-based software":http://wordpress.org on my website.
 

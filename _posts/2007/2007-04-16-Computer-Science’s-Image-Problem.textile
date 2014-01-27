@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Computer Science’s Image Problem"
+tags: [computers]
 ---
 NYT: <i><a href="http://www.nytimes.com/2007/04/17/science/17comp.html">Computer Science Takes Steps to Bring Women to the Fold</a></i>
 

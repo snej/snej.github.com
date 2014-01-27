@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cloudy Identity"
+tags: [me, work, networking, security, p2p, cloudy]
 ---
 <i>Continuing from "the previous Cloudy post":http://mooseyard.com/Jens/2008/04/cloudy-as-buzzwords/ ... </i>
 

@@ -4,7 +4,7 @@ title: "“Interview With An Adware Developer”"
 ---
 Matt Knox, a Ruby developer and repentant former coder for an adware company, "explains how adware works":http://philosecurity.org/2009/01/12/interview-with-an-adware-author. Really fascinating stuff, and quite scary from a security point of view.
 
-bq. “At the same time, we also made a virtual process executable. I’ve never heard of anybody else doing this before. Windows has this thing called Create Remote Thread. Basically, the semantics of Create Remote Thread are: You’re a process, I’m a different process. I call you and say “Hey! I have this bit of code. I’d really like it if you’d run this.” You’d say, “Sure,” because you’re a Windows processâ€“ you’re all hippie-like and free love. Windows processes, by the way, are insanely promiscuous. So! We would call a bunch of processes, hand them all a gob of code, and they would all run it. Each process would all know about two of the other ones. This allowed them to set up a ring … mutual support, right?”
+bq. “At the same time, we also made a virtual process executable. I’ve never heard of anybody else doing this before. Windows has this thing called Create Remote Thread. Basically, the semantics of Create Remote Thread are: You’re a process, I’m a different process. I call you and say “Hey! I have this bit of code. I’d really like it if you’d run this.” You’d say, “Sure,” because you’re a Windows process— you’re all hippie-like and free love. Windows processes, by the way, are insanely promiscuous. So! We would call a bunch of processes, hand them all a gob of code, and they would all run it. Each process would all know about two of the other ones. This allowed them to set up a ring … mutual support, right?”
 
 Later on he describes further Windows security fubars like undeleteable Registry keys. All of this further validates my obstinate refusal to give in to my children's pleas to install Windows so they can play all the games that only run on PCs!
 
@@ -17,4 +17,4 @@ bq. <i>S: Do you think that in our society we delude ourselves into thinking we 
 M: Oh, absolutely. If you think about it, when I use a credit card, the security model is the same as that of handing you my wallet and saying, “Take out whatever money you think you want, and then give it back.”
 [...]
 <i>S: Is there anything else you wanted to comment on?</i>
-M: People can have things as good as they are willing to work for. If you want to have a system that’s clean of nasty software, you can do that. If you want to have personal privacy, it’s possibleâ€“ very hard, but possible. And I think it’s worth it.
+M: People can have things as good as they are willing to work for. If you want to have a system that’s clean of nasty software, you can do that. If you want to have personal privacy, it’s possible — very hard, but possible. And I think it’s worth it.

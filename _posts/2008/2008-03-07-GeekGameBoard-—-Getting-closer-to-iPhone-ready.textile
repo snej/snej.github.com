@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "GeekGameBoard — Getting closer to iPhone-ready"
+tags: [me, games, cocoa, ios]
 ---
 To encourage development, I've started an open source project based on the *GeekGameBoard* game-development sample code that Apple published last December (which, by a strange coincidence, I wrote.) <strike>I hope to have it ready for iPhone game development soon.</strike> It runs on iPhones, too!
 

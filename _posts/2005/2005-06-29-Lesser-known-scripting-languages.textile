@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lesser-known scripting languages"
+tags: [fiction, computers, languages, humor]
 ---
 Just when it seemed, a decade ago, that the programming world had settled on C++ as the _lingua franca_, the One Language To Rule Them All, instead we got an explosion of new high-level languages that have risen to popularity. Why did this happen? Chiefly because the World-Wide Web has conditioned users to expect five-second delays before any responses to their actions, which provides an environment ideally suited for interpreted, garbage-collected scripting languages. This movement has been encouraged by server vendors like Sun and IBM who are eager to show Web developers the productivity increases they can get by using such languages, especially after they then install massively powerful servers.
 <!--more-->
