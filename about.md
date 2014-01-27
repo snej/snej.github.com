@@ -21,8 +21,8 @@ Send friendly correspondence to <tt>thought-palace</tt> at this domain.
 
 ## About The Type
 
-Body & incidental text is set in the wonderful [**Alegreya**](http://www.huertatipografica.com/fonts/alegreya-ht-pro) and [**Alegreya Sans**](http://www.huertatipografica.com/fonts/alegreya-sans-ht), designed by Juan Pablo del Peral for Huerta Tipográfica.
+Body & incidental text is set in the wonderful [**Alegreya**](http://www.google.com/fonts/specimen/Alegreya) and [**Alegreya Sans**](http://www.google.com/fonts/specimen/Alegreya+Sans), designed by Juan Pablo del Peral for [Huerta Tipográfica](http://www.huertatipografica.com).
 
-Headings are set in **Cutive** by [Vernon Adams](http://code.newtypography.co.uk).
+Headings are set in [**Cutive**](http://www.google.com/fonts/specimen/Cutive) by [Vernon Adams](http://code.newtypography.co.uk).
 
 All fonts are available through [Google Web Fonts](http://www.google.com/fonts/).
