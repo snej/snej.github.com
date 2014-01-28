@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I Has A Hash Table"
+tags: [computers, me]
 ---
 I know, three weeks ago I said I was "building me a B-Tree":http://mooseyard.com/Jens/2009/08/im-building-me-a-b-tree/. I did build it, even the parts I listed under "What's next?" in that post, and it works. But it became apparent there was a more urgent need for a hash table, for work-related reasons, so I switched gears to build one of those on the same principles.
 

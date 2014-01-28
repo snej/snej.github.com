@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My presentation from Keeping It Realtime"
+tags: [me, computers, couchbase, couchdb]
 ---
 I gave another talk about Couchbase/CouchDB at the "Keeping It Realtime conference":http://krtconf.com this week in Portland. This one is titled <i>"_ch_ch_changes: CouchDB/Couchbase Notifications And Replications"</i>, and "the slides are now up on slideshare":http://www.slideshare.net/Couchbase/keeping-itrealtimechchchanges.
 

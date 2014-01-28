@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "sneJ’s Law of Toolbars"
+tags: [ui, computers]
 ---
 *The Pessimistic Form*
 The set of commands available in a toolbar (even via customization) is restricted to those that are either:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I’m Building Me A B-Tree"
+tags: [computers, me]
 ---
 The other day I took it into my head to implement a "B+tree":http://en.wikipedia.org/wiki/B%2Btree. Why? Because they sound neat, and I've done hardly any serious programming with trees in my career. (Someone, I think Buzz Andersen, once noted that there are two kinds of programmers: those who do think in terms of trees, and those who do everything with hash tables. I'm in the latter camp.)
 

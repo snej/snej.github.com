@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Assassination of J.G. Ballard Considered As A Metafictional Homage"
+tags: [fiction]
 ---
 <i>“Some people have suggested that mental illness is a kind of adaptation to the sort of circumstances that will arise in the future. As we move towards a more and more psychotic landscape, the psychotic traits are signs of a kind of Darwinian adaptation.”</i> --1998
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "What will Web 3.0 be?"
+tags: [p2p, networking, computers]
 ---
 So, Web 2.0's heyday is over, and somewhere out there, Web 3.0 is slouching toward us waiting to be born. What will it be?
 

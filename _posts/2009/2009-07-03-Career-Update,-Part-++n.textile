@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Career Update, Part ++n"
+tags: [work, me, google]
 ---
 I've been working at Google since last August. The Big G's hiring process is rather weird -- when you interview, it's not for any specific team. It's only after you get an offer that you decide which team to join, of the ones with open positions.
 

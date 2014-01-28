@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Re: Idea for alternative RSS syncing system"
+tags: [networking, computers]
 ---
 Brent "NetNewsWire" Simmons raises the idea of "an open protocol for syncing RSS/Atom subscriptions":http://inessential.com/2010/02/08/idea_for_alternative_rss_syncing_system, that is, a way of keeping multiple local newsreader apps (like on a Mac and an iPhone) in sync with each other, so that they share the same set of subscribed feeds, and remember which articles have already been read. You can think of it as "IMAP for RSS".
 

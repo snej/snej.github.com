@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Dungeon Master"
+tags: [poetry]
 ---
 Call the roller of big dice,
 The long-haired one, and bid him whip

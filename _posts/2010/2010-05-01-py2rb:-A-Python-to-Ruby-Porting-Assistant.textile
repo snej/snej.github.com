@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "py2rb: A Python-to-Ruby Porting Assistant"
+tags: [computers, me]
 ---
 I've never figured out whether I prefer Python or Ruby, so I've written things in both languages. Sometimes I start in one, then change my mind and decide I'd rather use the other. Unfortunately, changing over is painful, even though both have fairly similar syntax. For instance, converting to Ruby means inserting zillions of "end" statements!
 

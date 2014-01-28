@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Security: Not Quite Getting It"
+tags: [security]
 ---
 I got an iPhone 3GS yesterday (yes, it totally rules.) While setting up online account access for billing, AT&T had me enter a password.
 

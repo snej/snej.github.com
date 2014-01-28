@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Bonjour / Chat Tutorial For iPhone Developers"
+tags: [p2p, networking, computers]
 ---
 MobileOrchard just published "a tutorial article by Peter Bakhyryev":http://www.mobileorchard.com/tutorial-networking-and-bonjour-on-iphone/, describing a sample iPhone app called "Chatty" that acts as a simple peer-to-peer chat-room.
 

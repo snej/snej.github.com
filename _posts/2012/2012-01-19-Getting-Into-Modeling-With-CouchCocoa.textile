@@ -1,8 +1,0 @@
----
-layout: post
-title: "Getting Into Modeling With CouchCocoa"
-tags: [Couchbase, TouchDB]
----
-I gave a webcast last month for O'Reilly, and "it's up on YouTube now":http://www.youtube.com/watch?v=U4h90TgWan0 so you can watch it at your leisure. Here's the abstract:
-
-bq. It can be very liberating to store your Couchbase app's data as free-form dictionaries, free of the rigid schema of a relational database. But there's a lot to be said for the syntactic comforts and conveniences of modeling your data as native Cocoa objects with predeclared @properties, the way CoreData does. Don't fret - the CouchCocoa framework lets you do both, even in the same database. During this webcast I'll show you how to acquire the glamor of an object model, while still letting your NoSQL freak-flag fly.

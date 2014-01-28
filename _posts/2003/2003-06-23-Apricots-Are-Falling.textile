@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Apricots Are Falling"
-tags: [fiction, poetry]
+tags: [poetry]
 ---
 The apricots are falling, bit by bit
 helped along by interfering squirrels.

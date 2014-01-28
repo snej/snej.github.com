@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Anagrams"
-tags: [me, fiction, poetry]
+tags: [me, poetry]
 ---
 Way back in 1989 my friend M@ and I used to work at a font company called *Kingsley/ATF Type Corporation*. One evening after work -- actually we were still at work, physically speaking -- we began to consider the subject of anagrams of the company name. After running off the necessary letters (in 100pt ITC Galliard all caps from an Adobe Type 1 font, using Microsoft Word 4.0 on a Mac SE, printing to a 300dpi Apple LaserWriter NTX) and cutting them out (I forget the brand name of the scissors) we set to with gusto.
 

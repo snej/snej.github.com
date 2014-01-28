@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Fudge"
+tags: [computers, me]
 ---
 I've just released a new open-source project, a small one -- "Fudge-Cpp":https://bitbucket.org/snej/fudge-cpp, a fast C++ library for reading and writing "Fudge":http://fudgemsg.org/ messages.
 

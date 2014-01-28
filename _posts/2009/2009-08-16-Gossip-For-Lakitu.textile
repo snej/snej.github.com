@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Gossip For Lakitu"
+tags: [p2p, computers, me]
 ---
 Last year I wrote "a series of blog posts about a peer-to-peer system called Cloudy":http://mooseyard.com/Jens/?s=cloudy that I was developing. I was going up the stack, from messaging to identity, but didn't finish documenting all the layers I'd built. I mostly stopped working on Cloudy after I went back to gainful employment, but I keep thinking about this stuff.
 

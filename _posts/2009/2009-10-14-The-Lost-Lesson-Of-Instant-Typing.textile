@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Lost Lesson Of Instant Typing"
+tags: [ui, computers, me]
 ---
 Farhad Manjoo "writing in Slate":http://www.slate.com/id/2232311/pagenum/all about Google Wave:
 

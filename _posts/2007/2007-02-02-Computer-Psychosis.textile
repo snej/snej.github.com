@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Computer Psychosis"
-tags: [computers, psychology]
+tags: [computers, psychology, sf]
 ---
 _"I have verified that I can create a sound file that can wake Vista speech recognition, open Windows Explorer, delete the documents folder, and then empty the trash."_
 — "George Ou, ZDNet":http://blogs.zdnet.com/Ou/?p=418

@@ -1,9 +1,0 @@
----
-layout: post
-title: "Project/bug tracker for MYCrypto"
----
-I've set up "a project tracker site for MYCrypto":http://mooseyard.lighthouseapp.com/projects/29227/home on Lighthouse. It's got the usual features -- a -bug- ticket database, milestone tracker, news posts, etc.
-
-Right now there are no -bugs- tickets filed. So MYCrypto must be done. Haha! No, I still need to file tickets on the known issues and planned features, but I haven't gotten around to it yet. (Maybe I should file a ticket to remind myself.)
-
-Oh, and there's "a MYCrypto news feed":feed://mooseyard.lighthouseapp.com/projects/29227-mycrypto/events.atom you can subscribe to.

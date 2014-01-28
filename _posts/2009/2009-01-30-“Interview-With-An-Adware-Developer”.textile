@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "“Interview With An Adware Developer”"
+tags: [security, computers]
 ---
 Matt Knox, a Ruby developer and repentant former coder for an adware company, "explains how adware works":http://philosecurity.org/2009/01/12/interview-with-an-adware-author. Really fascinating stuff, and quite scary from a security point of view.
 

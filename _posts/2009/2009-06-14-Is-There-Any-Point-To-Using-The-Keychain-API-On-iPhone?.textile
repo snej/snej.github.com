@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Is There Any Point To Using The Keychain API On iPhone?"
+tags: [ios, security, computers]
 ---
 I've always liked the Keychain technology in Mac OS X. Sure, the API is notoriously confusing and awkward, but the end-user benefits are compelling:
 

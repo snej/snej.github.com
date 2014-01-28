@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Music, Alone"
+tags: [music, me]
 ---
 The feelings created by music are so strong, for me, but so ineffable. The problem of perception is usually described using color — how can we know if the visual sensation I call "red" is anything like the one you call "red"? — but only gets worse as you ascend to higher order perceptions, where even names become harder to apply. What do you call the feeling incited by "Guernica", and even if you find the same words I would, is it the same feeling? And yet vision is our strongest, highest-bandwidth, most describable sense. We struggle to describe sound without using the technical terms of musicians, or vague metaphors.
 

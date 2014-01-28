@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "320, 160, 192, GO!"
+tags: [music, me]
 ---
 "New happy fun summer mix!":http://recordings.mooseyard.com/mub59/
 

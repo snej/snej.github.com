@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fulfillment"
-tags: [fiction]
+tags: [fiction, sf]
 ---
 Eli finally entered the Fulfillment Center at dusk, through the wide metal doors opening into the chilly space within. He had been waiting in line since dawn, shuffling slowly back and forth through the cracked remnants of the old parking lot under the eyes of the security guards. The Center was an old, damaged warehouse – this had been an industrial area before the war – and was lit within by banks of fluorescent tubes suspended from the high ceiling.
 

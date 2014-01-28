@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Glass Lizard"
-tags: [fiction]
+tags: [fiction, sf]
 ---
 The beach that fall was overrun by glass lizards; I had never seen them before. I knew there had been none at the beach when we had visited during the summers (I could remember four summers, and my parents said there had been more.)
 <!--more-->

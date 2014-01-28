@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Glitch City"
+tags: [fiction, sf]
 ---
 No _again_, I will not show you what’s under the bandage on my arm. I won’t even look myself, anymore; it’s gotten too disturbing. I mean, the wound hasn’t changed, but every time I look at it it bothers me more, takes me longer to stop shivering. I keep wanting to touch it.
 

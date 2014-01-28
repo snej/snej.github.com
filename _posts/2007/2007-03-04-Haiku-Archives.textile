@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Haiku Archives"
-tags: [fiction, poetry]
+tags: [poetry]
 ---
 h3. 2001
 

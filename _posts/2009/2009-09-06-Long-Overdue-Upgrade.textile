@@ -1,9 +1,0 @@
----
-layout: post
-title: "Long-Overdue Upgrade"
----
-I finally bit the bullet and upgraded to the latest WordPress from the seriously prehistoric version I used to run (I think it was 2.0.4 or something like that.) With the current attacks against older versions, it finally seemed like a worthwhile thing to waste an afternoon on. :-P
-
-Almost everything should work more or less the same. I've taken the opportunity to move to a subdomain -- jens.mooseyard.com -- but the old URLs redirect. The theme is different, because my hacked-up, customized old theme probably wouldn't have survived the upgrade intact. I can't say I like this one better, but it'll do.
-<!--more-->
-The only data loss I know of is the email subscriptions. If you were subscribed to the comments of any prior post, that's gone now. If you still have something new to say, you can post it and check the "Subscribe" checkbox, and then you'll get emails again.

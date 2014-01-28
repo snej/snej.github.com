@@ -1,9 +1,0 @@
----
-layout: post
-title: "VoodooPad 4.1 and VP Reader for iPhone Released"
----
-Flying Meat Software has <a href="http://gusmueller.com/blog/archives/2009/03/voodoopad_4.1_and_vp_reader_for_iphone_released.html">released a VoodooPad Reader app for iPhone</a>, as a complement to their great desktop wiki. So now you can sync your VP docs to your iPhone and access them on the go, with or without a network.
-
-What's especially cool, to me, is that VP Reader uses my "MYNetwork":http://mooseyard.com/projects/MYNetwork library and BLIP protocol for its networking. Gus calls it "an awesome network library ... It made moving pages from VoodooPad to the iPhone over the network completely painless. A++ would recommend again." Thanks, Gus! I believe this is the first appearance of BLIP in a shipping product, since my own apps remain in limbo.
-
-The "VP Reader source code is available":http://flycode.googlecode.com/svn/trunk/vpreader/ if you want to see how it was done.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Couchbase news (and my preso)"
+tags: [me, work, couchbase]
 ---
 "My new employer is doing well":http://www.couchbase.com/press-releases/couchbase-series-C:
 

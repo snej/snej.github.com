@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Polar Star"
-tags: [fiction, poetry]
+tags: [poetry]
 ---
 The horizon folded down its blackness.
 Overhead curled exalted green clouds

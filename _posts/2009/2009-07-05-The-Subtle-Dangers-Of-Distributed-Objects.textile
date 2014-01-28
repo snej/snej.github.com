@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Subtle Dangers Of Distributed Objects"
+tags: [cocoa, security, computers]
 ---
 bq. *Introduction:* I wrote this as part of a reply on Apple's bonjour-dev mailing list, then decided it might be worth publishing more visibly. I've found that Cocoa's Distributed Objects technology is immediately attractive to many developers, while those who've used it end up finding that it's much more complex than it looks. But I haven't seen much written about the caveats of using it.
 
