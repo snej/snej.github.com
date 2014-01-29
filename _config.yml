@@ -1,6 +1,6 @@
 title:            Thought Palace
 description:      "Little boxes made of words, by Jens Alfke"
-disqus_shortname: 
+disqus_shortname: thought-palace-blog
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://jens.mooseyard.com
 #url:             http://localhost:4000
@@ -21,9 +21,9 @@ owner:
   linkedin:       jensalfke
   instagram:      snej
   flickr:         
-  tumblr:         
+  tumblr:         thought-palace.tumblr.com
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:   https://plus.google.com/+JensAlfke
+  google_plus:    https://plus.google.com/+JensAlfke
 
 # Background image to be tiled on all pages
 background: patterns/bright_squares.png
