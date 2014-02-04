@@ -1,11 +1,11 @@
 ---
 title: "Notes Toward A Social-Network Schema"
-tags: []
+tags: [social, networking, couchdb, couchbase]
 layout: post
 comments: true
 ---
 
-Modeling a social network in a JSON-document-oriented database like Couchbase [Lite] or CouchDB isn't hard. Here's a basic schema that I've been playing with for a while.
+Modeling a social network in a JSON-document-oriented database like [Couchbase](http://couchbase.com) [[Lite](http://www.couchbase.com/mobile#lite)] or [CouchDB](http://couchdb.apache.org) isn't hard. Here's a basic schema that I've been playing with for a while.
 
 ## Schema
 
